@@ -15,6 +15,12 @@
 		3A112C281ADC6EA80029167E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A112C271ADC6EA80029167E /* Images.xcassets */; };
 		3A112C2B1ADC6EA80029167E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A112C291ADC6EA80029167E /* LaunchScreen.xib */; };
 		3A112C371ADC6EA80029167E /* BPcontrolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C361ADC6EA80029167E /* BPcontrolTests.m */; };
+		3A989F931AED53EF00A4C945 /* Forte.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F8F1AED53EF00A4C945 /* Forte.ttf */; };
+		3A989F941AED53EF00A4C945 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F901AED53EF00A4C945 /* Roboto-Bold.ttf */; };
+		3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F911AED53EF00A4C945 /* Roboto-Italic.ttf */; };
+		3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F921AED53EF00A4C945 /* Roboto-Regular.ttf */; };
+		3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A989F991AED54B400A4C945 /* ApiManager.m */; };
+		F55BAEC45B4D465BB3B6B0CD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA32FE7558B881AA1EACFD9E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38034E55E7B6AC7BB8A5A03F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3A112C141ADC6EA80029167E /* BPcontrol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BPcontrol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A112C181ADC6EA80029167E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A112C191ADC6EA80029167E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +49,15 @@
 		3A112C301ADC6EA80029167E /* BPcontrolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPcontrolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A112C351ADC6EA80029167E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A112C361ADC6EA80029167E /* BPcontrolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPcontrolTests.m; sourceTree = "<group>"; };
+		3A989F861AED50EA00A4C945 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resources.h; sourceTree = "<group>"; };
+		3A989F8F1AED53EF00A4C945 /* Forte.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Forte.ttf; sourceTree = "<group>"; };
+		3A989F901AED53EF00A4C945 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		3A989F911AED53EF00A4C945 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		3A989F921AED53EF00A4C945 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		3A989F981AED54B400A4C945 /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		3A989F991AED54B400A4C945 /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		85E84C97E232C51F93A6E539 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DA32FE7558B881AA1EACFD9E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55BAEC45B4D465BB3B6B0CD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +85,8 @@
 				3A112C161ADC6EA80029167E /* BPcontrol */,
 				3A112C331ADC6EA80029167E /* BPcontrolTests */,
 				3A112C151ADC6EA80029167E /* Products */,
+				51654CF0E35AA5ABDAFDEBF0 /* Pods */,
+				94D811AEF1DDB5D9CDDF758B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,13 +102,15 @@
 		3A112C161ADC6EA80029167E /* BPcontrol */ = {
 			isa = PBXGroup;
 			children = (
+				3A989F9B1AED54C800A4C945 /* WebService */,
+				3A989F971AED53FA00A4C945 /* Assets */,
+				3AF47B941AED74B0009FE6F8 /* Resources */,
 				3A112C1B1ADC6EA80029167E /* AppDelegate.h */,
 				3A112C1C1ADC6EA80029167E /* AppDelegate.m */,
 				3A112C211ADC6EA80029167E /* ViewController.h */,
 				3A112C221ADC6EA80029167E /* ViewController.m */,
 				3A112C241ADC6EA80029167E /* Main.storyboard */,
 				3A112C271ADC6EA80029167E /* Images.xcassets */,
-				3A112C291ADC6EA80029167E /* LaunchScreen.xib */,
 				3A112C1E1ADC6EA80029167E /* BPcontrol.xcdatamodeld */,
 				3A112C171ADC6EA80029167E /* Supporting Files */,
 			);
@@ -122,6 +143,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3A989F971AED53FA00A4C945 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3A989F8F1AED53EF00A4C945 /* Forte.ttf */,
+				3A989F921AED53EF00A4C945 /* Roboto-Regular.ttf */,
+				3A989F901AED53EF00A4C945 /* Roboto-Bold.ttf */,
+				3A989F911AED53EF00A4C945 /* Roboto-Italic.ttf */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		3A989F9B1AED54C800A4C945 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				3A989F981AED54B400A4C945 /* ApiManager.h */,
+				3A989F991AED54B400A4C945 /* ApiManager.m */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
+		3AF47B941AED74B0009FE6F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A112C291ADC6EA80029167E /* LaunchScreen.xib */,
+				3A989F861AED50EA00A4C945 /* Resources.h */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		51654CF0E35AA5ABDAFDEBF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85E84C97E232C51F93A6E539 /* Pods.debug.xcconfig */,
+				38034E55E7B6AC7BB8A5A03F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		94D811AEF1DDB5D9CDDF758B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA32FE7558B881AA1EACFD9E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A112C3A1ADC6EA80029167E /* Build configuration list for PBXNativeTarget "BPcontrol" */;
 			buildPhases = (
+				0C214E00C0E18D5C49BFD04C /* Check Pods Manifest.lock */,
 				3A112C101ADC6EA80029167E /* Sources */,
 				3A112C111ADC6EA80029167E /* Frameworks */,
 				3A112C121ADC6EA80029167E /* Resources */,
+				478434C70CAE6AFC753482A2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A112C261ADC6EA80029167E /* Main.storyboard in Resources */,
+				3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */,
+				3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */,
+				3A989F931AED53EF00A4C945 /* Forte.ttf in Resources */,
+				3A989F941AED53EF00A4C945 /* Roboto-Bold.ttf in Resources */,
 				3A112C2B1ADC6EA80029167E /* LaunchScreen.xib in Resources */,
 				3A112C281ADC6EA80029167E /* Images.xcassets in Resources */,
 			);
@@ -217,11 +290,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C214E00C0E18D5C49BFD04C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		478434C70CAE6AFC753482A2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A112C101ADC6EA80029167E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */,
 				3A112C201ADC6EA80029167E /* BPcontrol.xcdatamodeld in Sources */,
 				3A112C1D1ADC6EA80029167E /* AppDelegate.m in Sources */,
 				3A112C231ADC6EA80029167E /* ViewController.m in Sources */,
@@ -347,9 +454,12 @@
 		};
 		3A112C3B1ADC6EA80029167E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85E84C97E232C51F93A6E539 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BPcontrol/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,9 +467,12 @@
 		};
 		3A112C3C1ADC6EA80029167E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38034E55E7B6AC7BB8A5A03F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BPcontrol/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +531,7 @@
 				3A112C3C1ADC6EA80029167E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A112C3D1ADC6EA80029167E /* Build configuration list for PBXNativeTarget "BPcontrolTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +540,7 @@
 				3A112C3F1ADC6EA80029167E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

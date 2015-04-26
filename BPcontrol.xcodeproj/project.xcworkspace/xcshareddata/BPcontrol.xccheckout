@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6723FA84-823F-462A-BEE6-BE8110591023</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BPcontrol</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D107FA6832F197DD92D6E9DEFEAB042DE1B352BD</key>
+		<string>https://github.com/jvilaplana/ios-shuite-hypertension.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BPcontrol.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D107FA6832F197DD92D6E9DEFEAB042DE1B352BD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jvilaplana/ios-shuite-hypertension.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D107FA6832F197DD92D6E9DEFEAB042DE1B352BD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D107FA6832F197DD92D6E9DEFEAB042DE1B352BD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios-shuite-hypertension</string>
+		</dict>
+	</array>
+</dict>
+</plist>
