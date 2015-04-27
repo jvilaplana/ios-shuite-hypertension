@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DEB9CADE609E3B456193843 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA32FE7558B881AA1EACFD9E /* libPods.a */; };
 		3A112C1A1ADC6EA80029167E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C191ADC6EA80029167E /* main.m */; };
 		3A112C1D1ADC6EA80029167E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C1C1ADC6EA80029167E /* AppDelegate.m */; };
 		3A112C201ADC6EA80029167E /* BPcontrol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C1E1ADC6EA80029167E /* BPcontrol.xcdatamodeld */; };
@@ -20,8 +19,6 @@
 		3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F911AED53EF00A4C945 /* Roboto-Italic.ttf */; };
 		3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F921AED53EF00A4C945 /* Roboto-Regular.ttf */; };
 		3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A989F991AED54B400A4C945 /* ApiManager.m */; };
-		3ACD070B1AEDB71400A021A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ACD070A1AEDB71400A021A0 /* LaunchScreen.xib */; };
-		F2E09BD63C59AAED882D2AA8 /* libPods-BPcontrol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E617BDFE958729EC8DE4EC9 /* libPods-BPcontrol.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +54,6 @@
 		3A989F921AED53EF00A4C945 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		3A989F981AED54B400A4C945 /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		3A989F991AED54B400A4C945 /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
-		3ACD070A1AEDB71400A021A0 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		3AF0CC861AED8DD6008D95BC /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		3AF0CC871AED8DD6008D95BC /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		3AF0CC881AED8DD6008D95BC /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -219,8 +215,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2E09BD63C59AAED882D2AA8 /* libPods-BPcontrol.a in Frameworks */,
-				1DEB9CADE609E3B456193843 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +564,6 @@
 			isa = PBXGroup;
 			children = (
 				3A989F861AED50EA00A4C945 /* Resources.h */,
-				3ACD070A1AEDB71400A021A0 /* LaunchScreen.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -682,7 +675,6 @@
 				3A112C261ADC6EA80029167E /* Main.storyboard in Resources */,
 				3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */,
 				3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */,
-				3ACD070B1AEDB71400A021A0 /* LaunchScreen.xib in Resources */,
 				3A989F931AED53EF00A4C945 /* Forte.ttf in Resources */,
 				3A989F941AED53EF00A4C945 /* Roboto-Bold.ttf in Resources */,
 				3A112C281ADC6EA80029167E /* Images.xcassets in Resources */,
