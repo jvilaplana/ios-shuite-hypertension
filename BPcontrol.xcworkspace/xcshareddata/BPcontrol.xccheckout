@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>95EE025C-D1C1-48A9-B1E4-194582E7E80E</string>
+	<string>222ED6B0-F26B-40A3-BBF9-322D84CE73DB</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Pods</string>
+	<string>BPcontrol</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D107FA6832F197DD92D6E9DEFEAB042DE1B352BD</key>
 		<string>https://github.com/jvilaplana/ios-shuite-hypertension.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Pods/Pods.xcodeproj</string>
+	<string>BPcontrol.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D107FA6832F197DD92D6E9DEFEAB042DE1B352BD</key>
-		<string>../../..</string>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jvilaplana/ios-shuite-hypertension.git</string>
