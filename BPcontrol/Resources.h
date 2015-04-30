@@ -19,9 +19,14 @@
 #define RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 #define RGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
-#define ROJO RGB(179, 10, 21)
-#define GRIS RGB(169, 169, 169)
-#define GRIS_CLARO RGB(216, 216, 216)
+#define GRAYBP RGB(212,212,212)
+#define GRAYMENUCELL RGB(236,236,236)
+#define MENUSEPARATOR RGB(157,156,156)
+#define MENUTEXT RGB(77,94,110)
+#define CELLHEADER RGB(234,234,234)
+#define GRAYPROFILE RGB(108,108,108)
+
+
 
 //#define STRTRAD(key, comment) NSLocalizedStringFromTable(key, [LanguageController getCurrentLanguage], comment)
 #define STRTRAD(key, comment) comment
@@ -43,17 +48,10 @@ NSArrayObjectMaybeNil(__ARRAYNAME__, 8),\
 NSArrayObjectMaybeNil(__ARRAYNAME__, 9),\
 nil
 
-#define MUSEO_100         @"Museo-100"
-#define MUSEO_300         @"Museo-300"
-#define MUSEO_500         @"Museo-500"
-#define MUSEO_700         @"Museo-700"
-#define MUSEO_900         @"Museo-900"
-
-#define MUSEO_ITALIC_100         @"Museo-100Italic"
-#define MUSEO_ITALIC_300         @"Museo-300Italic"
-#define MUSEO_ITALIC_500         @"Museo-500Italic"
-#define MUSEO_ITALIC_700         @"Museo-700Italic"
-#define MUSEO_ITALIC_900         @"Museo-900Italic"
+#define FORTE              @"Forte"
+#define ROBOTOREGULAR      @"Roboto-Regular"
+#define ROBOTOBOLD         @"Robot-Bold"
+#define ROBOTOITALIC       @"Roboto-Italic"
 
 #define GourgramItemsArray @[@"chauqetillaunisex", @"cuchara", @"delantal unisex", @"gorro", @"guante"]
 
