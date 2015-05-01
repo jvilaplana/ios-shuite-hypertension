@@ -1,0 +1,21 @@
+
+/* Class = "UIViewController"; title = "CentersController"; ObjectID = "2Hp-rC-LAy"; */
+"2Hp-rC-LAy.title" = "CentersController";
+
+/* Class = "UITabBarController"; title = "TabBarController"; ObjectID = "4bc-ZW-7QZ"; */
+"4bc-ZW-7QZ.title" = "TabBarController";
+
+/* Class = "UIViewController"; title = "InitController"; ObjectID = "Je3-qU-eLY"; */
+"Je3-qU-eLY.title" = "InitController";
+
+/* Class = "UIPageViewController"; title = "InformationController"; ObjectID = "X6Y-NX-hN1"; */
+"X6Y-NX-hN1.title" = "InformationController";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "isI-2k-kzO"; */
+"isI-2k-kzO.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "tgX-5G-vqI"; */
+"tgX-5G-vqI.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "ucX-Ec-p2G"; */
+"ucX-Ec-p2G.title" = "Item 2";

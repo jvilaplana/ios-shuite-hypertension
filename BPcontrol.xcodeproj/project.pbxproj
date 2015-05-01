@@ -19,7 +19,24 @@
 		3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F911AED53EF00A4C945 /* Roboto-Italic.ttf */; };
 		3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F921AED53EF00A4C945 /* Roboto-Regular.ttf */; };
 		3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A989F991AED54B400A4C945 /* ApiManager.m */; };
+		3AED64601AF3B674007A40D6 /* Pressure.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED645F1AF3B674007A40D6 /* Pressure.m */; };
+		3AED64631AF3BF55007A40D6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED64621AF3BF55007A40D6 /* User.m */; };
+		3AED64661AF3C613007A40D6 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED64651AF3C613007A40D6 /* Message.m */; };
+		3AED646D1AF3DD0B007A40D6 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED646C1AF3DD0B007A40D6 /* TabBarController.m */; };
+		3AED647C1AF3EA33007A40D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AED647E1AF3EA33007A40D6 /* Localizable.strings */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		3AED646E1AF3E3C5007A40D6 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = "com.apple.build-tasks.copy-strings-file";
+			fileType = text.plist.strings;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyStrings\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		3A112C311ADC6EA80029167E /* PBXContainerItemProxy */ = {
@@ -54,6 +71,18 @@
 		3A989F921AED53EF00A4C945 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		3A989F981AED54B400A4C945 /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		3A989F991AED54B400A4C945 /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		3AED645E1AF3B674007A40D6 /* Pressure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pressure.h; sourceTree = "<group>"; };
+		3AED645F1AF3B674007A40D6 /* Pressure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pressure.m; sourceTree = "<group>"; };
+		3AED64611AF3BF55007A40D6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3AED64621AF3BF55007A40D6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3AED64641AF3C613007A40D6 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		3AED64651AF3C613007A40D6 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		3AED646B1AF3DD0B007A40D6 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		3AED646C1AF3DD0B007A40D6 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		3AED646F1AF3E406007A40D6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		3AED64711AF3E426007A40D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		3AED647D1AF3EA33007A40D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3AED647F1AF3EA35007A40D6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3AF0CC861AED8DD6008D95BC /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		3AF0CC871AED8DD6008D95BC /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		3AF0CC881AED8DD6008D95BC /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -251,6 +280,8 @@
 		3A112C161ADC6EA80029167E /* BPcontrol */ = {
 			isa = PBXGroup;
 			children = (
+				3AED64671AF3D78D007A40D6 /* Controllers */,
+				3AED645D1AF3B50F007A40D6 /* Model */,
 				3A989F9B1AED54C800A4C945 /* WebService */,
 				3A989F971AED53FA00A4C945 /* Assets */,
 				3AF47B941AED74B0009FE6F8 /* Resources */,
@@ -310,6 +341,28 @@
 				3A989F991AED54B400A4C945 /* ApiManager.m */,
 			);
 			name = WebService;
+			sourceTree = "<group>";
+		};
+		3AED645D1AF3B50F007A40D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AED645E1AF3B674007A40D6 /* Pressure.h */,
+				3AED645F1AF3B674007A40D6 /* Pressure.m */,
+				3AED64611AF3BF55007A40D6 /* User.h */,
+				3AED64621AF3BF55007A40D6 /* User.m */,
+				3AED64641AF3C613007A40D6 /* Message.h */,
+				3AED64651AF3C613007A40D6 /* Message.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3AED64671AF3D78D007A40D6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AED646B1AF3DD0B007A40D6 /* TabBarController.h */,
+				3AED646C1AF3DD0B007A40D6 /* TabBarController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		3AF0CC841AED8DD6008D95BC /* AFNetworking */ = {
@@ -564,6 +617,7 @@
 			isa = PBXGroup;
 			children = (
 				3A989F861AED50EA00A4C945 /* Resources.h */,
+				3AED647E1AF3EA33007A40D6 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -604,6 +658,7 @@
 				478434C70CAE6AFC753482A2 /* Copy Pods Resources */,
 			);
 			buildRules = (
+				3AED646E1AF3E3C5007A40D6 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -655,6 +710,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 3A112C0B1ADC6EA80029167E;
 			productRefGroup = 3A112C151ADC6EA80029167E /* Products */;
@@ -675,6 +731,7 @@
 				3A112C261ADC6EA80029167E /* Main.storyboard in Resources */,
 				3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */,
 				3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */,
+				3AED647C1AF3EA33007A40D6 /* Localizable.strings in Resources */,
 				3A989F931AED53EF00A4C945 /* Forte.ttf in Resources */,
 				3A989F941AED53EF00A4C945 /* Roboto-Bold.ttf in Resources */,
 				3A112C281ADC6EA80029167E /* Images.xcassets in Resources */,
@@ -729,7 +786,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */,
+				3AED64661AF3C613007A40D6 /* Message.m in Sources */,
+				3AED64631AF3BF55007A40D6 /* User.m in Sources */,
+				3AED646D1AF3DD0B007A40D6 /* TabBarController.m in Sources */,
 				3A112C201ADC6EA80029167E /* BPcontrol.xcdatamodeld in Sources */,
+				3AED64601AF3B674007A40D6 /* Pressure.m in Sources */,
 				3A112C1D1ADC6EA80029167E /* AppDelegate.m in Sources */,
 				3A112C231ADC6EA80029167E /* ViewController.m in Sources */,
 				3A112C1A1ADC6EA80029167E /* main.m in Sources */,
@@ -759,8 +820,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				3A112C251ADC6EA80029167E /* Base */,
+				3AED646F1AF3E406007A40D6 /* es */,
+				3AED64711AF3E426007A40D6 /* en */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3AED647E1AF3EA33007A40D6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AED647D1AF3EA33007A40D6 /* en */,
+				3AED647F1AF3EA35007A40D6 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -800,7 +872,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -836,7 +908,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -916,7 +988,7 @@
 				3A112C391ADC6EA80029167E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		3A112C3A1ADC6EA80029167E /* Build configuration list for PBXNativeTarget "BPcontrol" */ = {
 			isa = XCConfigurationList;
@@ -925,7 +997,7 @@
 				3A112C3C1ADC6EA80029167E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		3A112C3D1ADC6EA80029167E /* Build configuration list for PBXNativeTarget "BPcontrolTests" */ = {
 			isa = XCConfigurationList;
@@ -934,7 +1006,7 @@
 				3A112C3F1ADC6EA80029167E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

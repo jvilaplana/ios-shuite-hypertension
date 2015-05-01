@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  BPcontrol
+
+  Created by Adrian Carrera on 1/5/15.
+  Copyright (c) 2015 Adrian Carrera. All rights reserved.
+*/
+/* TabBarController */
+"Tab1title" = "Start";
+"Tab2title" = "Centers";
+"Tab3title" = "Info";
