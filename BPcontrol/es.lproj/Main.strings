@@ -12,10 +12,10 @@
 "X6Y-NX-hN1.title" = "InformationController";
 
 /* Class = "UITabBarItem"; title = "Item"; ObjectID = "isI-2k-kzO"; */
-"isI-2k-kzO.title" = "Item";
+"isI-2k-kzO.title" = "Inicio";
 
 /* Class = "UITabBarItem"; title = "Item"; ObjectID = "tgX-5G-vqI"; */
-"tgX-5G-vqI.title" = "Item";
+"tgX-5G-vqI.title" = "Info";
 
 /* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "ucX-Ec-p2G"; */
-"ucX-Ec-p2G.title" = "Item 2";
+"ucX-Ec-p2G.title" = "Centros";

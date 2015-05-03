@@ -14,6 +14,13 @@
 		3A112C261ADC6EA80029167E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A112C241ADC6EA80029167E /* Main.storyboard */; };
 		3A112C281ADC6EA80029167E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A112C271ADC6EA80029167E /* Images.xcassets */; };
 		3A112C371ADC6EA80029167E /* BPcontrolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C361ADC6EA80029167E /* BPcontrolTests.m */; };
+		3A3737C21AF6719B0024801D /* ic_action_help_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737BC1AF6719B0024801D /* ic_action_help_tab.png */; };
+		3A3737C31AF6719B0024801D /* ic_action_help_tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737BD1AF6719B0024801D /* ic_action_help_tab@2x.png */; };
+		3A3737C41AF6719B0024801D /* ic_action_home_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737BE1AF6719B0024801D /* ic_action_home_tab.png */; };
+		3A3737C51AF6719B0024801D /* ic_action_home_tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737BF1AF6719B0024801D /* ic_action_home_tab@2x.png */; };
+		3A3737D11AF673CD0024801D /* ic_action_location_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737D01AF673CD0024801D /* ic_action_location_tab.png */; };
+		3A3737D51AF6746E0024801D /* ic_action_location_tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737D41AF6746E0024801D /* ic_action_location_tab@2x.png */; };
+		3A3737D81AF67A050024801D /* InitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3737D71AF67A050024801D /* InitController.m */; };
 		3A989F931AED53EF00A4C945 /* Forte.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F8F1AED53EF00A4C945 /* Forte.ttf */; };
 		3A989F941AED53EF00A4C945 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F901AED53EF00A4C945 /* Roboto-Bold.ttf */; };
 		3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F911AED53EF00A4C945 /* Roboto-Italic.ttf */; };
@@ -64,6 +71,14 @@
 		3A112C301ADC6EA80029167E /* BPcontrolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPcontrolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A112C351ADC6EA80029167E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A112C361ADC6EA80029167E /* BPcontrolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPcontrolTests.m; sourceTree = "<group>"; };
+		3A3737BC1AF6719B0024801D /* ic_action_help_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_help_tab.png; sourceTree = "<group>"; };
+		3A3737BD1AF6719B0024801D /* ic_action_help_tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_help_tab@2x.png"; sourceTree = "<group>"; };
+		3A3737BE1AF6719B0024801D /* ic_action_home_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_home_tab.png; sourceTree = "<group>"; };
+		3A3737BF1AF6719B0024801D /* ic_action_home_tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_home_tab@2x.png"; sourceTree = "<group>"; };
+		3A3737D01AF673CD0024801D /* ic_action_location_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_location_tab.png; sourceTree = "<group>"; };
+		3A3737D41AF6746E0024801D /* ic_action_location_tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_location_tab@2x.png"; sourceTree = "<group>"; };
+		3A3737D61AF67A050024801D /* InitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitController.h; sourceTree = "<group>"; };
+		3A3737D71AF67A050024801D /* InitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitController.m; sourceTree = "<group>"; };
 		3A989F861AED50EA00A4C945 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resources.h; sourceTree = "<group>"; };
 		3A989F8F1AED53EF00A4C945 /* Forte.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Forte.ttf; sourceTree = "<group>"; };
 		3A989F901AED53EF00A4C945 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -280,6 +295,7 @@
 		3A112C161ADC6EA80029167E /* BPcontrol */ = {
 			isa = PBXGroup;
 			children = (
+				3A3737BB1AF66F490024801D /* Images */,
 				3AED64671AF3D78D007A40D6 /* Controllers */,
 				3AED645D1AF3B50F007A40D6 /* Model */,
 				3A989F9B1AED54C800A4C945 /* WebService */,
@@ -323,6 +339,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3A3737BB1AF66F490024801D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3A3737D41AF6746E0024801D /* ic_action_location_tab@2x.png */,
+				3A3737D01AF673CD0024801D /* ic_action_location_tab.png */,
+				3A3737BC1AF6719B0024801D /* ic_action_help_tab.png */,
+				3A3737BD1AF6719B0024801D /* ic_action_help_tab@2x.png */,
+				3A3737BE1AF6719B0024801D /* ic_action_home_tab.png */,
+				3A3737BF1AF6719B0024801D /* ic_action_home_tab@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		3A989F971AED53FA00A4C945 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +390,8 @@
 			children = (
 				3AED646B1AF3DD0B007A40D6 /* TabBarController.h */,
 				3AED646C1AF3DD0B007A40D6 /* TabBarController.m */,
+				3A3737D61AF67A050024801D /* InitController.h */,
+				3A3737D71AF67A050024801D /* InitController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -728,10 +759,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3737C21AF6719B0024801D /* ic_action_help_tab.png in Resources */,
 				3A112C261ADC6EA80029167E /* Main.storyboard in Resources */,
+				3A3737C31AF6719B0024801D /* ic_action_help_tab@2x.png in Resources */,
+				3A3737D51AF6746E0024801D /* ic_action_location_tab@2x.png in Resources */,
+				3A3737C51AF6719B0024801D /* ic_action_home_tab@2x.png in Resources */,
 				3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */,
+				3A3737D11AF673CD0024801D /* ic_action_location_tab.png in Resources */,
 				3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */,
 				3AED647C1AF3EA33007A40D6 /* Localizable.strings in Resources */,
+				3A3737C41AF6719B0024801D /* ic_action_home_tab.png in Resources */,
 				3A989F931AED53EF00A4C945 /* Forte.ttf in Resources */,
 				3A989F941AED53EF00A4C945 /* Roboto-Bold.ttf in Resources */,
 				3A112C281ADC6EA80029167E /* Images.xcassets in Resources */,
@@ -786,6 +823,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */,
+				3A3737D81AF67A050024801D /* InitController.m in Sources */,
 				3AED64661AF3C613007A40D6 /* Message.m in Sources */,
 				3AED64631AF3BF55007A40D6 /* User.m in Sources */,
 				3AED646D1AF3DD0B007A40D6 /* TabBarController.m in Sources */,
