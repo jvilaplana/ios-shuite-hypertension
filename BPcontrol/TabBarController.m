@@ -7,6 +7,7 @@
 //
 
 #import "TabBarController.h"
+#import "Resources.h"
 
 @interface TabBarController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"jijijiji");
+
+   //[//[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+       ///                                                GRAYPROFILE, UITextAttributeTextColor,
+                                                      // nil] forState:UIControlStateHighlighted];
+    self.tabBar.selectedImageTintColor = GRAYPROFILE;
 }
 
 - (void)didReceiveMemoryWarning {

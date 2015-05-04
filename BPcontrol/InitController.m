@@ -7,6 +7,7 @@
 //
 
 #import "InitController.h"
+#import "Resources.h"
 
 @interface InitController ()
 
@@ -16,12 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    //UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
-    //do something like background color, title, etc you self
-    NSLog(@"Paso po aqui");
-    //navbar.backgroundColor = [UIColor greenColor];
-    //[self.view addSubview:navbar];
+    UIImage *img = [UIImage imageNamed:@"logo.png"];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [imgView setImage:img];
+
+    [imgView setContentMode:UIViewContentModeScaleAspectFit];
+    self.navigationItem.titleView = imgView;
+    self.navigationController.navigationBar.backgroundColor = GRAYBP;
 }
 
 - (void)didReceiveMemoryWarning {
