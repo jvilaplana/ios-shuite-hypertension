@@ -1,22 +1,25 @@
 //
-//  TabBarController.m
+//  CentersViewController.m
 //  BPcontrol
 //
-//  Created by Adrian Carrera on 1/5/15.
+//  Created by Adrian on 4/5/15.
 //  Copyright (c) 2015 Adrian Carrera. All rights reserved.
 //
 
-#import "TabBarController.h"
+#import "CentersViewController.h"
+#import "Resources.h"
 
-@interface TabBarController ()
+@interface CentersViewController ()
 
 @end
 
-@implementation TabBarController
+@implementation CentersViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"jijijiji");
+//    [[UINavigationBar appearance] setBarTintColor:GRAYBP];
+        self.navigationBar.topItem.title = @"title text";
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

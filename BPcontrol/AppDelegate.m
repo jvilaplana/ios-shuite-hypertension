@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "InitController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+
+   // [[UINavigationBar appearance] setTitleTextAttributes:@{ NSFontAttributeName : ROBOTOBOLD_FONT(14.0f),
+                                          //                 NSForegroundColorAttributeName : GRAYBP
+                                            //               }];
+
     return YES;
 }
 

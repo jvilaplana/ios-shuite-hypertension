@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    //do something like background color, title, etc you self
+    NSLog(@"Paso po aqui");
+    //navbar.backgroundColor = [UIColor greenColor];
+    //[self.view addSubview:navbar];
 }
 
 - (void)didReceiveMemoryWarning {

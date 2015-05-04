@@ -1,22 +1,23 @@
 //
-//  TabBarController.m
+//  InfoPageViewController.m
 //  BPcontrol
 //
-//  Created by Adrian Carrera on 1/5/15.
+//  Created by Adrian on 3/5/15.
 //  Copyright (c) 2015 Adrian Carrera. All rights reserved.
 //
 
-#import "TabBarController.h"
+#import "InfoPageViewController.h"
 
-@interface TabBarController ()
+@interface InfoPageViewController ()
 
 @end
 
-@implementation TabBarController
+@implementation InfoPageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"jijijiji");
+    NSLog(@"dfdsfd");
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

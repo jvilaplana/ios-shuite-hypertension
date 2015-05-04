@@ -26,8 +26,6 @@
 #define CELLHEADER RGB(234,234,234)
 #define GRAYPROFILE RGB(108,108,108)
 
-
-
 //#define STRTRAD(key, comment) NSLocalizedStringFromTable(key, [LanguageController getCurrentLanguage], comment)
 #define STRTRAD(key, comment) comment
 
@@ -48,53 +46,22 @@ NSArrayObjectMaybeNil(__ARRAYNAME__, 8),\
 NSArrayObjectMaybeNil(__ARRAYNAME__, 9),\
 nil
 
+#define FONT(fname,fsize) [UIFont fontWithName:fname size:fsize]
+
 #define FORTE              @"Forte"
 #define ROBOTOREGULAR      @"Roboto-Regular"
 #define ROBOTOBOLD         @"Robot-Bold"
 #define ROBOTOITALIC       @"Roboto-Italic"
 
-#define GourgramItemsArray @[@"chauqetillaunisex", @"cuchara", @"delantal unisex", @"gorro", @"guante"]
-
-#define kDictJsonKey @"dictJsonKey"
-#define kUpdateViewsKey @"updateViewsKey"
+#define FORTE_FONT(fsize) FONT(FORTE, fsize)
+#define ROBOTOREGULAR_FONT(fsize) FONT(ROBOTOREGULAR, fsize)
+#define ROBOTOBOLD_FONT(fsize) FONT(ROBOTOBOLD, fsize)
+#define ROBOTOITALIC_FONT(fsize) FONT(ROBOTOITALIC_FONT, fsize)
 
 #define URL_FACEBOOK     @"https://www.facebook.com/"
 #define URL_FACEBOOK_APP @"fb://profile/107718629298104"
 #define URL_TWITTER      @"https://twitter.com/"
 #define URL_INSTAGRAM    @"http://instagram.com//"
 #define URL_GOOGLEPLUS   @"https://plus.google.com/"
-
-#define kFavoritesFileName @"favorites.plist"
-
-typedef void (^CompletionBlock)(NSError *error, id object);
-
-#define NumMenuOptions 4
-typedef NS_ENUM(NSUInteger, MenuOptionType) {
-    MenuOptionWeb,
-    MenuOptionChefs,
-    MenuOptionCursos,
-    MenuOptionTrucos,
-};
-
-typedef NS_ENUM(NSUInteger, TVCollectionViewCellType) {
-    HomeTuCanal,
-    HomeCategory,
-    HomeVideo,
-};
-
-typedef NS_ENUM(NSUInteger, HomeType) {
-    HomeInitial,
-    HomeSection,
-    HomeSubSection,
-    HomeDetail,
-    HomeFavorites,
-};
-
-typedef NS_ENUM(NSUInteger, HomeTopOptionsType) {
-    HomeTopTuCanal,
-    HomeTopVideos,
-    HomeTopGourgram,
-    HomeTopEnTv,
-};
 
 #endif
