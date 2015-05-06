@@ -10,3 +10,8 @@
 "Tab2title" = "Centers";
 "Tab3title" = "Info";
 "ButtonAreaAccess" = "Patient area access";
+"EnterCodeMessage" = "If the entered number is correct , before long you will receive an SMS with the code on your device. Enter it.";
+"CodeToHomeButton" = "Register";
+"PhonebuttonAccess" = "Accept";
+"SendTlfRegister" = "Confirm the prefix of your country and enter your phone number.";
+"RegisterStep1" = "REGISTER-STEP1";

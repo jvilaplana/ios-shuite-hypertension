@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0CA6021AFAC87400309466 /* TelephoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CA6011AFAC87300309466 /* TelephoneViewController.m */; };
 		3A112C1A1ADC6EA80029167E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C191ADC6EA80029167E /* main.m */; };
 		3A112C1D1ADC6EA80029167E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C1C1ADC6EA80029167E /* AppDelegate.m */; };
 		3A112C201ADC6EA80029167E /* BPcontrol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C1E1ADC6EA80029167E /* BPcontrol.xcdatamodeld */; };
@@ -67,6 +68,8 @@
 /* Begin PBXFileReference section */
 		1E617BDFE958729EC8DE4EC9 /* libPods-BPcontrol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BPcontrol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38034E55E7B6AC7BB8A5A03F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3A0CA6001AFAC87300309466 /* TelephoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelephoneViewController.h; sourceTree = "<group>"; };
+		3A0CA6011AFAC87300309466 /* TelephoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelephoneViewController.m; sourceTree = "<group>"; };
 		3A112C141ADC6EA80029167E /* BPcontrol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BPcontrol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A112C181ADC6EA80029167E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A112C191ADC6EA80029167E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -423,6 +426,8 @@
 				3A4EDA0F1AF68FA3006C0699 /* InfoPageViewController.m */,
 				3AE671F51AF6DD11002E51A3 /* CentersViewController.h */,
 				3AE671F61AF6DD11002E51A3 /* CentersViewController.m */,
+				3A0CA6001AFAC87300309466 /* TelephoneViewController.h */,
+				3A0CA6011AFAC87300309466 /* TelephoneViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -861,6 +866,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */,
+				3A0CA6021AFAC87400309466 /* TelephoneViewController.m in Sources */,
 				3A3737D81AF67A050024801D /* InitController.m in Sources */,
 				3A4EDA101AF68FA3006C0699 /* InfoPageViewController.m in Sources */,
 				3AED64661AF3C613007A40D6 /* Message.m in Sources */,

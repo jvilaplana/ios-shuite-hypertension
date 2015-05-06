@@ -45,7 +45,7 @@
         
      myImages =[NSArray arrayWithObjects:@"arnau3.jpg",@"foto00.jpg",@"foto22.jpg",@"foto33.jpg",@"foto44.jpg",@"smaria3.jpg",nil];
         
-      updateBCK = [NSTimer scheduledTimerWithTimeInterval:(10.0) target:self selector:@selector(changeImage) userInfo:nil repeats:YES];
+    updateBCK = [NSTimer scheduledTimerWithTimeInterval:(10.0) target:self selector:@selector(changeImage) userInfo:nil repeats:YES];
         
         
     [updateBCK fire];

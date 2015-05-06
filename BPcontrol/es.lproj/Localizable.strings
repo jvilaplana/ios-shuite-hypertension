@@ -10,3 +10,8 @@
 "Tab2title" = "Centros";
 "Tab3title" = "Info";
 "ButtonAreaAccess" = "Acceso area de paciente";
+"EnterCodeMessage" = "Si el numero introducido es correcto, en poco tiempo recibirá un SMS con el código en su dispositivo. Introduzcalo";
+"CodeToHomeButton" = "Registrase";
+"PhonebuttonAccess" = "Aceptar";
+"SendTlfRegister" = "Confirme el prefijo de su país e introduzca su numero de teléfono";
+"RegisterStep1" = "REGISTRO-PASO1";
