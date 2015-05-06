@@ -9,5 +9,11 @@
 #import "ViewController.h"
 
 @interface InitController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *patientAccessButton;
+@property (weak, nonatomic) IBOutlet UIImageView *images;
+
+
+-(void)executeImageTask;
+
 
 @end

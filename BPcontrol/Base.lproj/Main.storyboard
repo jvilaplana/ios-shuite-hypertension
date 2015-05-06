@@ -48,13 +48,42 @@
                     <view key="view" contentMode="scaleToFill" id="k76-5y-LYg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksO-ea-AK3">
+                                <rect key="frame" x="163" y="438" width="274" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Lsl-ix-OQC"/>
+                                    <constraint firstAttribute="width" constant="274" id="kG2-Oo-djo"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f2l-Vd-ay9">
+                                <rect key="frame" x="163" y="140" width="274" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="hUf-vV-JZN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ksO-ea-AK3" firstAttribute="centerX" secondItem="k76-5y-LYg" secondAttribute="centerX" id="2gQ-Tt-7Xp"/>
+                            <constraint firstAttribute="centerX" secondItem="f2l-Vd-ay9" secondAttribute="centerX" id="OG7-UI-mED"/>
+                            <constraint firstItem="K93-71-CEp" firstAttribute="top" secondItem="ksO-ea-AK3" secondAttribute="bottom" constant="67" id="SMM-PD-tIL"/>
+                            <constraint firstItem="f2l-Vd-ay9" firstAttribute="trailing" secondItem="ksO-ea-AK3" secondAttribute="trailing" id="WuT-7q-XI3"/>
+                            <constraint firstItem="f2l-Vd-ay9" firstAttribute="top" secondItem="waA-ga-7Yv" secondAttribute="bottom" constant="76" id="u3e-s0-Cky"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yKE-fX-XxT"/>
+                    <connections>
+                        <outlet property="images" destination="f2l-Vd-ay9" id="Q4o-We-nIg"/>
+                        <outlet property="patientAccessButton" destination="ksO-ea-AK3" id="DtD-AL-Xak"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83Y-Ju-zvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895" y="1218"/>
+            <point key="canvasLocation" x="1825" y="1218"/>
         </scene>
         <!--InitRootController-->
         <scene sceneID="JMX-qt-6Eh">

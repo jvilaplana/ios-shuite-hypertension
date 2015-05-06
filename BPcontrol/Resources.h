@@ -25,6 +25,7 @@
 #define MENUTEXT RGB(77,94,110)
 #define CELLHEADER RGB(234,234,234)
 #define GRAYPROFILE RGB(108,108,108)
+#define ORANGEBUTTON RGB(255,108,82)
 
 //#define STRTRAD(key, comment) NSLocalizedStringFromTable(key, [LanguageController getCurrentLanguage], comment)
 #define STRTRAD(key, comment) comment

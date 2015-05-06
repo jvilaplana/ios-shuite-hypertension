@@ -12,6 +12,8 @@
 	<dict>
 		<key>D107FA6832F197DD92D6E9DEFEAB042DE1B352BD</key>
 		<string>https://github.com/jvilaplana/ios-shuite-hypertension.git</string>
+		<key>E921D0E5A777167D96CA6C39730BCBF8EEC5CA3D</key>
+		<string>https://github.com/jvilaplana/android-shuite-hypertension.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BPcontrol.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>D107FA6832F197DD92D6E9DEFEAB042DE1B352BD</key>
 		<string>..</string>
+		<key>E921D0E5A777167D96CA6C39730BCBF8EEC5CA3D</key>
+		<string>../../android-shuite-hypertension</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jvilaplana/ios-shuite-hypertension.git</string>
@@ -28,6 +32,14 @@
 	<string>D107FA6832F197DD92D6E9DEFEAB042DE1B352BD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E921D0E5A777167D96CA6C39730BCBF8EEC5CA3D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>android-shuite-hypertension</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
