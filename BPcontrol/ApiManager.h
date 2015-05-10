@@ -7,18 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking.h>
 #import "Resources.h"
 
 #define URL_BASE @"http://app2.hesoftgroup.eu"
+#define ERROR_DOMAIN @"BPcontrol"
 
 @interface ApiManager : NSObject
 
 + (id)sharedManager;
 
-//@property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
+@property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
 
-//-(void)getBackendJsonWithCompletionBlock:(CompletionBlock)completionBlock;
+-(void)initURLs;
 
-//-(void)getUrlStringToStreamFromEpisodeUrlString:(NSString*)episodeUrlString withCompletiobBlock:(CompletionBlock)completionBlock;
+-(void)customDialogConnectionError;
 
+-(void)sendTlfToSHUITE:(NSString*) telephone prefix:(NSString*)prefix withCompletionBlock:(CompletionBlock)completionBlock;
+
+-(void)sendCodeToSHUITE:(NSString *)code telephone: (NSString*)tlf prefix:(NSString*)prefix withCompletionBlock:(CompletionBlock)completionBlock;
 @end

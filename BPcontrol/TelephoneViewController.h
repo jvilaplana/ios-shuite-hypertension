@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SVProgressHUD.h>
 
-@interface TelephoneViewController : UINavigationController
+@interface TelephoneViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *enterTelepohoneDescription;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
-@property (weak, nonatomic) IBOutlet UITextField *prefix;
+@property (weak, nonatomic) IBOutlet UITextField *prefixTextField;
 @property (weak, nonatomic) IBOutlet UIButton *buttonToCode;
 
 - (IBAction)buttonToCode:(id)sender;

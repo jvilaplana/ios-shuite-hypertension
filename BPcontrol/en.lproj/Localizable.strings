@@ -9,9 +9,20 @@
 "Tab1title" = "Start";
 "Tab2title" = "Centers";
 "Tab3title" = "Info";
+
+/* Register process*/
 "ButtonAreaAccess" = "Patient area access";
 "EnterCodeMessage" = "If the entered number is correct , before long you will receive an SMS with the code on your device. Enter it.";
 "CodeToHomeButton" = "Register";
 "PhonebuttonAccess" = "Accept";
 "SendTlfRegister" = "Confirm the prefix of your country and enter your phone number.";
-"RegisterStep1" = "REGISTER-STEP1";
+"RegisterStep1" = "REGISTER - STEP 1";
+"RegisterStep2" = "REGISTER - STEP 2";
+"TelephonePlaceholder" = "Phone number";
+"NoConnection" = "No network connection";
+"ConnectionProblems" = "A error ocurred when you tried establish a connection with server";
+"OK"="Aceptar";
+"CodePlaceholder" = "Received code";
+"FailSave" = "Error";
+"FailNSuser" = "Error saving in disk";
+"ErrorRecoveringData" = "Error recovering data from disk";

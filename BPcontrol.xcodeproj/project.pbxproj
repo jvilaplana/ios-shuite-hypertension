@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2113EEC31FB8D1C220A7CBA3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA32FE7558B881AA1EACFD9E /* libPods.a */; };
 		3A0CA6021AFAC87400309466 /* TelephoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CA6011AFAC87300309466 /* TelephoneViewController.m */; };
 		3A112C1A1ADC6EA80029167E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C191ADC6EA80029167E /* main.m */; };
 		3A112C1D1ADC6EA80029167E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C1C1ADC6EA80029167E /* AppDelegate.m */; };
@@ -23,6 +24,9 @@
 		3A3737D51AF6746E0024801D /* ic_action_location_tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737D41AF6746E0024801D /* ic_action_location_tab@2x.png */; };
 		3A3737D81AF67A050024801D /* InitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3737D71AF67A050024801D /* InitController.m */; };
 		3A4EDA101AF68FA3006C0699 /* InfoPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4EDA0F1AF68FA3006C0699 /* InfoPageViewController.m */; };
+		3A75C9BE1AFFD6270012DF8E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A75C9BC1AFFD6270012DF8E /* Fabric.framework */; };
+		3A75C9BF1AFFD6270012DF8E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A75C9BD1AFFD6270012DF8E /* Crashlytics.framework */; };
+		3A96A17B1AFBBB6400FF23FC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A96A17A1AFBBB6400FF23FC /* logo.png */; };
 		3A989F931AED53EF00A4C945 /* Forte.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F8F1AED53EF00A4C945 /* Forte.ttf */; };
 		3A989F941AED53EF00A4C945 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F901AED53EF00A4C945 /* Roboto-Bold.ttf */; };
 		3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F911AED53EF00A4C945 /* Roboto-Italic.ttf */; };
@@ -35,7 +39,8 @@
 		3AC600F31AF989790045E66D /* foto44.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AC600ED1AF989790045E66D /* foto44.jpg */; };
 		3AC600F41AF989790045E66D /* smaria3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AC600EE1AF989790045E66D /* smaria3.jpg */; };
 		3AE671F71AF6DD11002E51A3 /* CentersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE671F61AF6DD11002E51A3 /* CentersViewController.m */; };
-		3AE671F91AF6E369002E51A3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE671F81AF6E369002E51A3 /* logo.png */; };
+		3AEA326C1AFFACB2005CC894 /* SendCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA326B1AFFACB2005CC894 /* SendCodeController.m */; };
+		3AEA32701AFFCF3B005CC894 /* PrincipalMenuStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEA32721AFFCF3B005CC894 /* PrincipalMenuStoryboard.storyboard */; };
 		3AED64601AF3B674007A40D6 /* Pressure.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED645F1AF3B674007A40D6 /* Pressure.m */; };
 		3AED64631AF3BF55007A40D6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED64621AF3BF55007A40D6 /* User.m */; };
 		3AED64661AF3C613007A40D6 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED64651AF3C613007A40D6 /* Message.m */; };
@@ -93,6 +98,9 @@
 		3A3737D71AF67A050024801D /* InitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitController.m; sourceTree = "<group>"; };
 		3A4EDA0E1AF68FA3006C0699 /* InfoPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPageViewController.h; sourceTree = "<group>"; };
 		3A4EDA0F1AF68FA3006C0699 /* InfoPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPageViewController.m; sourceTree = "<group>"; };
+		3A75C9BC1AFFD6270012DF8E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
+		3A75C9BD1AFFD6270012DF8E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
+		3A96A17A1AFBBB6400FF23FC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		3A989F861AED50EA00A4C945 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resources.h; sourceTree = "<group>"; };
 		3A989F8F1AED53EF00A4C945 /* Forte.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Forte.ttf; sourceTree = "<group>"; };
 		3A989F901AED53EF00A4C945 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -108,7 +116,11 @@
 		3AC600EE1AF989790045E66D /* smaria3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = smaria3.jpg; path = "../../android-shuite-hypertension/app/src/main/res/drawable-xxhdpi/smaria3.jpg"; sourceTree = "<group>"; };
 		3AE671F51AF6DD11002E51A3 /* CentersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CentersViewController.h; sourceTree = "<group>"; };
 		3AE671F61AF6DD11002E51A3 /* CentersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CentersViewController.m; sourceTree = "<group>"; };
-		3AE671F81AF6E369002E51A3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Desktop/logo.png; sourceTree = "<group>"; };
+		3AEA326A1AFFACB2005CC894 /* SendCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCodeController.h; sourceTree = "<group>"; };
+		3AEA326B1AFFACB2005CC894 /* SendCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCodeController.m; sourceTree = "<group>"; };
+		3AEA32711AFFCF3B005CC894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PrincipalMenuStoryboard.storyboard; sourceTree = "<group>"; };
+		3AEA32741AFFCF3D005CC894 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PrincipalMenuStoryboard.strings; sourceTree = "<group>"; };
+		3AEA32761AFFCF3E005CC894 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PrincipalMenuStoryboard.strings; sourceTree = "<group>"; };
 		3AED645E1AF3B674007A40D6 /* Pressure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pressure.h; sourceTree = "<group>"; };
 		3AED645F1AF3B674007A40D6 /* Pressure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pressure.m; sourceTree = "<group>"; };
 		3AED64611AF3BF55007A40D6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -282,6 +294,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2113EEC31FB8D1C220A7CBA3 /* libPods.a in Frameworks */,
+				3A75C9BF1AFFD6270012DF8E /* Crashlytics.framework in Frameworks */,
+				3A75C9BE1AFFD6270012DF8E /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +333,9 @@
 		3A112C161ADC6EA80029167E /* BPcontrol */ = {
 			isa = PBXGroup;
 			children = (
+				3A75C9BD1AFFD6270012DF8E /* Crashlytics.framework */,
+				3A75C9BC1AFFD6270012DF8E /* Fabric.framework */,
+				3AEA326F1AFFCF13005CC894 /* Storyboards */,
 				3A3737BB1AF66F490024801D /* Images */,
 				3AED64671AF3D78D007A40D6 /* Controllers */,
 				3AED645D1AF3B50F007A40D6 /* Model */,
@@ -328,7 +346,6 @@
 				3A112C1C1ADC6EA80029167E /* AppDelegate.m */,
 				3A112C211ADC6EA80029167E /* ViewController.h */,
 				3A112C221ADC6EA80029167E /* ViewController.m */,
-				3A112C241ADC6EA80029167E /* Main.storyboard */,
 				3A112C271ADC6EA80029167E /* Images.xcassets */,
 				3A112C1E1ADC6EA80029167E /* BPcontrol.xcdatamodeld */,
 				3A112C171ADC6EA80029167E /* Supporting Files */,
@@ -365,13 +382,13 @@
 		3A3737BB1AF66F490024801D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A96A17A1AFBBB6400FF23FC /* logo.png */,
 				3AC600E91AF989790045E66D /* arnau3.jpg */,
 				3AC600EA1AF989790045E66D /* foto00.jpg */,
 				3AC600EB1AF989790045E66D /* foto22.jpg */,
 				3AC600EC1AF989790045E66D /* foto33.jpg */,
 				3AC600ED1AF989790045E66D /* foto44.jpg */,
 				3AC600EE1AF989790045E66D /* smaria3.jpg */,
-				3AE671F81AF6E369002E51A3 /* logo.png */,
 				3A3737D41AF6746E0024801D /* ic_action_location_tab@2x.png */,
 				3A3737D01AF673CD0024801D /* ic_action_location_tab.png */,
 				3A3737BC1AF6719B0024801D /* ic_action_help_tab.png */,
@@ -402,6 +419,15 @@
 			name = WebService;
 			sourceTree = "<group>";
 		};
+		3AEA326F1AFFCF13005CC894 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3AEA32721AFFCF3B005CC894 /* PrincipalMenuStoryboard.storyboard */,
+				3A112C241ADC6EA80029167E /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		3AED645D1AF3B50F007A40D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +454,8 @@
 				3AE671F61AF6DD11002E51A3 /* CentersViewController.m */,
 				3A0CA6001AFAC87300309466 /* TelephoneViewController.h */,
 				3A0CA6011AFAC87300309466 /* TelephoneViewController.m */,
+				3AEA326A1AFFACB2005CC894 /* SendCodeController.h */,
+				3AEA326B1AFFACB2005CC894 /* SendCodeController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -723,6 +751,7 @@
 				3A112C111ADC6EA80029167E /* Frameworks */,
 				3A112C121ADC6EA80029167E /* Resources */,
 				478434C70CAE6AFC753482A2 /* Copy Pods Resources */,
+				3A75C9BB1AFFD4FC0012DF8E /* ShellScript */,
 			);
 			buildRules = (
 				3AED646E1AF3E3C5007A40D6 /* PBXBuildRule */,
@@ -803,7 +832,7 @@
 				3A3737D51AF6746E0024801D /* ic_action_location_tab@2x.png in Resources */,
 				3AC600F41AF989790045E66D /* smaria3.jpg in Resources */,
 				3AC600F11AF989790045E66D /* foto22.jpg in Resources */,
-				3AE671F91AF6E369002E51A3 /* logo.png in Resources */,
+				3AEA32701AFFCF3B005CC894 /* PrincipalMenuStoryboard.storyboard in Resources */,
 				3A3737C51AF6719B0024801D /* ic_action_home_tab@2x.png in Resources */,
 				3AC600EF1AF989790045E66D /* arnau3.jpg in Resources */,
 				3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */,
@@ -812,6 +841,7 @@
 				3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */,
 				3AED647C1AF3EA33007A40D6 /* Localizable.strings in Resources */,
 				3A3737C41AF6719B0024801D /* ic_action_home_tab.png in Resources */,
+				3A96A17B1AFBBB6400FF23FC /* logo.png in Resources */,
 				3A989F931AED53EF00A4C945 /* Forte.ttf in Resources */,
 				3A989F941AED53EF00A4C945 /* Roboto-Bold.ttf in Resources */,
 				3A112C281ADC6EA80029167E /* Images.xcassets in Resources */,
@@ -842,6 +872,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		3A75C9BB1AFFD4FC0012DF8E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 94b484a447ee8199355bcf042cbace2307512dcc 1abd203b78af4d095dd39fd1d561ea258a88d9a023fbce150785a476b844261f";
 		};
 		478434C70CAE6AFC753482A2 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -877,6 +920,7 @@
 				3A112C1D1ADC6EA80029167E /* AppDelegate.m in Sources */,
 				3AE671F71AF6DD11002E51A3 /* CentersViewController.m in Sources */,
 				3A112C231ADC6EA80029167E /* ViewController.m in Sources */,
+				3AEA326C1AFFACB2005CC894 /* SendCodeController.m in Sources */,
 				3A112C1A1ADC6EA80029167E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,6 +952,17 @@
 				3AED64711AF3E426007A40D6 /* en */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3AEA32721AFFCF3B005CC894 /* PrincipalMenuStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AEA32711AFFCF3B005CC894 /* Base */,
+				3AEA32741AFFCF3D005CC894 /* en */,
+				3AEA32761AFFCF3E005CC894 /* es */,
+			);
+			name = PrincipalMenuStoryboard.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3AED647E1AF3EA33007A40D6 /* Localizable.strings */ = {
@@ -1006,6 +1061,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BPcontrol/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1020,6 +1079,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BPcontrol/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

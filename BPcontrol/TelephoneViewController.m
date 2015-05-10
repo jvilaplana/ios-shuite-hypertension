@@ -7,6 +7,7 @@
 //
 
 #import "TelephoneViewController.h"
+#import "ApiManager.h"
 #import "Resources.h"
 
 @interface TelephoneViewController ()
@@ -23,6 +24,13 @@
     [self.buttonToCode setTintColor:[UIColor whiteColor]];
     [self.buttonToCode setBackgroundColor:ORANGEBUTTON];
     [self.buttonToCode setTitle:NSLocalizedString(@"PhonebuttonAccess", nil) forState:UIControlStateNormal];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
+    self.navigationController.navigationBar.translucent = NO;
+     self.navigationController.navigationBar.tintColor = MENUTEXT;
+    [self.phoneTextField setPlaceholder:NSLocalizedString(@"TelephonePlaceholder",nil)];
+    [self.tabBarController.tabBar setHidden:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,5 +49,45 @@
 */
 
 - (IBAction)buttonToCode:(id)sender {
+    
+    [SVProgressHUD show];
+    
+    NSString *telephone = self.phoneTextField.text;
+    NSString *prefix = self.prefixTextField.text;
+    [self saveValues:telephone And:prefix];
+    [[ApiManager sharedManager] sendTlfToSHUITE:telephone prefix:prefix withCompletionBlock:^(NSError *error, id object) {
+        
+        [SVProgressHUD dismiss];
+        
+        if (error && ![error.domain containsString:@"serialization"]) {
+            [[ApiManager sharedManager] customDialogConnectionError];
+
+        }
+    }];
 }
+
+-(void)saveValues:(NSString*)phone And:(NSString*) prefix {
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    
+    [preferences setObject:phone forKey:TLFNSUSER];
+    [preferences setObject:prefix forKey:PREFIXSAVE];
+
+    const BOOL didSave = [preferences synchronize];
+    
+    if (!didSave)
+    {
+        [self showFailAlert];
+    }
+}
+
+-(void) showFailAlert{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"FailSave",nil)
+                                                    message:NSLocalizedString(@"FailNSuser",nil)
+                                                   delegate:nil
+                                          cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                          otherButtonTitles:nil];
+    [alert show];
+
+}
+
 @end

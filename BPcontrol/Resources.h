@@ -47,6 +47,8 @@ NSArrayObjectMaybeNil(__ARRAYNAME__, 8),\
 NSArrayObjectMaybeNil(__ARRAYNAME__, 9),\
 nil
 
+typedef void (^CompletionBlock)(NSError *error, id object);
+
 #define FONT(fname,fsize) [UIFont fontWithName:fname size:fsize]
 
 #define FORTE              @"Forte"
@@ -64,5 +66,9 @@ nil
 #define URL_TWITTER      @"https://twitter.com/"
 #define URL_INSTAGRAM    @"http://instagram.com//"
 #define URL_GOOGLEPLUS   @"https://plus.google.com/"
+
+#define TLFNSUSER @"telephone"
+#define PREFIXSAVE @"prefix"
+#define USERUUID @"useruuid"
 
 #endif

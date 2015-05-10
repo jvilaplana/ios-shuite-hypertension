@@ -14,4 +14,10 @@
 "CodeToHomeButton" = "Registrase";
 "PhonebuttonAccess" = "Aceptar";
 "SendTlfRegister" = "Confirme el prefijo de su país e introduzca su numero de teléfono";
-"RegisterStep1" = "REGISTRO-PASO1";
+"RegisterStep1" = "REGISTRO - PASO 1";
+"TelephonePlaceholder" = "Numero de teléfono";
+"NoConnection" = "Error de conexión";
+"ConnectionProblems" = "Ha ocurrido un problema intentando establecer conexión con el servidor";
+"OK"="Aceptar";
+"FailSave" = "Error";
+"FailNSuser" = "Error guardando datos en disco";

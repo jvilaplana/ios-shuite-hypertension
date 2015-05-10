@@ -7,11 +7,17 @@
 //
 
 #import "ApiManager.h"
-#import <AFNetworking.h>
 
 #pragma mark Singleton Methods
 
-@implementation ApiManager
+#define SEND_TLF_URL @"/hypertensionPatient/restValidateMobile/"
+#define SEND_CODE_URL @"/hypertensionPatient/restValidateCode/"
+
+@implementation ApiManager{
+    
+    NSString *sendTlfNumber,*sendCodeNumber;
+    UIAlertView *alert;
+}
 
 + (id)sharedManager {
     static ApiManager *sharedMyManager = nil;
@@ -25,9 +31,70 @@
 - (id)init {
     if (self = [super init]) {
         
-        //_manager = [[AFHTTPRequestOperationManager alloc] init];
+        [self initURLs];
+        _manager = [[AFHTTPRequestOperationManager alloc] init];
     }
     return self;
 }
+
+-(void)initURLs{
+    sendTlfNumber =  [NSString stringWithFormat:@"%@%@",URL_BASE,SEND_TLF_URL];
+    sendCodeNumber = [NSString stringWithFormat:@"%@%@",URL_BASE,SEND_CODE_URL];
+}
+
+#pragma mark WebService calls
+
+-(void)sendTlfToSHUITE:(NSString *)telephone prefix:(NSString *)prefix withCompletionBlock:(CompletionBlock)completionBlock{
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@%@",sendTlfNumber,prefix,telephone];
+    [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        if ([[responseObject valueForKeyPath:@"status.cod"] isEqualToString:@"200"]) {
+            completionBlock(nil, [responseObject valueForKey:@"content"]);
+        }else{
+            completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:[[responseObject valueForKeyPath:@"status.cod"] integerValue] userInfo:nil], nil);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        completionBlock(error, nil);
+    }];
+
+}
+
+-(void)sendCodeToSHUITE:(NSString *)code telephone: (NSString*)tlf prefix:(NSString*)prefix withCompletionBlock:(CompletionBlock)completionBlock{
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@%@?code=%@",sendCodeNumber,prefix,tlf,code];
+    [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        if ([[responseObject valueForKeyPath:@"status.cod"] isEqualToString:@"200"]) {
+            completionBlock(nil, responseObject);
+        }else{
+            completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:[[responseObject valueForKeyPath:@"status.cod"] integerValue] userInfo:nil], nil);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        completionBlock(error, nil);
+    }];
+
+}
+
+-(void)customDialogConnectionError{
+   
+    if(alert == nil){
+        alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"NoConnection",nil)
+                                                        message:NSLocalizedString(@"ConnectionProblems",nil)
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                 otherButtonTitles:nil];
+
+    }
+    
+    [alert show];
+   }
+
+
+
 
 @end
