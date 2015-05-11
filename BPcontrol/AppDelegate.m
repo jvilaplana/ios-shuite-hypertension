@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "InitController.h"
 #import <Fabric/Fabric.h>
+#import "SWRevealViewController.h"
 #import <Crashlytics/Crashlytics.h>
 
 
@@ -22,7 +23,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    [Fabric with:@[CrashlyticsKit]];
+   [Fabric with:@[CrashlyticsKit]];
+    
+    [self loadPrincipalMenuStoryBoard];
 
     return YES;
 }
@@ -133,15 +136,16 @@
 #pragma mark - Load Principal Menu Storyboard
 -(void)loadPrincipalMenuStoryBoard{
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PrincipalMenuStoryboard" bundle:[NSBundle mainBundle]];
-    UIViewController *vc =[storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-    
-    if (!self.window){
+    SWRevealViewController *revealController =[storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+    UINavigationController *navigationController = (UINavigationController *)revealController.frontViewController;
+    UIViewController *homeviewcontroller = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    /*if (!self.window){
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    }else{
-    
     }
-    self.window.rootViewController = vc;
-    [self.window makeKeyAndVisible];
+    
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];*/
+    [navigationController pushViewController:homeviewcontroller animated:YES];
 }
 
 
