@@ -10,10 +10,12 @@
 #import "Resources.h"
 #import "ApiManager.h"
 #import <SVProgressHUD.h>
+#import "AppDelegate.h"
 
 @interface SendCodeController (){
 
     NSString* tlf,*prefix;
+    BOOL shouldSegue;
 }
 
 @end
@@ -33,6 +35,7 @@
     self.navigationController.navigationBar.tintColor = MENUTEXT;
     [self.codeTextField setPlaceholder:NSLocalizedString(@"CodePlaceholder",nil)];
     [self.tabBarController.tabBar setHidden:YES];
+    shouldSegue = NO;
 
 }
 
@@ -41,36 +44,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)sendCodeToSHUITE:(id)sender {
-    
-    [SVProgressHUD show];
-    
-    NSString *code = self.codeTextField.text;
-    [self readTlfAndPrefix];
-
-    [[ApiManager sharedManager] sendCodeToSHUITE:code telephone:tlf prefix:prefix withCompletionBlock:^(NSError *error, id object) {
-        
-        [SVProgressHUD dismiss];
-        
-        if (error!=nil && ![error.domain containsString:@"serialization"]) {
-            [[ApiManager sharedManager] customDialogConnectionError];
-        }else{
-            NSString *uuid = [object valueForKey:@"uuid"];
-            [self saveUuid:uuid];
-        }
-    }];
-
-}
 -(void) readTlfAndPrefix{
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     
@@ -120,4 +93,63 @@
                                           otherButtonTitles:nil];
     [alert show];
 }
+
+-(BOOL) checkIfTextFieldOK{
+    
+    if (self.codeTextField.text == nil ||
+        [self.codeTextField.text isEqualToString:@""] ||
+        [self.codeTextField.text isEqualToString:@" "] ) {
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
+-(void)showTextFieldEmptyDialog{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"FailSave",nil)
+                                                    message:NSLocalizedString(@"TextFieldEmptyCode",nil)
+                                                   delegate:nil
+                                          cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                          otherButtonTitles:nil];
+    
+    [alert show];
+}
+
+#pragma mark - Storyboard
+-(void) loadPrincipalMenuStoryBoard{
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate loadPrincipalMenuStoryBoard];
+}
+
+#pragma mark - Action
+- (IBAction)sendCodeToSHUITE:(id)sender {
+    
+    if ([self checkIfTextFieldOK]) {
+        
+        [SVProgressHUD show];
+        
+        NSString *code = self.codeTextField.text;
+        [self readTlfAndPrefix];
+        
+        [[ApiManager sharedManager] sendCodeToSHUITE:code telephone:tlf prefix:prefix withCompletionBlock:^(NSError *error, id object) {
+            
+            [SVProgressHUD dismiss];
+            
+            if (error!=nil && ![error.domain containsString:@"serialization"]) {
+                [[ApiManager sharedManager] customDialogConnectionError];
+            }else{
+                shouldSegue = YES;
+                NSString *uuid = [object valueForKey:@"uuid"];
+                [self saveUuid:uuid];
+                [self loadPrincipalMenuStoryBoard];
+            }
+        }];
+    }else{
+        [self showTextFieldEmptyDialog];
+    }
+    
+}
+
+
+
 @end

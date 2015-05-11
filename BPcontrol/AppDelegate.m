@@ -130,5 +130,19 @@
         }
     }
 }
+#pragma mark - Load Principal Menu Storyboard
+-(void)loadPrincipalMenuStoryBoard{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PrincipalMenuStoryboard" bundle:[NSBundle mainBundle]];
+    UIViewController *vc =[storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    
+    if (!self.window){
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    }else{
+    
+    }
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+}
+
 
 @end

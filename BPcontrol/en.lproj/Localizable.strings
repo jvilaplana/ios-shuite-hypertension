@@ -26,3 +26,5 @@
 "FailSave" = "Error";
 "FailNSuser" = "Error saving in disk";
 "ErrorRecoveringData" = "Error recovering data from disk";
+"TextFieldEmptyTlf" = "The phone number can't be empty";
+"TextFieldEmptyCode" = "The code field can't be empty";

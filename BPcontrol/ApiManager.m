@@ -67,7 +67,7 @@
     NSString *url = [NSString stringWithFormat:@"%@%@%@?code=%@",sendCodeNumber,prefix,tlf,code];
     [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        if ([[responseObject valueForKeyPath:@"status.cod"] isEqualToString:@"200"]) {
+        if ([responseObject objectForKey:@"uuid"]!=nil) {
             completionBlock(nil, responseObject);
         }else{
             completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:[[responseObject valueForKeyPath:@"status.cod"] integerValue] userInfo:nil], nil);

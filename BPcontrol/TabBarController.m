@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        int *x = NULL; *x = 42;
 
    //[//[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
        ///                                                GRAYPROFILE, UITextAttributeTextColor,
