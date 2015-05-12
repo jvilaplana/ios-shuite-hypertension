@@ -1,0 +1,20 @@
+/* Class = "IBUILabel"; text = "Map"; ObjectID = "0nO-07-1w5"; */
+"0nO-07-1w5.text" = "Map";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "6vN-EI-KRj"; */
+"6vN-EI-KRj.text" = "Label";
+
+/* Class = "IBUIViewController"; title = "HomeViewController"; ObjectID = "EkO-49-0y8"; */
+"EkO-49-0y8.title" = "HomeViewController";
+
+/* Class = "IBUILabel"; text = "Red"; ObjectID = "F5x-X2-2Qb"; */
+"F5x-X2-2Qb.text" = "Red";
+
+/* Class = "IBUINavigationItem"; title = "Color"; ObjectID = "KLF-wr-R6E"; */
+"KLF-wr-R6E.title" = "Color";
+
+/* Class = "IBUILabel"; text = "Blue"; ObjectID = "f0i-MZ-Bgg"; */
+"f0i-MZ-Bgg.text" = "Blue";
+
+/* Class = "IBUINavigationItem"; title = "Map"; ObjectID = "ffO-an-83h"; */
+"ffO-an-83h.title" = "Map";
