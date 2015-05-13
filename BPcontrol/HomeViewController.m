@@ -8,6 +8,8 @@
 
 #import "HomeViewController.h"
 #import "SWRevealViewController.h"
+#import "ApiManager.h"
+#import "User.h"
 
 
 @interface HomeViewController ()
@@ -20,6 +22,7 @@
 {
     [super viewDidLoad];
     [self customSetup];
+    [self getUserInfo];
 }
 
 
@@ -85,4 +88,13 @@
 }
 */
 
+-(void) getUserInfo{
+    NSString *uuid = [self recoveryUserUUID];
+    [[ApiManager sharedManager] getUserInfo
+}
+     
+-(NSString*)recoveryUserUUID{
+    NSUserDefaults *preferences = [NSUserDefaults de]
+
+}
 @end

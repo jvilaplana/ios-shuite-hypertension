@@ -26,4 +26,5 @@
 -(void)sendTlfToSHUITE:(NSString*) telephone prefix:(NSString*)prefix withCompletionBlock:(CompletionBlock)completionBlock;
 
 -(void)sendCodeToSHUITE:(NSString *)code telephone: (NSString*)tlf prefix:(NSString*)prefix withCompletionBlock:(CompletionBlock)completionBlock;
+-(void) getUserInfo:(NSString*)UUID withCompletionBlock:(CompletionBlock) completionBlock;
 @end

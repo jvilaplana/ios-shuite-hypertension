@@ -10,6 +10,7 @@
 #import "InitController.h"
 #import <Fabric/Fabric.h>
 #import "SWRevealViewController.h"
+#import "TabBarController.h"
 #import <Crashlytics/Crashlytics.h>
 
 
@@ -24,9 +25,14 @@
     // Override point for customization after application launch.
 
    [Fabric with:@[CrashlyticsKit]];
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     
-    [self loadPrincipalMenuStoryBoard];
-
+    if ([preferences objectForKey:USERUUID]!=nil){
+        
+        [self loadPrincipalMenuStoryBoard];
+    }else{
+        [self loadRegisterStoryBoard];
+    }
     return YES;
 }
 
@@ -137,15 +143,14 @@
 -(void)loadPrincipalMenuStoryBoard{
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PrincipalMenuStoryboard" bundle:[NSBundle mainBundle]];
     SWRevealViewController *revealController =[storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
-    UINavigationController *navigationController = (UINavigationController *)revealController.frontViewController;
-    UIViewController *homeviewcontroller = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-    /*if (!self.window){
-        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    }
-    
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];*/
-    [navigationController pushViewController:homeviewcontroller animated:YES];
+    [[UIApplication sharedApplication].keyWindow setRootViewController:revealController];
+    [self.window setRootViewController:revealController];
+}
+
+-(void)loadRegisterStoryBoard{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    TabBarController *controller =[storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+    [self.window setRootViewController:controller];
 }
 
 

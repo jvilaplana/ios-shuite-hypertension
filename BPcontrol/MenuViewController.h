@@ -1,9 +1,9 @@
 //
 //  MenuViewController.h
-//  RevealControllerStoryboardExample
+//  BPcontrol
 //
-//  Created by Nick Hodapp on 1/9/13.
-//  Copyright (c) 2013 CoDeveloper. All rights reserved.
+//  Created by Adrian on 11/5/15.
+//  Copyright (c) 2015 Adrian Carrera. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

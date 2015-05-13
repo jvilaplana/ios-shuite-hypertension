@@ -12,10 +12,11 @@
 
 #define SEND_TLF_URL @"/hypertensionPatient/restValidateMobile/"
 #define SEND_CODE_URL @"/hypertensionPatient/restValidateCode/"
+#define GET_USER_INFO @"hypertensionPatient/restShow/"
 
 @implementation ApiManager{
     
-    NSString *sendTlfNumber,*sendCodeNumber;
+    NSString *sendTlfNumber,*sendCodeNumber,*getUserInfo;
     UIAlertView *alert;
 }
 
@@ -40,6 +41,7 @@
 -(void)initURLs{
     sendTlfNumber =  [NSString stringWithFormat:@"%@%@",URL_BASE,SEND_TLF_URL];
     sendCodeNumber = [NSString stringWithFormat:@"%@%@",URL_BASE,SEND_CODE_URL];
+    getUserInfo = [NSString stringWithFormat:@"%@%@",URL_BASE,GET_USER_INFO];
 }
 
 #pragma mark WebService calls
@@ -78,6 +80,26 @@
         completionBlock(error, nil);
     }];
 
+}
+
+-(void)getUserInfo:(NSString *)UUID withCompletionBlock:(CompletionBlock)completionBlock{
+    
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@",getUserInfo,UUID];
+    [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        if ([responseObject objectForKey:@"patient"]!=nil) {
+            completionBlock(nil, responseObject);
+        }else{
+            completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:[[responseObject valueForKeyPath:@"status.cod"] integerValue] userInfo:nil], nil);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        completionBlock(error, nil);
+    }];
+
+    
 }
 
 -(void)customDialogConnectionError{

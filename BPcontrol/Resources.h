@@ -33,6 +33,8 @@
 // Return nil when __INDEX__ is beyond the bounds of the array
 #define NSArrayObjectMaybeNil(__ARRAY__, __INDEX__) ((__INDEX__ >= [__ARRAY__ count]) ? nil : [__ARRAY__ objectAtIndex:__INDEX__])
 
+#define pragma
+
 // Manually expand an array into an argument list
 #define NSArrayToVariableArgumentsList(__ARRAYNAME__)\
 NSArrayObjectMaybeNil(__ARRAYNAME__, 0),\
@@ -66,6 +68,28 @@ typedef void (^CompletionBlock)(NSError *error, id object);
 #define URL_TWITTER      @"https://twitter.com/"
 #define URL_INSTAGRAM    @"http://instagram.com//"
 #define URL_GOOGLEPLUS   @"https://plus.google.com/"
+
+#define NumMenuOptions 18
+#define Profile @"profile"
+#define Init @"init"
+#define BloodPressures @"pressures"
+#define Evolutiont @"evolution"
+#define PatientHistory @"patienthistory"
+#define Messages @"messages"
+#define Videos @"videos"
+#define HealthCenters @"healthcenters"
+#define Contact @"contact"
+#define Help @"help"
+#define Facebook @"facebook"
+#define Twitter @"twitter"
+#define GooglPlus @"googleplus"
+#define Attributions @"attributions"
+#define Logo @"logo"
+#define ProfileHeader @"profileheader"
+#define Sections @"sections"
+#define Social  @"social"
+#define Others  @"others"
+
 
 #define TLFNSUSER @"telephone"
 #define PREFIXSAVE @"prefix"

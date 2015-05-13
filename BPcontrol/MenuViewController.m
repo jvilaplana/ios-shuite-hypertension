@@ -1,13 +1,13 @@
 //
 //  MenuViewController.m
-//  RevealControllerStoryboardExample
+//  BPcontrol
 //
-//  Created by Nick Hodapp on 1/9/13.
-//  Copyright (c) 2013 CoDeveloper. All rights reserved.
+//  Created by Adrian on 11/5/15.
+//  Copyright (c) 2015 Adrian Carrera. All rights reserved.
 //
 
 #import "MenuViewController.h"
-#import "HomeViewController.h"
+#import "Resources.h"
 
 @implementation SWUITableViewCell
 @end
@@ -21,13 +21,13 @@
     if ( [sender isKindOfClass:[UITableViewCell class]] )
     {
         //UILabel* c = [(SWUITableViewCell *)sender label];
-        UINavigationController *navController = segue.destinationViewController;
+        /*UINavigationController *navController = segue.destinationViewController;
         HomeViewController* cvc = [navController childViewControllers].firstObject;
         if ( [cvc isKindOfClass:[HomeViewController class]] )
         {
             //cvc.color = c.textColor;
             //cvc.text = c.text;
-        }
+        }*/
     }
 }
 
@@ -41,31 +41,87 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return NumMenuOptions;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell;
 
     switch ( indexPath.row )
     {
+            
         case 0:
-            CellIdentifier = @"map";
+            CellIdentifier = Logo;
+            break;
+        case 1:
+            CellIdentifier = ProfileHeader;
+            break;
+        case 2:
+            CellIdentifier = Profile;
             break;
             
-        case 1:
-            CellIdentifier = @"blue";
+        case 3:
+            CellIdentifier = Sections;
+            break;
+            
+        case 4:
+            CellIdentifier = Init;
+            break;
+            
+        case 5:
+            CellIdentifier = BloodPressures;
             break;
 
-        case 2:
-            CellIdentifier = @"red";
+        case 6:
+            CellIdentifier = Evolutiont;
             break;
+            
+        case 7:
+            CellIdentifier = PatientHistory;
+            break;
+            
+        case 8:
+            CellIdentifier = Messages;
+            break;
+            
+        case 9:
+            CellIdentifier = Videos;
+            break;
+            
+        case 10:
+            CellIdentifier = HealthCenters;
+            break;
+            
+        case 11:
+            CellIdentifier =Contact;
+            break;
+        case 12:
+            CellIdentifier =Social;
+            break;
+        case 13:
+            CellIdentifier =Facebook;
+            break;
+        case 14:
+            CellIdentifier = Twitter;
+            break;
+        case 15:
+            CellIdentifier = GooglPlus;
+            break;
+        case 16:
+            CellIdentifier = Others;
+            break;
+        case 17:
+            CellIdentifier = Attributions;
+            break;
+            
+            
     }
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+
  
-    return cell;
+    return [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
 }
 
 #pragma mark state preservation / restoration
