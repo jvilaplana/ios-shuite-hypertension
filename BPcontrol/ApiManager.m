@@ -7,12 +7,13 @@
 //
 
 #import "ApiManager.h"
+#import "User.h"
 
 #pragma mark Singleton Methods
 
 #define SEND_TLF_URL @"/hypertensionPatient/restValidateMobile/"
 #define SEND_CODE_URL @"/hypertensionPatient/restValidateCode/"
-#define GET_USER_INFO @"hypertensionPatient/restShow/"
+#define GET_USER_INFO @"/hypertensionPatient/restShow/"
 
 @implementation ApiManager{
     
@@ -82,14 +83,13 @@
 
 }
 
--(void)getUserInfo:(NSString *)UUID withCompletionBlock:(CompletionBlock)completionBlock{
-    
+-(void)getUserInfo:(NSString *)UUID withCompletionBlock:(CompletionBlock)completionBlock
     
     NSString *url = [NSString stringWithFormat:@"%@%@",getUserInfo,UUID];
     [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         if ([responseObject objectForKey:@"patient"]!=nil) {
-            completionBlock(nil, responseObject);
+                       completionBlock(nil, responseObject);
         }else{
             completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:[[responseObject valueForKeyPath:@"status.cod"] integerValue] userInfo:nil], nil);
         }

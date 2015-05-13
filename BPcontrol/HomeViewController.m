@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "SWRevealViewController.h"
 #import "ApiManager.h"
+#import "Resources.h"
+#import <SVProgressHUD.h>
 #import "User.h"
 
 
@@ -90,11 +92,22 @@
 
 -(void) getUserInfo{
     NSString *uuid = [self recoveryUserUUID];
-    [[ApiManager sharedManager] getUserInfo
+    [SVProgressHUD show];
+    [[ApiManager sharedManager] getUserInfo:uuid withCompletionBlock:^(NSError *error, id object) {
+        [SVProgressHUD dismiss];
+
+    
+    }];
 }
      
 -(NSString*)recoveryUserUUID{
-    NSUserDefaults *preferences = [NSUserDefaults de]
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    if ([preferences objectForKey:USERUUID]) {
+        return [preferences objectForKey:USERUUID];
+    }
+    return @"";
 
 }
+
+-(void)parseUserJSON1
 @end
