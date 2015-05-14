@@ -12,8 +12,16 @@
 @implementation SWUITableViewCell
 @end
 
-@implementation MenuViewController
+@implementation MenuViewController{
+    
+    CGFloat screenHeight;
+}
 
+-(void)awakeFromNib{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    screenHeight = screenRect.size.height;
+    NSLog(@"Height %f",screenHeight);
+}
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
@@ -44,10 +52,16 @@
     return NumMenuOptions;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{   if(indexPath.row==2){
+    return (100 * screenHeight)/667;
+    }
+    return (44*screenHeight)/667;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell;
 
     switch ( indexPath.row )
     {
@@ -60,6 +74,8 @@
             break;
         case 2:
             CellIdentifier = Profile;
+            _userProfileImage.layer.cornerRadius=15;
+            _userProfileImage.clipsToBounds = YES;
             break;
             
         case 3:
