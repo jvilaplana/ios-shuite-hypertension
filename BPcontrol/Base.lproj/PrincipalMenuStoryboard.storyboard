@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Orh-ga-qQz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Orh-ga-qQz">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -134,33 +134,32 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.87024468018045442" green="0.86904540914885475" blue="0.88999368686868685" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profile" rowHeight="103" id="6qc-jJ-Lyt">
+                            <tableViewCell contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="profile" rowHeight="106" id="6qc-jJ-Lyt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6qc-jJ-Lyt" id="yha-fX-6xq">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dVD-tg-9F4">
-                                            <rect key="frame" x="25" y="14" width="90" height="74"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_action_dialog.png" translatesAutoresizingMaskIntoConstraints="NO" id="dVD-tg-9F4">
+                                            <rect key="frame" x="18" y="14" width="90" height="77"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="7LC-4M-lHu"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adrián Carrera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdA-7V-rIg">
-                                            <rect key="frame" x="131" y="27" width="141" height="47"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="141" id="Zhl-Ko-MSe"/>
-                                            </constraints>
+                                            <rect key="frame" x="124" y="21" width="112" height="63"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="tdA-7V-rIg" firstAttribute="leading" secondItem="yha-fX-6xq" secondAttribute="leading" constant="131" id="8Z7-j8-9aV"/>
-                                        <constraint firstItem="tdA-7V-rIg" firstAttribute="leading" secondItem="dVD-tg-9F4" secondAttribute="trailing" constant="16" id="E3V-w3-Gcr"/>
-                                        <constraint firstItem="dVD-tg-9F4" firstAttribute="leading" secondItem="yha-fX-6xq" secondAttribute="leadingMargin" constant="17" id="EYN-hJ-rdt"/>
-                                        <constraint firstItem="tdA-7V-rIg" firstAttribute="top" secondItem="yha-fX-6xq" secondAttribute="topMargin" constant="19" id="EfZ-sI-CKi"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="tdA-7V-rIg" secondAttribute="bottom" constant="20" id="NAI-NR-cuS"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="dVD-tg-9F4" secondAttribute="bottom" constant="6" id="eNq-KS-znK"/>
-                                        <constraint firstItem="dVD-tg-9F4" firstAttribute="top" secondItem="yha-fX-6xq" secondAttribute="topMargin" constant="6" id="hQy-PN-dF5"/>
+                                        <constraint firstItem="dVD-tg-9F4" firstAttribute="leading" secondItem="yha-fX-6xq" secondAttribute="leadingMargin" constant="10" id="4yy-BZ-nM8"/>
+                                        <constraint firstItem="tdA-7V-rIg" firstAttribute="top" secondItem="yha-fX-6xq" secondAttribute="topMargin" constant="13" id="SFp-h6-ReW"/>
+                                        <constraint firstItem="dVD-tg-9F4" firstAttribute="centerY" secondItem="tdA-7V-rIg" secondAttribute="centerY" id="TB1-6x-zGB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tdA-7V-rIg" secondAttribute="bottom" constant="13" id="V8l-Sk-t85"/>
+                                        <constraint firstItem="dVD-tg-9F4" firstAttribute="top" secondItem="yha-fX-6xq" secondAttribute="topMargin" constant="6" id="ViI-8f-ENm"/>
+                                        <constraint firstItem="tdA-7V-rIg" firstAttribute="leading" secondItem="dVD-tg-9F4" secondAttribute="trailing" constant="16" id="giD-dV-PWg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>

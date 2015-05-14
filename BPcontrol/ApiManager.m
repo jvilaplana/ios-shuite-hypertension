@@ -83,13 +83,15 @@
 
 }
 
--(void)getUserInfo:(NSString *)UUID withCompletionBlock:(CompletionBlock)completionBlock
+-(void)getUserInfo:(NSString *)UUID withCompletionBlock:(CompletionBlock)completionBlock{
     
     NSString *url = [NSString stringWithFormat:@"%@%@",getUserInfo,UUID];
     [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         if ([responseObject objectForKey:@"patient"]!=nil) {
-                       completionBlock(nil, responseObject);
+            [[User sharedManager] setDianaDiastolicIndex:(int)[responseObject objectForKey:@"dbp"]];
+            [[User sharedManager] setDianaSystolicIndex:(int)[responseObject objectForKey:@"sbp"]];
+            completionBlock(nil, responseObject);
         }else{
             completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:[[responseObject valueForKeyPath:@"status.cod"] integerValue] userInfo:nil], nil);
         }

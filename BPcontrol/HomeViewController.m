@@ -91,15 +91,25 @@
 */
 
 -(void) getUserInfo{
-    NSString *uuid = [self recoveryUserUUID];
+    
+    NSString* uuid = [self recoveryUserUUID];
     [SVProgressHUD show];
     [[ApiManager sharedManager] getUserInfo:uuid withCompletionBlock:^(NSError *error, id object) {
+        
         [SVProgressHUD dismiss];
-
-    
+        
+        if (error && ![error.domain containsString:@"serialization"]) {
+            
+            [[ApiManager sharedManager] customDialogConnectionError];
+            
+        }else{
+            [self parseUserJSON:object];
+        }
+        
     }];
-}
      
+}
+
 -(NSString*)recoveryUserUUID{
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     if ([preferences objectForKey:USERUUID]) {
@@ -109,5 +119,21 @@
 
 }
 
--(void)parseUserJSON1
+-(void)parseUserJSON:(id)jsonresponse{
+    NSDictionary* patient =[jsonresponse objectForKey:@"patient"];
+    [[User sharedManager] setCreationDate:[self splitSHUITEDateType:@"dateCreated"]];
+    [[User sharedManager] setMobileNumber:[patient objectForKey:@"mobileNumber"]];
+    [[User sharedManager] setSecondSurname:[patient objectForKey:@"secondSurname"]];
+    [[User sharedManager] setBirthDate:[self splitSHUITEDateType:@"birthDate"]];
+    [[User sharedManager] setIdentityCard:[patient objectForKey:@"identityCard"]];
+    [[User sharedManager] setEmail:[patient objectForKey:@"email"]];
+    [[User sharedManager] setName:[patient objectForKey:@"name"]];
+    [[User sharedManager] setTown:[patient objectForKey:@"town"]];
+    [[User sharedManager] setFirstSurname:[patient objectForKey:@"firstSurname"]];
+}
+
+-(NSString*) splitSHUITEDateType:(NSString*)date{
+    NSString *tmp =  [date stringByReplacingOccurrencesOfString:@"T" withString:@" "];
+    return [tmp stringByReplacingOccurrencesOfString:@"T" withString:@""];
+}
 @end

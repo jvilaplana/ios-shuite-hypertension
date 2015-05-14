@@ -10,6 +10,8 @@
 
 @implementation User
 
+@synthesize dianaSystolicIndex;
+@synthesize dianaDiastolicIndex;
 @synthesize UUID;
 @synthesize name;
 @synthesize firstSurname;
@@ -25,7 +27,6 @@
 @synthesize mobileNumberPrefix;
 @synthesize town;
 @synthesize isInSession;
-
 
 +(id)sharedManager{
     static User *sharedUser=nil;

@@ -8,11 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject{
-    
-    int DIANA_SYSTOLIC_INDEX;
-    int DIANA_DIASTOLIC_INDEX;
-}
+@interface User : NSObject
+
 
 @property NSString* UUID;
 @property NSString* name;
@@ -29,6 +26,8 @@
 @property NSString* mobileNumber;
 @property NSString* mobileNumberPrefix;
 @property bool isInSession;
+@property int dianaSystolicIndex;
+@property int dianaDiastolicIndex;
 
 +(id) sharedManager;
 
