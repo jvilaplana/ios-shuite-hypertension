@@ -7,19 +7,27 @@
 //
 
 #import "MenuViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #import "Resources.h"
+#import "User.h"
 
 @implementation SWUITableViewCell
 @end
+@implementation ProfileTableViewCell
+@end
+
 
 @implementation MenuViewController{
     
     CGFloat screenHeight;
+    NSData * imageData;
+  
 }
 
 -(void)awakeFromNib{
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     screenHeight = screenRect.size.height;
+    imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: @"http://app2.hesoftgroup.eu/hypertensionPatient/restDownloadProfileImage/a5683026-0f3b-4ea5-a129-0aec2c36c1eb"]];
     NSLog(@"Height %f",screenHeight);
 }
 
@@ -62,7 +70,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-
+    UITableViewCell *cell = nil;
     switch ( indexPath.row )
     {
             
@@ -74,10 +82,11 @@
             break;
         case 2:
             CellIdentifier = Profile;
-            _userProfileImage.layer.cornerRadius=15;
-            _userProfileImage.clipsToBounds = YES;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((ProfileTableViewCell*)cell).userImage.image = [UIImage imageWithData: imageData];
+            ((ProfileTableViewCell*)cell).userImage.clipsToBounds = YES;
+            ((ProfileTableViewCell*)cell).userImage.layer.cornerRadius =((ProfileTableViewCell*)cell).userImage.frame.size.height/2 -1;
             break;
-            
         case 3:
             CellIdentifier = Sections;
             break;
@@ -135,9 +144,13 @@
             
     }
 
-
+    if (cell == nil) {
+        return [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+    }else{
+        return cell;
+    }
  
-    return [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+    
 }
 
 #pragma mark state preservation / restoration

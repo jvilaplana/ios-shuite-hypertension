@@ -95,15 +95,25 @@
     NSString* uuid = [self recoveryUserUUID];
     [SVProgressHUD show];
     [[ApiManager sharedManager] getUserInfo:uuid withCompletionBlock:^(NSError *error, id object) {
-        
         [SVProgressHUD dismiss];
-        
         if (error && ![error.domain containsString:@"serialization"]) {
             
             [[ApiManager sharedManager] customDialogConnectionError];
             
         }else{
             [self parseUserJSON:object];
+           /* [[ApiManager sharedManager] getUserInfo:uuid withCompletionBlock:^(NSError *error, id object) {
+                
+                if (error && ![error.domain containsString:@"serialization"]) {
+                    
+                    [[ApiManager sharedManager] customDialogConnectionError];
+                    
+                }else{
+                    [User sharedManager]ima
+                    
+                }
+                [SVProgressHUD dismiss];
+            }];*/
         }
         
     }];
@@ -121,6 +131,7 @@
 
 -(void)parseUserJSON:(id)jsonresponse{
     NSDictionary* patient =[jsonresponse objectForKey:@"patient"];
+    
     [[User sharedManager] setCreationDate:[self splitSHUITEDateType:@"dateCreated"]];
     [[User sharedManager] setMobileNumber:[patient objectForKey:@"mobileNumber"]];
     [[User sharedManager] setSecondSurname:[patient objectForKey:@"secondSurname"]];

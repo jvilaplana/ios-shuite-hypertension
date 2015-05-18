@@ -14,10 +14,11 @@
 #define SEND_TLF_URL @"/hypertensionPatient/restValidateMobile/"
 #define SEND_CODE_URL @"/hypertensionPatient/restValidateCode/"
 #define GET_USER_INFO @"/hypertensionPatient/restShow/"
+#define GET_USER_IMAGE @"/hypertensionPatient/restDownloadProfileImage/"
 
 @implementation ApiManager{
     
-    NSString *sendTlfNumber,*sendCodeNumber,*getUserInfo;
+    NSString *sendTlfNumber,*sendCodeNumber,*getUserInfo,*getUserImage;
     UIAlertView *alert;
 }
 
@@ -43,6 +44,7 @@
     sendTlfNumber =  [NSString stringWithFormat:@"%@%@",URL_BASE,SEND_TLF_URL];
     sendCodeNumber = [NSString stringWithFormat:@"%@%@",URL_BASE,SEND_CODE_URL];
     getUserInfo = [NSString stringWithFormat:@"%@%@",URL_BASE,GET_USER_INFO];
+    getUserImage = [NSString stringWithFormat:@"%@%@",URL_BASE,GET_USER_IMAGE];
 }
 
 #pragma mark WebService calls
@@ -102,6 +104,22 @@
     }];
 
     
+}
+
+-(void) getUserImage:(NSString *)UUID withCompletionBlock:(CompletionBlock)completionBlock{
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@",getUserImage,UUID];
+    [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (responseObject!=nil) {
+            completionBlock(nil, responseObject);
+        }else{
+            completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:500 userInfo:nil], nil);
+        }
+
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        completionBlock(error, nil);
+    }];
 }
 
 -(void)customDialogConnectionError{

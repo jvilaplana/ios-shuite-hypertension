@@ -10,7 +10,6 @@
 
 @interface User : NSObject
 
-
 @property NSString* UUID;
 @property NSString* name;
 @property NSString* firstSurname;
