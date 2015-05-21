@@ -28,3 +28,22 @@
 "ErrorRecoveringData" = "Error recovering data from disk";
 "TextFieldEmptyTlf" = "The phone number can't be empty";
 "TextFieldEmptyCode" = "The code field can't be empty";
+
+"Profile" = "Profile";
+"Sections" = "Sections";
+"Init" = "Init";
+"BloodPressures" = "Blood Pressures";
+"Evolution" = "Evolution";
+"PatientHistory" = "Patient History";
+"Messages" = "Messages";
+"Videos" = "Videos";
+"HealthCenters" = "Health Centers";
+"Contact" = "Contact";
+"Help" = "Help";
+"Social" = "Social";
+"Facebook" = "Facebook";
+"Sections" = "Sections";
+"Twitter" = "Twitter";
+"GooglePlus" = "Google Plus";
+"Others" = "Others";
+"Attributions" = "Attributions";

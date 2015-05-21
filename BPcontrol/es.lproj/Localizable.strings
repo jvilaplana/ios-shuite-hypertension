@@ -24,3 +24,22 @@
 "FailNSuser" = "Error guardando datos en disco";
 "TextFieldEmptyTlf" = "El campo telefono no puede estar en blanco";
 "TextFieldEmptyCode" = "El campo código no puede estar en blanco";
+
+"Profile" = "Perfil";
+"Sections" = "Secciones";
+"Init" = "Inicio";
+"BloodPressures" = "Presiones arteriales";
+"Evolution" = "Evolución";
+"PatientHistory" = "Historial del paciente";
+"Messages" = "Mensajes";
+"Videos" = "Videos";
+"HealthCenters" = "Centros médicos";
+"Contact" = "Contacto";
+"Help" = "Ayuda";
+"Sections" = "Secciones";
+"Social" = "Social";
+"Facebook" = "Facebook";
+"Twitter" = "Twitter";
+"GooglePlus" = "Google Plus";
+"Others" = "Otros";
+"Attributions" = "Atribuciones";

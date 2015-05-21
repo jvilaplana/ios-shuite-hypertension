@@ -10,20 +10,20 @@
 
 @interface User : NSObject
 
-@property NSString* UUID;
-@property NSString* name;
-@property NSString* firstSurname;
-@property NSString* secondSurname;
-@property NSString* identityCard;
-@property NSString* birthDate;
-@property NSString* email;
-@property NSString* lastUpdate;
+@property (strong,nonatomic) NSString* UUID;
+@property (strong,nonatomic) NSString* name;
+@property (strong,nonatomic) NSString* firstSurname;
+@property (strong,nonatomic) NSString* secondSurname;
+@property (strong,nonatomic) NSString* identityCard;
+@property (strong,nonatomic) NSString* birthDate;
+@property (strong,nonatomic) NSString* email;
+@property (strong,nonatomic) NSString* lastUpdate;
 @property bool active;
-@property NSString* creationDate;
-@property NSString* notes;
-@property NSString* town;
-@property NSString* mobileNumber;
-@property NSString* mobileNumberPrefix;
+@property (strong,nonatomic) NSString* creationDate;
+@property (strong,nonatomic) NSString* notes;
+@property (strong,nonatomic) NSString* town;
+@property (strong,nonatomic) NSString* mobileNumber;
+@property (strong,nonatomic) NSString* mobileNumberPrefix;
 @property bool isInSession;
 @property int dianaSystolicIndex;
 @property int dianaDiastolicIndex;

@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self activeHiddenKeyboardGesture];
     self.title = NSLocalizedString(@"RegisterStep1", nil);
     self.enterTelepohoneDescription.text = NSLocalizedString(@"SendTlfRegister", nil);
     [self.buttonToCode setTintColor:[UIColor whiteColor]];
@@ -37,10 +38,35 @@
     
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
+    [self dismissKeyboard];
+    [self buttonToCode:self.buttonToCode];
+    
+    return YES;
+}
+
+- (void)activeHiddenKeyboardGesture{
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+}
+
+-(void)dismissKeyboard {
+    [self.phoneTextField resignFirstResponder];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) hideKeyboard
+{
+    [self.view endEditing:YES];
+}
+
 
 - (IBAction)buttonToCode:(id)sender {
     
@@ -50,8 +76,7 @@
         NSString *telephone = self.phoneTextField.text;
         NSString *prefix = self.prefixTextField.text;
         [self saveValues:telephone And:prefix];
-        [[ApiManager sharedManager] sendTlfToSHUITE:@"r" prefix:prefix withCompletionBlock:^(NSError *error, id object) {
-        
+        [[ApiManager sharedManager] sendTlfToSHUITE:telephone prefix:prefix withCompletionBlock:^(NSError *error, id object) {
             [SVProgressHUD dismiss];
         
             if (error && ![error.domain containsString:@"serialization"]) {
@@ -66,6 +91,7 @@
            
         }];
     }else{
+        [SVProgressHUD dismiss];
         [self showTextFieldEmptyDialog];
     }
 }
@@ -113,9 +139,9 @@
 
 -(BOOL) checkIfTextFieldOK{
     
-    if (self.enterTelepohoneDescription.text == nil ||
-        [self.enterTelepohoneDescription.text isEqualToString:@""] ||
-         [self.enterTelepohoneDescription.text isEqualToString:@" "] ) {
+    if (self.phoneTextField.text == nil ||
+        [self.phoneTextField.text isEqualToString:@""] ||
+         [self.phoneTextField.text isEqualToString:@" "] ) {
         return NO;
     }else{
         return YES;

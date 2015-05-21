@@ -27,8 +27,10 @@
 -(void)awakeFromNib{
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     screenHeight = screenRect.size.height;
-    imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: @"http://app2.hesoftgroup.eu/hypertensionPatient/restDownloadProfileImage/a5683026-0f3b-4ea5-a129-0aec2c36c1eb"]];
-    NSLog(@"Height %f",screenHeight);
+    NSString *s = [[User sharedManager] name];
+    NSLog(@"%@",s);
+    imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"http://app2.hesoftgroup.eu/hypertensionPatient/restDownloadProfileImage/",[[User sharedManager] UUID]]]];
+
 }
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
@@ -89,56 +91,86 @@
             break;
         case 3:
             CellIdentifier = Sections;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Profile", nil);
             break;
             
         case 4:
             CellIdentifier = Init;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Init", nil);
             break;
             
         case 5:
             CellIdentifier = BloodPressures;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"BloodPressure", nil);
             break;
 
         case 6:
             CellIdentifier = Evolutiont;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Evolution", nil);
             break;
             
         case 7:
             CellIdentifier = PatientHistory;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"PatientHistory", nil);
             break;
             
         case 8:
             CellIdentifier = Messages;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Messages", nil);
             break;
             
         case 9:
             CellIdentifier = Videos;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Videos", nil);
             break;
             
         case 10:
             CellIdentifier = HealthCenters;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"HealthCenters", nil);
             break;
             
         case 11:
             CellIdentifier =Contact;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Contact", nil);
             break;
         case 12:
             CellIdentifier =Social;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Social", nil);
             break;
         case 13:
             CellIdentifier =Facebook;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Facebook", nil);
             break;
         case 14:
             CellIdentifier = Twitter;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Twitter", nil);
             break;
         case 15:
             CellIdentifier = GooglPlus;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"GooglePlus", nil);
             break;
         case 16:
             CellIdentifier = Others;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Others", nil);
             break;
         case 17:
             CellIdentifier = Attributions;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Attributions", nil);
             break;
             
             

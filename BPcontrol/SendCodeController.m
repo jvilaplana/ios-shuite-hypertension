@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self activeHiddenKeyboardGesture];
     self.title = NSLocalizedString(@"RegisterStep2", nil);
     self.sendCodeDescription.text = NSLocalizedString(@"EnterCodeMessage", nil);
     [self.finishRegisterButton setTintColor:[UIColor whiteColor]];
@@ -43,6 +44,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [self dismissKeyboard];
+    [self sendCodeToSHUITE:self.finishRegisterButton];
+    
+    return YES;
+}
+
+- (void)activeHiddenKeyboardGesture{
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+}
+
+-(void)dismissKeyboard {
+    [self.codeTextField resignFirstResponder];
+}
+
+
 
 -(void) readTlfAndPrefix{
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
