@@ -27,8 +27,8 @@
     [self getUserInfo];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.tintColor = MENUTEXT;
+    self.navigationController.navigationBar.tintColor = GRAYPROFILE;
+    self.title = NSLocalizedString(@"PrincipalMenu", nil);
 }
 
 
@@ -106,18 +106,6 @@
             
         }else{
             [self parseUserJSON:object];
-           /* [[ApiManager sharedManager] getUserInfo:uuid withCompletionBlock:^(NSError *error, id object) {
-                
-                if (error && ![error.domain containsString:@"serialization"]) {
-                    
-                    [[ApiManager sharedManager] customDialogConnectionError];
-                    
-                }else{
-                    [User sharedManager]ima
-                    
-                }
-                [SVProgressHUD dismiss];
-            }];*/
         }
         
     }];
@@ -136,19 +124,15 @@
 -(void)parseUserJSON:(id)jsonresponse{
     NSDictionary* patient =[jsonresponse objectForKey:@"patient"];
     [[User sharedManager] setUUID:[self recoveryUserUUID]];
-    [[User sharedManager] setCreationDate:[self splitSHUITEDateType:@"dateCreated"]];
+    [[User sharedManager] setCreationDate:[self splitSHUITEDateType:[patient objectForKey:@"DateCreated"]]];
     [[User sharedManager] setMobileNumber:[patient objectForKey:@"mobileNumber"]];
     [[User sharedManager] setSecondSurname:[patient objectForKey:@"secondSurname"]];
-    [[User sharedManager] setBirthDate:[self splitSHUITEDateType:@"birthDate"]];
+    [[User sharedManager] setBirthDate:[self splitSHUITEDateType:[patient objectForKey:@"birthDate"]]];
     [[User sharedManager] setIdentityCard:[patient objectForKey:@"identityCard"]];
-    //[[User sharedManager] setEmail:[patient :@"email"]];
+    [[User sharedManager] setEmail:[patient objectForKey:@"email"]];
     [[User sharedManager] setName:[patient objectForKey:@"name"]];
     [[User sharedManager] setTown:[patient objectForKey:@"town"]];
     [[User sharedManager] setFirstSurname:[patient objectForKey:@"firstSurname"]];
-   // User *user =  [User sharedManager];
-   // NSString *user1 = [[User sharedManager] ];
-  //  NSLog(@"sdfdsfdsfds%@",user1);
-    //NSString *s = @"dss";
 }
 
 -(NSString*) splitSHUITEDateType:(NSString*)date{

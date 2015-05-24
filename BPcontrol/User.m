@@ -10,6 +10,8 @@
 
 @implementation User
 
+static User * shared = nil;
+
 @synthesize dianaSystolicIndex;
 @synthesize dianaDiastolicIndex;
 @synthesize UUID;
@@ -28,22 +30,38 @@
 @synthesize town;
 @synthesize isInSession;
 
-+(id)sharedManager{
-    static User *sharedUser=nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken,^{
-        sharedUser = [[self alloc]init];
-    });
+
++(User*)sharedManager{
+    @synchronized([User class])
+    {
+        if (!shared)
+            return [[self alloc] init];
+        
+        return shared;
+    }
     
-    return sharedUser;
+    return nil;
 }
 
--(id)init{
-    if (self = [super init]) {
-        isInSession = false;
+
++(id)alloc
+{
+    @synchronized([User class])
+    {
+        NSAssert(shared == nil, @"Attempted to allocate a second instance of a singleton.");
+        shared = [super alloc];
+        return shared;
     }
     
-    return self;
+    return nil;
+}
+
+-(id)init {
+    self = [super init];
+    
+    if (self != nil) {
     }
+    return self;
+}
 
 @end

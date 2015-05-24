@@ -55,6 +55,7 @@
 		3A9D3A3A1B0253D000C5C488 /* ic_action_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D3A2A1B0253D000C5C488 /* ic_action_twitter.png */; };
 		3A9D3A3B1B0253D000C5C488 /* ic_action_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D3A2B1B0253D000C5C488 /* ic_action_youtube.png */; };
 		3A9D3A3D1B0257B300C5C488 /* menu_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D3A3C1B0257B300C5C488 /* menu_white.png */; };
+		3AA05B101B11472A00495164 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA05B0F1B11472A00495164 /* ProfileViewController.m */; };
 		3AA3A33A1B0111F400BB87A5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA3A3391B0111F400BB87A5 /* SWRevealViewController.m */; };
 		3AA3A33E1B01143F00BB87A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA3A33D1B01143F00BB87A5 /* ViewController.m */; };
 		3AA3A3421B01196F00BB87A5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA3A3411B01196F00BB87A5 /* HomeViewController.m */; };
@@ -158,6 +159,8 @@
 		3A9D3A2A1B0253D000C5C488 /* ic_action_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_twitter.png; sourceTree = "<group>"; };
 		3A9D3A2B1B0253D000C5C488 /* ic_action_youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_youtube.png; sourceTree = "<group>"; };
 		3A9D3A3C1B0257B300C5C488 /* menu_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_white.png; sourceTree = "<group>"; };
+		3AA05B0E1B11472A00495164 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		3AA05B0F1B11472A00495164 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		3AA3A3381B0111F400BB87A5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		3AA3A3391B0111F400BB87A5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3AA3A33C1B01143F00BB87A5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -547,6 +550,8 @@
 				3AEA326B1AFFACB2005CC894 /* SendCodeController.m */,
 				3AA3A3401B01196F00BB87A5 /* HomeViewController.h */,
 				3AA3A3411B01196F00BB87A5 /* HomeViewController.m */,
+				3AA05B0E1B11472A00495164 /* ProfileViewController.h */,
+				3AA05B0F1B11472A00495164 /* ProfileViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1033,6 +1038,7 @@
 				3AED646D1AF3DD0B007A40D6 /* TabBarController.m in Sources */,
 				3AA3A3421B01196F00BB87A5 /* HomeViewController.m in Sources */,
 				3A112C201ADC6EA80029167E /* BPcontrol.xcdatamodeld in Sources */,
+				3AA05B101B11472A00495164 /* ProfileViewController.m in Sources */,
 				3AED64601AF3B674007A40D6 /* Pressure.m in Sources */,
 				3AA3A33E1B01143F00BB87A5 /* ViewController.m in Sources */,
 				3AA3A33A1B0111F400BB87A5 /* SWRevealViewController.m in Sources */,

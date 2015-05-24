@@ -27,9 +27,8 @@
 -(void)awakeFromNib{
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     screenHeight = screenRect.size.height;
-    NSString *s = [[User sharedManager] name];
-    NSLog(@"%@",s);
-    imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"http://app2.hesoftgroup.eu/hypertensionPatient/restDownloadProfileImage/",[[User sharedManager] UUID]]]];
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"http://app2.hesoftgroup.eu/hypertensionPatient/restDownloadProfileImage/",[preferences objectForKey:USERUUID]]]];
 
 }
 
@@ -78,9 +77,16 @@
             
         case 0:
             CellIdentifier = Logo;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            cell.userInteractionEnabled = NO;
+            cell.textLabel.enabled = NO;
             break;
         case 1:
             CellIdentifier = ProfileHeader;
+            cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Profile", nil);
+            cell.userInteractionEnabled = NO;
+            cell.textLabel.enabled = NO;
             break;
         case 2:
             CellIdentifier = Profile;
@@ -88,11 +94,15 @@
             ((ProfileTableViewCell*)cell).userImage.image = [UIImage imageWithData: imageData];
             ((ProfileTableViewCell*)cell).userImage.clipsToBounds = YES;
             ((ProfileTableViewCell*)cell).userImage.layer.cornerRadius =((ProfileTableViewCell*)cell).userImage.frame.size.height/2 -1;
+            ((ProfileTableViewCell*)cell).profileLabel.text =[NSString stringWithFormat:@"%@ %@", [[User sharedManager] name],[[User sharedManager] firstSurname]];
+           
             break;
         case 3:
             CellIdentifier = Sections;
             cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
-            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Profile", nil);
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Sections", nil);
+            cell.userInteractionEnabled = NO;
+            cell.textLabel.enabled = NO;
             break;
             
         case 4:
@@ -146,6 +156,8 @@
             CellIdentifier =Social;
             cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
             ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Social", nil);
+            cell.userInteractionEnabled = NO;
+            cell.textLabel.enabled = NO;
             break;
         case 13:
             CellIdentifier =Facebook;
@@ -166,6 +178,8 @@
             CellIdentifier = Others;
             cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
             ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"Others", nil);
+            cell.userInteractionEnabled = NO;
+            cell.textLabel.enabled = NO;
             break;
         case 17:
             CellIdentifier = Attributions;
