@@ -55,13 +55,21 @@
 
 -(void) defineProfileLabels{
     self.nameSurnamesLabelHeader.text = NSLocalizedString(@"NameSurname", nil);
+    self.nameSurnameLabel.text = [NSString stringWithFormat:@"%@ %@ %@",[[User sharedManager] name],[[User sharedManager] firstSurname],[[User sharedManager] secondSurname]];
     self.dniLabelHeader.text = @"D.N.I:";
+    self.dniLabel.text = [[User sharedManager] identityCard];
     self.emailLabelHeader.text = @"E-mail:";
+    self.emailLabel.text = [[User sharedManager] email];
     self.birthDateLabelHeader.text = NSLocalizedString(@"BirthDate", nil);
+    self.birthDateLabel.text = [[User sharedManager] birthDate];
     self.lastPressuresLabelHeader.text = NSLocalizedString(@"LastPressures", nil);
+    self.lastPressuresLabel.text = [[User sharedManager] lastUpdate];
     self.placeResidenceLabelHeader.text = NSLocalizedString(@"PlaceResidence", nil);
+    self.placeResidenceLabel.text = [[User sharedManager] town];
     self.phoneNumberLabelHeader.text = NSLocalizedString(@"PhoneNumber", nil);
+    self.phoneNumberLabel.text = [[User sharedManager] mobileNumber];
     self.monitoringLabelHeader.text = NSLocalizedString(@"Monitoring", nil);
+    self.monitoringLabel.text = [[User sharedManager] creationDate];
 }
 
 /*

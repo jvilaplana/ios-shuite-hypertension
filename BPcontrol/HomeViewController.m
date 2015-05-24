@@ -124,7 +124,7 @@
 -(void)parseUserJSON:(id)jsonresponse{
     NSDictionary* patient =[jsonresponse objectForKey:@"patient"];
     [[User sharedManager] setUUID:[self recoveryUserUUID]];
-    [[User sharedManager] setCreationDate:[self splitSHUITEDateType:[patient objectForKey:@"DateCreated"]]];
+    [[User sharedManager] setCreationDate:[self splitSHUITEDateType:[patient objectForKey:@"dateCreated"]]];
     [[User sharedManager] setMobileNumber:[patient objectForKey:@"mobileNumber"]];
     [[User sharedManager] setSecondSurname:[patient objectForKey:@"secondSurname"]];
     [[User sharedManager] setBirthDate:[self splitSHUITEDateType:[patient objectForKey:@"birthDate"]]];
@@ -132,11 +132,12 @@
     [[User sharedManager] setEmail:[patient objectForKey:@"email"]];
     [[User sharedManager] setName:[patient objectForKey:@"name"]];
     [[User sharedManager] setTown:[patient objectForKey:@"town"]];
+    [[User sharedManager] setLastUpdate:[self splitSHUITEDateType:[patient objectForKey:@"lastUpdated"]]];
     [[User sharedManager] setFirstSurname:[patient objectForKey:@"firstSurname"]];
 }
 
 -(NSString*) splitSHUITEDateType:(NSString*)date{
-    NSString *tmp =  [date stringByReplacingOccurrencesOfString:@"T" withString:@" "];
-    return [tmp stringByReplacingOccurrencesOfString:@"T" withString:@""];
+    NSString *tmp = [date stringByReplacingOccurrencesOfString:@"T" withString:@" "];
+    return [[tmp stringByReplacingOccurrencesOfString:@"T" withString:@""] stringByReplacingOccurrencesOfString:@"Z" withString:@""];
 }
 @end
