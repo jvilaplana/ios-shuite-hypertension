@@ -50,3 +50,10 @@
 
 "PrincipalMenu" = "PRINCIPAL MENU";
 "ProfileTitle" = "PROFILE";
+
+"NameSurname" = "Name and surnames:";
+"BirthDate" = "Birth date:";
+"LastPressures" = "Last entered pressures:";
+"PlaceResidence" = "Place of residence:";
+"PhoneNumber" = "Phone number:";
+"Monitoring" = "Monitoring since:";

@@ -46,3 +46,9 @@
 
 "PrincipalMenu" = "MENÚ PRINCIPAL";
 "ProfileTitle" = "PERFIL";
+"NameSurname" = "Nombre y apellidos:";
+"BirthDate" = "Fecha de naciemiento:";
+"LastPressures" = "Ultimas presiones introducidas:";
+"PlaceResidence" = "Lugar de resides¡ncia:";
+"PhoneNumber" = "Numero de telefono:";
+"Monitoring" = "Seguimiento desde:";

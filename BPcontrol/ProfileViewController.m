@@ -27,6 +27,7 @@
      setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
     self.navigationController.navigationBar.tintColor = GRAYPROFILE;
     self.title = NSLocalizedString(@"ProfileTitle", nil);
+    [self defineProfileLabels];
 }
 
 
@@ -39,11 +40,28 @@
         [self.revealButtonItem setAction: @selector(revealToggle: )];
         [self.navigationController.navigationBar addGestureRecognizer:revealViewController.panGestureRecognizer];
     }
+     NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"http://app2.hesoftgroup.eu/hypertensionPatient/restDownloadProfileImage/",[[User sharedManager] UUID]]]];
+    
+    self.imageView.image = [UIImage imageWithData: imageData];
+    self.imageView.clipsToBounds = YES;
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.height/2 -1;
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) defineProfileLabels{
+    self.nameSurnamesLabelHeader.text = NSLocalizedString(@"NameSurname", nil);
+    self.dniLabelHeader.text = @"D.N.I:";
+    self.emailLabelHeader.text = @"E-mail:";
+    self.birthDateLabelHeader.text = NSLocalizedString(@"BirthDate", nil);
+    self.lastPressuresLabelHeader.text = NSLocalizedString(@"LastPressures", nil);
+    self.placeResidenceLabelHeader.text = NSLocalizedString(@"PlaceResidence", nil);
+    self.phoneNumberLabelHeader.text = NSLocalizedString(@"PhoneNumber", nil);
+    self.monitoringLabelHeader.text = NSLocalizedString(@"Monitoring", nil);
 }
 
 /*
