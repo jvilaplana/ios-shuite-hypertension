@@ -26,6 +26,7 @@
 		3A4EDA101AF68FA3006C0699 /* InfoPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4EDA0F1AF68FA3006C0699 /* InfoPageViewController.m */; };
 		3A75C9BE1AFFD6270012DF8E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A75C9BC1AFFD6270012DF8E /* Fabric.framework */; };
 		3A75C9BF1AFFD6270012DF8E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A75C9BD1AFFD6270012DF8E /* Crashlytics.framework */; };
+		3A954F841B150DFC00A32612 /* PressuresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A954F831B150DFC00A32612 /* PressuresViewController.m */; };
 		3A96A17B1AFBBB6400FF23FC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A96A17A1AFBBB6400FF23FC /* logo.png */; };
 		3A989F931AED53EF00A4C945 /* Forte.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F8F1AED53EF00A4C945 /* Forte.ttf */; };
 		3A989F941AED53EF00A4C945 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F901AED53EF00A4C945 /* Roboto-Bold.ttf */; };
@@ -128,6 +129,8 @@
 		3A4EDA0F1AF68FA3006C0699 /* InfoPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPageViewController.m; sourceTree = "<group>"; };
 		3A75C9BC1AFFD6270012DF8E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
 		3A75C9BD1AFFD6270012DF8E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
+		3A954F821B150DFC00A32612 /* PressuresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressuresViewController.h; sourceTree = "<group>"; };
+		3A954F831B150DFC00A32612 /* PressuresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressuresViewController.m; sourceTree = "<group>"; };
 		3A96A17A1AFBBB6400FF23FC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		3A989F861AED50EA00A4C945 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resources.h; sourceTree = "<group>"; };
 		3A989F8F1AED53EF00A4C945 /* Forte.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Forte.ttf; sourceTree = "<group>"; };
@@ -552,6 +555,8 @@
 				3AA3A3411B01196F00BB87A5 /* HomeViewController.m */,
 				3AA05B0E1B11472A00495164 /* ProfileViewController.h */,
 				3AA05B0F1B11472A00495164 /* ProfileViewController.m */,
+				3A954F821B150DFC00A32612 /* PressuresViewController.h */,
+				3A954F831B150DFC00A32612 /* PressuresViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1046,6 +1051,7 @@
 				3AE671F71AF6DD11002E51A3 /* CentersViewController.m in Sources */,
 				3AEA326C1AFFACB2005CC894 /* SendCodeController.m in Sources */,
 				3A112C1A1ADC6EA80029167E /* main.m in Sources */,
+				3A954F841B150DFC00A32612 /* PressuresViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

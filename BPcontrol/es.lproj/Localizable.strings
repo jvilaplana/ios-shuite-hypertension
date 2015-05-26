@@ -52,3 +52,11 @@
 "PlaceResidence" = "Lugar de resides¡ncia:";
 "PhoneNumber" = "Numero de telefono:";
 "Monitoring" = "Seguimiento desde:";
+
+"Systolic" = "Sistólica";
+"Diastolic" = "Diastólica";
+"Pulse"="Pulso";
+"Pressuressfirsttimetext" = "MAÑANA (6-9 horas):";
+"Pressuressecondtimetext" = "TARDE (18-21 horas):";
+"PressuresTitle" = "Pressures";
+"Pressuresmsg" = "Enter your daily pressures-three measurements per time slot";
