@@ -28,7 +28,28 @@
     self.morningHeader.textColor = MENUTEXT;
     self.morningHeader.text = NSLocalizedString(@"Pressuressfirsttimetext", nil);
     
+    [self configureView];
+    
 
+}
+
+-(void) configureView{
+    
+    [self changeButtomStyle];
+    
+}
+
+-(void) changeButtomStyle{
+
+    [self addStyleToButton:self.saveButton];
+    [self addStyleToButton:self.sendButton];
+    
+}
+
+-(void) addStyleToButton:(UIButton*) button{
+    [button setTintColor:[UIColor whiteColor]];
+    [button setBackgroundColor:ORANGEBUTTON];
+    [button setTitle:NSLocalizedString(@"PhonebuttonAccess", nil) forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {

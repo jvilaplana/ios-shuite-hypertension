@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Orh-ga-qQz">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -750,6 +749,7 @@
                                 <rect key="frame" x="155" y="-6" width="322" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="328" id="VM9-gc-RkA"/>
+                                    <constraint firstAttribute="height" constant="119" id="dPn-GP-dsq"/>
                                     <constraint firstAttribute="width" constant="322" id="lTp-u3-xt1"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="97" id="ojM-DL-jP0"/>
                                     <constraint firstAttribute="height" constant="119" id="qyX-Yk-1mZ"/>
@@ -761,6 +761,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="VM9-gc-RkA"/>
+                                        <exclude reference="qyX-Yk-1mZ"/>
                                         <exclude reference="wjD-GJ-Q22"/>
                                     </mask>
                                 </variation>
@@ -792,8 +793,8 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="uOs-ZP-10f"/>
                                                 <exclude reference="1KG-Iz-ePJ"/>
+                                                <exclude reference="uOs-ZP-10f"/>
                                             </mask>
                                         </variation>
                                     </textField>
@@ -995,8 +996,8 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="mhA-FV-Cmb"/>
                                                 <exclude reference="Jrm-PR-TGK"/>
+                                                <exclude reference="mhA-FV-Cmb"/>
                                             </mask>
                                         </variation>
                                     </textField>
@@ -1010,6 +1011,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="E66-4m-9jq"/>
                                                 <exclude reference="JpG-aW-z2U"/>
                                             </mask>
                                         </variation>
@@ -1149,6 +1151,7 @@
                                     <constraint firstItem="7KB-zy-OzP" firstAttribute="top" secondItem="OtH-xb-qjt" secondAttribute="top" constant="103" id="Mta-i1-T6U"/>
                                     <constraint firstItem="MBe-0c-zml" firstAttribute="top" secondItem="4Pk-3i-JWY" secondAttribute="bottom" constant="15" id="MuT-fg-kh8"/>
                                     <constraint firstItem="7KB-zy-OzP" firstAttribute="top" secondItem="oDz-d0-WhD" secondAttribute="top" constant="-52" id="P9O-eo-LpZ"/>
+                                    <constraint firstAttribute="height" constant="223" id="Pgt-WY-U78"/>
                                     <constraint firstItem="4Pk-3i-JWY" firstAttribute="leading" secondItem="eah-1Z-kcm" secondAttribute="trailing" constant="17" id="Pmn-RO-JNd"/>
                                     <constraint firstItem="7KB-zy-OzP" firstAttribute="baseline" secondItem="oDz-d0-WhD" secondAttribute="firstBaseline" constant="-52" id="RB1-WO-8sV"/>
                                     <constraint firstItem="7KB-zy-OzP" firstAttribute="baseline" secondItem="SnT-kE-13R" secondAttribute="firstBaseline" constant="52" id="RXD-wu-ixi"/>
@@ -1170,6 +1173,12 @@
                                     <constraint firstItem="7KB-zy-OzP" firstAttribute="centerY" secondItem="MBe-0c-zml" secondAttribute="centerY" constant="52" id="us5-LL-PbX"/>
                                     <constraint firstItem="7KB-zy-OzP" firstAttribute="trailing" secondItem="Hml-ME-oqo" secondAttribute="trailing" id="ycL-Wz-i9D"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3Ez-qY-ERm"/>
+                                        <exclude reference="JSy-zt-Mtk"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presiones de por la tarde" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ki1-bL-M2O">
                                 <rect key="frame" x="155" y="402" width="339" height="21"/>
@@ -1180,15 +1189,52 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="h9J-oi-uIO"/>
+                                    </mask>
+                                </variation>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjI-Pq-oIO">
+                                <rect key="frame" x="124" y="689" width="353" height="43"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R52-rs-BrM">
+                                        <rect key="frame" x="190" y="7" width="92" height="30"/>
+                                        <state key="normal" title="Enviar">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68R-vR-cI0">
+                                        <rect key="frame" x="74" y="6" width="94" height="31"/>
+                                        <state key="normal" title="Guardar">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="6Hq-gO-CSF"/>
+                                    <constraint firstAttribute="width" constant="353" id="YmJ-uL-ioE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Hq-gO-CSF"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ki1-bL-M2O" firstAttribute="trailing" secondItem="7pE-0b-mSH" secondAttribute="trailing" id="03N-MK-FgR"/>
                             <constraint firstItem="GTU-35-hfZ" firstAttribute="top" secondItem="7pE-0b-mSH" secondAttribute="bottom" constant="14" id="1v8-RA-RxD"/>
+                            <constraint firstItem="OtH-xb-qjt" firstAttribute="top" secondItem="v4U-vP-BdI" secondAttribute="top" constant="431" id="5Ds-Do-1do"/>
                             <constraint firstItem="Ki1-bL-M2O" firstAttribute="leading" secondItem="7pE-0b-mSH" secondAttribute="leading" id="5dS-FM-XGI"/>
+                            <constraint firstItem="kjI-Pq-oIO" firstAttribute="top" secondItem="OtH-xb-qjt" secondAttribute="bottom" constant="35" id="ABP-Bw-Unb"/>
                             <constraint firstItem="pvR-Bi-G7p" firstAttribute="top" secondItem="v4U-vP-BdI" secondAttribute="topMargin" constant="-6" id="DAC-Ez-bME"/>
+                            <constraint firstItem="Nep-Gc-bK2" firstAttribute="top" secondItem="kjI-Pq-oIO" secondAttribute="bottom" constant="268" id="IBy-mf-xuf"/>
                             <constraint firstItem="pvR-Bi-G7p" firstAttribute="top" secondItem="v4U-vP-BdI" secondAttribute="topMargin" constant="-8" id="IP7-b5-82c"/>
                             <constraint firstItem="GTU-35-hfZ" firstAttribute="trailing" secondItem="pvR-Bi-G7p" secondAttribute="trailing" id="JiM-EH-zVw"/>
                             <constraint firstItem="7pE-0b-mSH" firstAttribute="top" secondItem="pvR-Bi-G7p" secondAttribute="bottom" constant="8" symbolic="YES" id="Nsi-we-LUN"/>
@@ -1197,26 +1243,66 @@
                             <constraint firstItem="7pE-0b-mSH" firstAttribute="top" secondItem="pvR-Bi-G7p" secondAttribute="bottom" constant="26" id="Say-eg-KPK"/>
                             <constraint firstItem="pvR-Bi-G7p" firstAttribute="top" secondItem="v4U-vP-BdI" secondAttribute="topMargin" constant="2" id="T3L-Kc-OyR"/>
                             <constraint firstAttribute="centerX" secondItem="pvR-Bi-G7p" secondAttribute="centerX" constant="-16" id="X7A-mp-uP3"/>
+                            <constraint firstAttribute="centerX" secondItem="kjI-Pq-oIO" secondAttribute="centerX" id="XU4-9U-isQ"/>
+                            <constraint firstItem="kjI-Pq-oIO" firstAttribute="top" secondItem="OtH-xb-qjt" secondAttribute="bottom" constant="35" id="bKo-Pg-IRq"/>
                             <constraint firstItem="Ki1-bL-M2O" firstAttribute="leading" secondItem="pvR-Bi-G7p" secondAttribute="leading" id="fTd-FO-5zz"/>
                             <constraint firstAttribute="bottom" secondItem="pvR-Bi-G7p" secondAttribute="bottom" constant="879" id="fax-Ca-V2g"/>
+                            <constraint firstItem="OtH-xb-qjt" firstAttribute="top" secondItem="Ki1-bL-M2O" secondAttribute="bottom" constant="8" symbolic="YES" id="gpe-ko-OJN"/>
                             <constraint firstAttribute="centerX" secondItem="GTU-35-hfZ" secondAttribute="centerX" id="m9M-SW-8CD"/>
+                            <constraint firstAttribute="bottom" secondItem="GTU-35-hfZ" secondAttribute="bottom" constant="621" id="mlN-7n-NTz"/>
+                            <constraint firstItem="pvR-Bi-G7p" firstAttribute="top" secondItem="v4U-vP-BdI" secondAttribute="topMargin" constant="-6" id="nTY-Qd-62i"/>
                             <constraint firstItem="OtH-xb-qjt" firstAttribute="leading" secondItem="GTU-35-hfZ" secondAttribute="leading" id="t4U-dQ-SAh"/>
                             <constraint firstAttribute="trailing" secondItem="GTU-35-hfZ" secondAttribute="trailing" constant="123" id="tQh-jc-vZA"/>
                             <constraint firstItem="OtH-xb-qjt" firstAttribute="top" secondItem="Ki1-bL-M2O" secondAttribute="bottom" constant="8" symbolic="YES" id="um0-XY-Ynz"/>
+                            <constraint firstItem="Ki1-bL-M2O" firstAttribute="top" secondItem="GTU-35-hfZ" secondAttribute="bottom" constant="23" id="z7M-hJ-90B"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="DAC-Ez-bME"/>
                                 <exclude reference="IP7-b5-82c"/>
                                 <exclude reference="T3L-Kc-OyR"/>
+                                <exclude reference="fax-Ca-V2g"/>
                                 <exclude reference="RtK-Xm-hxX"/>
                                 <exclude reference="Say-eg-KPK"/>
                                 <exclude reference="m9M-SW-8CD"/>
+                                <exclude reference="P1G-Wd-nf5"/>
+                                <exclude reference="um0-XY-Ynz"/>
+                                <exclude reference="bKo-Pg-IRq"/>
+                                <exclude reference="IBy-mf-xuf"/>
                             </mask>
                         </variation>
                     </scrollView>
                     <navigationItem key="navigationItem" id="yFQ-KG-DGx"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
+                    <connections>
+                        <outlet property="SaveButton" destination="68R-vR-cI0" id="wd5-eb-A7I"/>
+                        <outlet property="aTxtField1" destination="Taj-Ce-X4P" id="gc9-nT-1Tv"/>
+                        <outlet property="aTxtField2" destination="MBe-0c-zml" id="xVk-1L-tVs"/>
+                        <outlet property="aTxtField3" destination="SnT-kE-13R" id="lOP-ti-0PI"/>
+                        <outlet property="aTxtField4" destination="Suw-V4-giY" id="NUW-t6-Ifb"/>
+                        <outlet property="aTxtField5" destination="4ce-9u-aSK" id="7I2-tR-Bmx"/>
+                        <outlet property="aTxtField6" destination="7KB-zy-OzP" id="hhy-PD-Q6T"/>
+                        <outlet property="aTxtField7" destination="oDz-d0-WhD" id="Ojj-5q-h0G"/>
+                        <outlet property="aTxtField8" destination="RMs-hc-qKm" id="UvL-5P-SaB"/>
+                        <outlet property="aTxtField9" destination="Hml-ME-oqo" id="3e7-VO-OYd"/>
+                        <outlet property="afternoonheader" destination="Ki1-bL-M2O" id="TFm-wC-a2z"/>
+                        <outlet property="diastolicHeader" destination="eah-1Z-kcm" id="QmU-2w-Ou9"/>
+                        <outlet property="mTxtField1" destination="ROd-cs-HeM" id="cCo-Lb-F69"/>
+                        <outlet property="mTxtField2" destination="FCQ-PB-82L" id="07p-HJ-Oxx"/>
+                        <outlet property="mTxtField3" destination="ppz-ib-acN" id="DbR-2f-vaM"/>
+                        <outlet property="mTxtField4" destination="Wyq-2v-Rg8" id="91C-AF-f9j"/>
+                        <outlet property="mTxtField5" destination="om5-S4-APv" id="3h6-GD-0V2"/>
+                        <outlet property="mTxtField6" destination="LZT-fr-ZaD" id="byz-z9-Seb"/>
+                        <outlet property="mTxtField7" destination="Ir1-jI-3Hl" id="o9D-8k-WFI"/>
+                        <outlet property="mTxtField8" destination="le9-8Q-Fim" id="jCW-mt-4ii"/>
+                        <outlet property="mTxtField9" destination="ffu-qG-oK4" id="kx5-Ig-Geo"/>
+                        <outlet property="morningHeader" destination="7pE-0b-mSH" id="Ccr-lr-e3s"/>
+                        <outlet property="pulseHeader" destination="4Pk-3i-JWY" id="CKf-Fs-E0w"/>
+                        <outlet property="saveButton" destination="68R-vR-cI0" id="dl2-OQ-pkt"/>
+                        <outlet property="sendButton" destination="68R-vR-cI0" id="0hb-No-21g"/>
+                        <outlet property="systolicHeader" destination="CsX-TH-fdB" id="6KU-GB-OOg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bok-CG-wJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1619,8 +1705,8 @@
         <image name="video_icon.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Mdq-bc-hLS"/>
         <segue reference="gmX-lo-DhK"/>
-        <segue reference="qVu-am-nJS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.093987808014565563" green="0.82175247608584767" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
