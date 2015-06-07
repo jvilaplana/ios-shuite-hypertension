@@ -11,12 +11,13 @@
 
 @interface PressuresViewController ()
 @end
-
 @implementation PressuresViewController{
     NSMutableArray *systolicValues;
     NSMutableArray *diastolicValues;
     NSMutableArray *pulseValues;
 }
+
+@synthesize picker;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,9 +28,10 @@
     self.title = NSLocalizedString(@"PressuresTitle", nil);
 
     [self calculateNumbersForPicker];
+    
     [self configureView];
-    
-    
+    self.mTxtField1.inputView = [self picker];
+    [self picker];
 
 }
 
@@ -47,6 +49,14 @@
     self.afternoonheader.text = NSLocalizedString(@"Pressuressecondtimetext", nil);
     
     
+}
+
+-(void) addToolBarToPicker{
+//    UIToolbar *toolBar= [[UIToolbar alloc] initWithFrame:CGRectMake(0,0,320,44)];
+//    [toolBar setBarStyle:UIBarStyleBlackOpaque];
+//    toolBar.items = @[barButtonDone];
+//    barButtonDone.tintColor=[UIColor blackColor];
+
 }
 
 -(void) changeButtomStyle{
@@ -97,10 +107,39 @@
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     
+    return kMaxComponents;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
+    switch (component) {
+        case kSystolicPressure:
+            return [systolicValues count];
+            break;
+        case kDiastolicPressure:
+            return [diastolicValues count];
+        case kPulse:
+            return [pulseValues count];
+        default:
+            return 0;
+            break;
+    }
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+    switch (component) {
+        case kSystolicPressure:
+            return [systolicValues[row] stringValue];
+            break;
+        case kDiastolicPressure:
+            return [diastolicValues[row] stringValue];
+        case kPulse:
+            return [pulseValues[row] stringValue];
+        default:
+            return @"0";
+            break;
+    }
+
 }
 
 - (IBAction)savePressures:(id)sender {

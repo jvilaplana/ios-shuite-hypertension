@@ -95,8 +95,9 @@ typedef void (^CompletionBlock)(NSError *error, id object);
 #define PREFIXSAVE @"prefix"
 #define USERUUID @"useruuid"
 
-#define kSystolicPressure
-#define kDiastolicPressure
-#define kPulse
+#define kMaxComponents 3
+#define kSystolicPressure 0
+#define kDiastolicPressure 1
+#define kPulse 2
 
 #endif

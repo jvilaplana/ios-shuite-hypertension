@@ -43,6 +43,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
 @property (strong, nonatomic) IBOutlet UIButton *saveButton;
 
+@property (strong, nonatomic) IBOutlet UIPickerView *picker;
+
 - (IBAction)savePressures:(id)sender;
 - (IBAction)sendPressuresToSHUITE:(id)sender;
 

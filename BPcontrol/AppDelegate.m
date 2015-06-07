@@ -24,7 +24,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-   [Fabric with:@[CrashlyticsKit]];
+   //[Fabric with:@[CrashlyticsKit]];
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     
     if ([preferences objectForKey:USERUUID]!=nil){
