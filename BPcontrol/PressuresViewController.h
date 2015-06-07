@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PressuresViewController : UIViewController
+@interface PressuresViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *headerPressures;
 @property (weak, nonatomic) IBOutlet UILabel *morningHeader;
 @property (strong, nonatomic) IBOutlet UILabel *afternoonheader;
@@ -41,5 +42,9 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
 @property (strong, nonatomic) IBOutlet UIButton *saveButton;
+
+- (IBAction)savePressures:(id)sender;
+- (IBAction)sendPressuresToSHUITE:(id)sender;
+
 
 @end

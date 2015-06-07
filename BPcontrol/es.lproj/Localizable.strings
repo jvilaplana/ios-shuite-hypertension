@@ -25,6 +25,7 @@
 "TextFieldEmptyTlf" = "El campo telefono no puede estar en blanco";
 "TextFieldEmptyCode" = "El campo código no puede estar en blanco";
 
+/* MENU */
 "Profile" = "Perfil";
 "Sections" = "Secciones";
 "Init" = "Inicio";
@@ -44,6 +45,7 @@
 "Others" = "Otros";
 "Attributions" = "Atribuciones";
 
+/* PROFILE */
 "PrincipalMenu" = "MENÚ PRINCIPAL";
 "ProfileTitle" = "PERFIL";
 "NameSurname" = "Nombre y apellidos:";
@@ -53,6 +55,7 @@
 "PhoneNumber" = "Numero de telefono:";
 "Monitoring" = "Seguimiento desde:";
 
+/* PRESSURES */
 "Systolic" = "Sistólica";
 "Diastolic" = "Diastólica";
 "Pulse"="Pulso";
@@ -60,3 +63,5 @@
 "Pressuressecondtimetext" = "TARDE (18-21 horas):";
 "PressuresTitle" = "Pressures";
 "Pressuresmsg" = "Enter your daily pressures-three measurements per time slot";
+"Send" = "Send";
+"Save" = "Save";

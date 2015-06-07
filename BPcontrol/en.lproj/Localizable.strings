@@ -29,6 +29,7 @@
 "TextFieldEmptyTlf" = "The phone number can't be empty";
 "TextFieldEmptyCode" = "The code field can't be empty";
 
+// MENU
 "Profile" = "Profile";
 "Sections" = "Sections";
 "Init" = "Init";
@@ -51,17 +52,19 @@
 "PrincipalMenu" = "PRINCIPAL MENU";
 "ProfileTitle" = "PROFILE";
 
+// PRESSURES
 "NameSurname" = "Name and surnames:";
 "BirthDate" = "Birth date:";
 "LastPressures" = "Last entered pressures:";
 "PlaceResidence" = "Place of residence:";
 "PhoneNumber" = "Phone number:";
 "Monitoring" = "Monitoring since:";
-
 "Systolic" = "Systolic";
 "Diastolic" = "Diastolic";
 "Pulse"="Pulse";
 "Pressuressfirsttimetext" = "MORNING (6-9 hours):";
-"Pressuressecondtimetext" = "EVENING (18-21 hours):";
+"Pressuressecondtimetext" = "AFTERNOON (18-21 hours):";
 "PressuresTitle" = "Presiones";
 "Pressuresmsg" = "Introduzca sus presiones diarias- 3 mediciones por franja";
+"Send" = "Enviar";
+"Save" = "Guardar";
