@@ -19,20 +19,19 @@
 
 @synthesize picker;
 
-- (void)viewDidLoad {
+- (void)viewDidLoad{
+    
     [super viewDidLoad];
-    [super viewDidLoad];
+
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
     self.navigationController.navigationBar.tintColor = GRAYPROFILE;
     self.title = NSLocalizedString(@"PressuresTitle", nil);
 
     [self calculateNumbersForPicker];
-    
     [self configureView];
+    
     self.mTxtField1.inputView = [self picker];
-    [self picker];
-
 }
 
 -(void) configureView{
@@ -48,7 +47,29 @@
     self.afternoonheader.textColor = MENUTEXT;
     self.afternoonheader.text = NSLocalizedString(@"Pressuressecondtimetext", nil);
     
+    [_pickerCancelButton setTitle:NSLocalizedString(@"Cancel", nil)];
     
+    [_pickerCancelButton setTitleTextAttributes:@{ NSFontAttributeName:
+                                                   [UIFont fontWithName:@"ArialMT" size:15.0],
+                                                    NSForegroundColorAttributeName: MENUTEXT}
+                                                    forState:UIControlStateNormal];
+    
+    [_pickerCancelButton setTitle:NSLocalizedString(@"Accept", nil)];
+    
+    [_pickerCancelButton setTitleTextAttributes:@{NSFontAttributeName :
+                                                  [UIFont fontWithName:@"ArialMT" size:15.0],
+                                                  NSForegroundColorAttributeName: MENUTEXT}
+                                                  forState:UIControlStateNormal];
+    
+    CGRect pickerRect = self.pickerView.bounds;
+    CGRect screenSize =  [[UIScreen mainScreen] bounds];
+    CGRect toolbarSize = self.toolbar.bounds;
+    
+    pickerRect.size.width = screenSize.size.width;
+    toolbarSize.size.width = screenSize.size.width;
+    
+    [self.pickerView setBounds:pickerRect];
+    [self.toolbar setBounds:toolbarSize];
 }
 
 -(void) addToolBarToPicker{

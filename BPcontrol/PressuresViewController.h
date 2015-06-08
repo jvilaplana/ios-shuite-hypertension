@@ -48,5 +48,12 @@
 - (IBAction)savePressures:(id)sender;
 - (IBAction)sendPressuresToSHUITE:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIView *parentView;
+@property (strong, nonatomic) IBOutlet UIView *pickerView;
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *pickerCancelButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *pickerOKButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *titlePicker;
+@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end
