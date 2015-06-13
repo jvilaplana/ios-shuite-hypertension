@@ -12,12 +12,19 @@
 @interface PressuresViewController ()
 @end
 @implementation PressuresViewController{
+    
     NSMutableArray *systolicValues;
     NSMutableArray *diastolicValues;
     NSMutableArray *pulseValues;
+    
+    SBPickerSelector *systolicPicker;
+    SBPickerSelector *diastolicPicker;
+    SBPickerSelector *pulsePicker;
+    
+    UITextField *currentSelected;
 }
 
-@synthesize picker;
+//@synthesize picker;
 
 - (void)viewDidLoad{
     
@@ -29,9 +36,10 @@
     self.title = NSLocalizedString(@"PressuresTitle", nil);
 
     [self calculateNumbersForPicker];
+    [self configurePickers];
+    [self prepareTextFieldsTags];
     [self configureView];
-    
-    self.mTxtField1.inputView = [self picker];
+
 }
 
 -(void) configureView{
@@ -47,37 +55,41 @@
     self.afternoonheader.textColor = MENUTEXT;
     self.afternoonheader.text = NSLocalizedString(@"Pressuressecondtimetext", nil);
     
-    [_pickerCancelButton setTitle:NSLocalizedString(@"Cancel", nil)];
-    
-    [_pickerCancelButton setTitleTextAttributes:@{ NSFontAttributeName:
-                                                   [UIFont fontWithName:@"ArialMT" size:15.0],
-                                                    NSForegroundColorAttributeName: MENUTEXT}
-                                                    forState:UIControlStateNormal];
-    
-    [_pickerCancelButton setTitle:NSLocalizedString(@"Accept", nil)];
-    
-    [_pickerCancelButton setTitleTextAttributes:@{NSFontAttributeName :
-                                                  [UIFont fontWithName:@"ArialMT" size:15.0],
-                                                  NSForegroundColorAttributeName: MENUTEXT}
-                                                  forState:UIControlStateNormal];
-    
-    CGRect pickerRect = self.pickerView.bounds;
-    CGRect screenSize =  [[UIScreen mainScreen] bounds];
-    CGRect toolbarSize = self.toolbar.bounds;
-    
-    pickerRect.size.width = screenSize.size.width;
-    toolbarSize.size.width = screenSize.size.width;
-    
-    [self.pickerView setBounds:pickerRect];
-    [self.toolbar setBounds:toolbarSize];
 }
 
--(void) addToolBarToPicker{
-//    UIToolbar *toolBar= [[UIToolbar alloc] initWithFrame:CGRectMake(0,0,320,44)];
-//    [toolBar setBarStyle:UIBarStyleBlackOpaque];
-//    toolBar.items = @[barButtonDone];
-//    barButtonDone.tintColor=[UIColor blackColor];
+-(void) configurePickers{
+    
+    systolicPicker = [SBPickerSelector picker];
+    diastolicPicker = [SBPickerSelector picker];
+    pulsePicker = [SBPickerSelector picker];
+    
+    systolicPicker.pickerData = systolicValues;
+    diastolicPicker.pickerData = diastolicValues;
+    pulsePicker.pickerData = pulseValues;
+    
+    systolicPicker.pickerType = SBPickerSelectorTypeText;
+    diastolicPicker.pickerType = SBPickerSelectorTypeText;
+    pulsePicker.pickerType = SBPickerSelectorTypeText;
 
+    
+    systolicPicker.delegate = self;
+    diastolicPicker.delegate = self;
+    pulsePicker.delegate = self;
+    
+    systolicPicker.doneButtonTitle = NSLocalizedString(@"Accept",nil);
+    systolicPicker.cancelButtonTitle =  NSLocalizedString(@"Cancel",nil);
+
+    diastolicPicker.doneButtonTitle = NSLocalizedString(@"Accept",nil);
+    diastolicPicker.cancelButtonTitle =  NSLocalizedString(@"Cancel",nil);
+    
+    pulsePicker.doneButtonTitle = NSLocalizedString(@"Accept", nil);
+    pulsePicker.cancelButtonTitle = NSLocalizedString(@"Cancel", nil);
+
+}
+
+-(void) showPicker:(SBPickerSelector*) picker{
+    
+    [picker showPickerOver:self];
 }
 
 -(void) changeButtomStyle{
@@ -100,15 +112,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 -(void)calculateNumbersForPicker{
     
@@ -126,42 +129,94 @@
         [pulseValues addObject:[NSNumber numberWithInteger:i]];
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+-(void) prepareTextFieldsTags{
     
-    return kMaxComponents;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    [self.mTxtField1 setTag: kSystolicM1];
+    [self.mTxtField2 setTag: kDiastolicM1];
+    [self.mTxtField3 setTag: kPulseM1];
     
-    switch (component) {
-        case kSystolicPressure:
-            return [systolicValues count];
-            break;
-        case kDiastolicPressure:
-            return [diastolicValues count];
-        case kPulse:
-            return [pulseValues count];
-        default:
-            return 0;
-            break;
-    }
-}
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    [self.mTxtField4 setTag: kSystolicM2];
+    [self.mTxtField5 setTag: kDiastolicM2];
+    [self.mTxtField6 setTag: kPulseM2];
     
-    switch (component) {
-        case kSystolicPressure:
-            return [systolicValues[row] stringValue];
-            break;
-        case kDiastolicPressure:
-            return [diastolicValues[row] stringValue];
-        case kPulse:
-            return [pulseValues[row] stringValue];
-        default:
-            return @"0";
-            break;
-    }
+    [self.mTxtField7 setTag: kSystolicM3];
+    [self.mTxtField8 setTag: kDiastolicM3];
+    [self.mTxtField9 setTag: kPulseM3];
+    
+    [self.aTxtField1 setTag: kSystolicA1];
+    [self.aTxtField2 setTag: kDiastolicA1];
+    [self.aTxtField3 setTag: kPulseA1];
+    
+    [self.aTxtField4 setTag: kSystolicA2];
+    [self.aTxtField5 setTag: kDiastolicA2];
+    [self.aTxtField6 setTag: kPulseA2];
+    
+    [self.aTxtField7 setTag: kSystolicA3];
+    [self.aTxtField8 setTag: kDiastolicA3];
+    [self.aTxtField9 setTag: kPulseA3];
 
 }
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    currentSelected = textField;
+    
+    switch ([textField tag]) {
+            case kSystolicM1 | kSystolicA2 | kSystolicA3 |kSystolicM2 | kSystolicM3 | kSystolicA1:
+            [systolicPicker showPickerOver:self];
+                break;
+            case kDiastolicA1 | kDiastolicA2 | kDiastolicA3 | kDiastolicM1 | kDiastolicM2 | kDiastolicM3:
+                 [systolicPicker showPickerOver:self];
+                break;
+            case kPulseA1 | kPulseA2 | kPulseA3 | kPulseM1 | kPulseM2 | kPulseM3:
+                 [systolicPicker showPickerOver:self];
+             break;
+    }
+
+}
+
+-(void) pickerSelector:(SBPickerSelector *)selector selectedValue:(NSString *)value index:(NSInteger)idx{
+    
+    [currentSelected setText:value];
+    
+}
+
+//- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+//    
+//    return kMaxComponents;
+//}
+//
+//- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+//    
+//    switch (component) {
+//        case kSystolicPressure:
+//            return [systolicValues count];
+//            break;
+//        case kDiastolicPressure:
+//            return [diastolicValues count];
+//        case kPulse:
+//            return [pulseValues count];
+//        default:
+//            return 0;
+//            break;
+//    }
+//}
+//- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+//    
+//    switch (component) {
+//        case kSystolicPressure:
+//            return [systolicValues[row] stringValue];
+//            break;
+//        case kDiastolicPressure:
+//            return [diastolicValues[row] stringValue];
+//        case kPulse:
+//            return [pulseValues[row] stringValue];
+//        default:
+//            return @"0";
+//            break;
+//    }
+//
+//}
 
 - (IBAction)savePressures:(id)sender {
     

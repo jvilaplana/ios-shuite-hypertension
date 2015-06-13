@@ -96,8 +96,26 @@ typedef void (^CompletionBlock)(NSError *error, id object);
 #define USERUUID @"useruuid"
 
 #define kMaxComponents 3
-#define kSystolicPressure 0
-#define kDiastolicPressure 1
-#define kPulse 2
+
+#define kSystolicM1 1
+#define kSystolicM2 2
+#define kSystolicM3 3
+#define kSystolicA1 4
+#define kSystolicA2 5
+#define kSystolicA3 6
+
+#define kDiastolicM1 7
+#define kDiastolicM2 8
+#define kDiastolicM3 9
+#define kDiastolicA1 10
+#define kDiastolicA2 11
+#define kDiastolicA3 12
+
+#define kPulseM1 13
+#define kPulseM2 14
+#define kPulseM3 15
+#define kPulseA1 16
+#define kPulseA2 17
+#define kPulseA3 18
 
 #endif

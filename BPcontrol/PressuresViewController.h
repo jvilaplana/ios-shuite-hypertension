@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SBPickerSelector.h"
 
-@interface PressuresViewController : UIViewController<SBPickerSelectorDelegate>
+@interface PressuresViewController : UIViewController<SBPickerSelectorDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *headerPressures;
 @property (weak, nonatomic) IBOutlet UILabel *morningHeader;
@@ -44,17 +44,17 @@
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
 @property (strong, nonatomic) IBOutlet UIButton *saveButton;
 
-@property (strong, nonatomic) IBOutlet SBPickerSelector *picker;
+//@property (strong, nonatomic) IBOutlet SBPickerSelector *picker;
 
 - (IBAction)savePressures:(id)sender;
 - (IBAction)sendPressuresToSHUITE:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIView *parentView;
-@property (strong, nonatomic) IBOutlet UIView *pickerView;
-
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *pickerCancelButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *pickerOKButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *titlePicker;
-@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
+//@property (strong, nonatomic) IBOutlet UIView *parentView;
+//@property (strong, nonatomic) IBOutlet UIView *pickerView;
+//
+//@property (strong, nonatomic) IBOutlet UIBarButtonItem *pickerCancelButton;
+//@property (strong, nonatomic) IBOutlet UIBarButtonItem *pickerOKButton;
+//@property (strong, nonatomic) IBOutlet UIBarButtonItem *titlePicker;
+//@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end
