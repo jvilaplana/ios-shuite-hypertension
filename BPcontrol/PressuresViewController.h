@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SBPickerSelector.h"
 
-@interface PressuresViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>
+@interface PressuresViewController : UIViewController<SBPickerSelectorDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *headerPressures;
 @property (weak, nonatomic) IBOutlet UILabel *morningHeader;
@@ -43,7 +44,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
 @property (strong, nonatomic) IBOutlet UIButton *saveButton;
 
-@property (strong, nonatomic) IBOutlet UIPickerView *picker;
+@property (strong, nonatomic) IBOutlet SBPickerSelector *picker;
 
 - (IBAction)savePressures:(id)sender;
 - (IBAction)sendPressuresToSHUITE:(id)sender;

@@ -20,14 +20,19 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - SBPickerSelector (1.0.7):
+    - SBPickerSelector/Core (= 1.0.7)
+  - SBPickerSelector/Core (1.0.7)
   - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - SBPickerSelector (~> 1.0.1)
   - SVProgressHUD (~> 1.1)
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  SBPickerSelector: 84b2f1a12cd37b77e72d8c5007c46d3fe444834f
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.36.3

@@ -48,6 +48,18 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 3
 
+// SBPickerSelector
+#define COCOAPODS_POD_AVAILABLE_SBPickerSelector
+#define COCOAPODS_VERSION_MAJOR_SBPickerSelector 1
+#define COCOAPODS_VERSION_MINOR_SBPickerSelector 0
+#define COCOAPODS_VERSION_PATCH_SBPickerSelector 7
+
+// SBPickerSelector/Core
+#define COCOAPODS_POD_AVAILABLE_SBPickerSelector_Core
+#define COCOAPODS_VERSION_MAJOR_SBPickerSelector_Core 1
+#define COCOAPODS_VERSION_MINOR_SBPickerSelector_Core 0
+#define COCOAPODS_VERSION_PATCH_SBPickerSelector_Core 7
+
 // SVProgressHUD
 #define COCOAPODS_POD_AVAILABLE_SVProgressHUD
 #define COCOAPODS_VERSION_MAJOR_SVProgressHUD 1

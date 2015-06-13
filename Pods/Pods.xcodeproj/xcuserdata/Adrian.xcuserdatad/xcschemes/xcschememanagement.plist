@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SBPickerSelector.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>20F9007877AD44C12C2603AD</key>
+		<key>167796FF34FCDFF9D1D6C2AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77C96BE88373199FCE1CFB30</key>
+		<key>4DE02DA6E819EE16A19EE3C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3702224678ADF68F389C2A5</key>
+		<key>E7A313E3A1B0B523E933B72C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF96C73375BFAD7CC280796F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
