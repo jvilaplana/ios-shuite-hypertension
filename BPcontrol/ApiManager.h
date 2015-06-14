@@ -28,4 +28,5 @@
 -(void)sendCodeToSHUITE:(NSString *)code telephone: (NSString*)tlf prefix:(NSString*)prefix withCompletionBlock:(CompletionBlock)completionBlock;
 -(void) getUserInfo:(NSString*)UUID withCompletionBlock:(CompletionBlock) completionBlock;
 -(void) getUserImage:(NSString*)UUID withCompletionBlock:(CompletionBlock) completionBlock;
+-(void) postPressuresToSHUITEWhitMorning:(NSArray*)morning withAfternoon:(NSArray*)afternoon withCompletionBlock:(CompletionBlock) completionBlock;
 @end

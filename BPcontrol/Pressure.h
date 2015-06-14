@@ -11,9 +11,11 @@
 @interface Pressure : NSObject
 
 @property NSDate* date;
-@property NSString* systolic;
-@property NSString* diastolic;
-@property NSString* pulse;
+@property NSInteger systolic;
+@property NSInteger diastolic;
+@property NSInteger pulse;
 @property int semaphore;
+
++(Pressure*)averageOfPressuresMorning:(NSArray*)morningArray withAfternoonPressures:(NSArray*)afternoonArray;
 
 @end

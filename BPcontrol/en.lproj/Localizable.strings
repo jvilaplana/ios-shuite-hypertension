@@ -71,3 +71,4 @@
 "Accept" = "Accept";
 "Cancel" = "Cancel";
 "NoSave" = "To keep the pressure you have to have at least a time zone";
+"MessageSend" = "To send pressures have to fill both slots. If only one , click save button to save the pressures of a slot button.";

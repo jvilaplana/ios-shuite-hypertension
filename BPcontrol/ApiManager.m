@@ -8,6 +8,8 @@
 
 #import "ApiManager.h"
 #import "User.h"
+#import "Pressure.h"
+#import "User.h"
 
 #pragma mark Singleton Methods
 
@@ -15,10 +17,11 @@
 #define SEND_CODE_URL @"/hypertensionPatient/restValidateCode/"
 #define GET_USER_INFO @"/hypertensionPatient/restShow/"
 #define GET_USER_IMAGE @"/hypertensionPatient/restDownloadProfileImage/"
+#define POST_MEASUREMENTS @"/hypertensionBloodPressure/restSave"
 
 @implementation ApiManager{
     
-    NSString *sendTlfNumber,*sendCodeNumber,*getUserInfo,*getUserImage;
+    NSString *sendTlfNumber,*sendCodeNumber,*getUserInfo,*getUserImage,*postPressures;
     UIAlertView *alert;
 }
 
@@ -45,6 +48,7 @@
     sendCodeNumber = [NSString stringWithFormat:@"%@%@",URL_BASE,SEND_CODE_URL];
     getUserInfo = [NSString stringWithFormat:@"%@%@",URL_BASE,GET_USER_INFO];
     getUserImage = [NSString stringWithFormat:@"%@%@",URL_BASE,GET_USER_IMAGE];
+    postPressures = [NSString stringWithFormat:@"%@%@",URL_BASE,POST_MEASUREMENTS];
 }
 
 #pragma mark WebService calls
@@ -134,7 +138,52 @@
     }
     
     [alert show];
-   }
+}
+
+-(void) postPressuresToSHUITEWhitMorning:(NSArray*)morning withAfternoon:(NSArray*)afternoon withCompletionBlock:(CompletionBlock) completionBlock;{
+    
+    Pressure* mfirst = [morning objectAtIndex:0];
+    Pressure* msecond = [morning objectAtIndex:1];
+    Pressure* mthird = [morning objectAtIndex:2];
+    
+    Pressure* afirst = [afternoon objectAtIndex:0];
+    Pressure* asecond = [afternoon objectAtIndex:1];
+    Pressure* athird = [afternoon objectAtIndex:2];
+    
+    NSString *UUID = [[User sharedManager] UUID];
+    
+    NSDictionary *params = @{
+                             @"systole1m": [NSString stringWithFormat:@"%i",(int)[mfirst systolic]] ,
+                             @"systolec2m":[NSString stringWithFormat:@"%i",(int)[msecond systolic]],
+                             @"systole3m":[NSString stringWithFormat:@"%i",(int)[mthird systolic]],
+                             @"diastole1m": [NSString stringWithFormat:@"%i",(int)[mfirst diastolic]] ,
+                             @"diastole2m":[NSString stringWithFormat:@"%i",(int)[msecond diastolic]],
+                             @"diastole3m":[NSString stringWithFormat:@"%i",(int)[mthird diastolic]],
+                             @"pulse1m": [NSString stringWithFormat:@"%i",(int)[mfirst pulse]],
+                             @"pulse2m":[NSString stringWithFormat:@"%i",(int)[msecond pulse]],
+                             @"pulse3m":[NSString stringWithFormat:@"%i",(int)[mthird pulse]],
+                             @"systole1n": [NSString stringWithFormat:@"%i",(int)[afirst systolic]] ,
+                             @"systole2n":[NSString stringWithFormat:@"%i",(int)[asecond systolic]],
+                             @"systole3n":[NSString stringWithFormat:@"%i",(int)[athird systolic]],
+                             @"diastole1n": [NSString stringWithFormat:@"%i",(int)[afirst diastolic]] ,
+                             @"diastole2n":[NSString stringWithFormat:@"%i",(int)[asecond diastolic]],
+                             @"diastole3n":[NSString stringWithFormat:@"%i",(int)[athird diastolic]],
+                             @"pulse1n": [NSString stringWithFormat:@"%i",(int)[afirst pulse]],
+                             @"pulse2n":[NSString stringWithFormat:@"%i",(int)[asecond pulse]],
+                             @"pulse3n":[NSString stringWithFormat:@"%i",(int)[athird pulse]],
+                             @"uuid":UUID};
+    
+    [_manager POST:postPressures parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (responseObject!=nil) {
+            completionBlock(nil, responseObject);
+        }else{
+            completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:500 userInfo:nil], nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+       completionBlock(error, nil);
+    }];
+    
+}
 
 
 
