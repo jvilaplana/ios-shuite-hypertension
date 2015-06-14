@@ -61,9 +61,10 @@
 "Pulse"="Pulso";
 "Pressuressfirsttimetext" = "MAÑANA (6-9 horas):";
 "Pressuressecondtimetext" = "TARDE (18-21 horas):";
-"PressuresTitle" = "Pressures";
-"Pressuresmsg" = "Enter your daily pressures-three measurements per time slot";
-"Send" = "Send";
-"Save" = "Save";
+"PressuresTitle" = "Presiones";
+"Pressuresmsg" = "Introduzca sus presiones diarias- 3 mediciones por franja";
+"Send" = "Enviar";
+"Save" = "Guardar";
 "Accept" = "Aceptar";
 "Cancel" = "Cancelar";
+"NoSave" = "Para guardar la presiones tienes que tener rellenado almenos una fraja horaria.";

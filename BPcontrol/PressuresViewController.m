@@ -24,8 +24,6 @@
     UITextField *currentSelected;
 }
 
-//@synthesize picker;
-
 - (void)viewDidLoad{
     
     [super viewDidLoad];
@@ -34,6 +32,13 @@
      setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
     self.navigationController.navigationBar.tintColor = GRAYPROFILE;
     self.title = NSLocalizedString(@"PressuresTitle", nil);
+    
+    self.mSystolicHeader.text = NSLocalizedString(@"Systolic", nil);
+    self.aSystolicHeader.text = NSLocalizedString(@"Systolic", nil);
+    self.mDiastolicHeader.text = NSLocalizedString(@"Diastolic", nil);
+    self.aDiastolicHeader.text = NSLocalizedString(@"Diastolic", nil);
+    self.mPulseHeader.text = NSLocalizedString(@"Pulse", nil);
+    self.aPulseHeader.text = NSLocalizedString(@"Pulse", nil);
 
     [self calculateNumbersForPicker];
     [self configurePickers];
@@ -67,9 +72,9 @@
     diastolicPicker.pickerData = diastolicValues;
     pulsePicker.pickerData = pulseValues;
     
-    systolicPicker.pickerType = SBPickerSelectorTypeText;
-    diastolicPicker.pickerType = SBPickerSelectorTypeText;
-    pulsePicker.pickerType = SBPickerSelectorTypeText;
+    systolicPicker.pickerType = SBPickerSelectorTypeNumerical;
+    diastolicPicker.pickerType = SBPickerSelectorTypeNumerical;
+    pulsePicker.pickerType = SBPickerSelectorTypeNumerical;
 
     
     systolicPicker.delegate = self;
@@ -120,13 +125,13 @@
    pulseValues = [NSMutableArray array];
     
     for (NSInteger i = 50; i < 250; i++)
-        [systolicValues addObject:[NSNumber numberWithInteger:i]];
+        [systolicValues addObject:[NSString stringWithFormat:@"%i",(int)i]];
     
     for (NSInteger i = 30; i < 130; i++)
-        [diastolicValues addObject:[NSNumber numberWithInteger:i]];
+        [diastolicValues addObject:[NSString stringWithFormat:@"%i",(int)i]];
     
     for (NSInteger i = 10; i < 200; i++)
-        [pulseValues addObject:[NSNumber numberWithInteger:i]];
+        [pulseValues addObject:[NSString stringWithFormat:@"%i",(int)i]];
 }
 
 -(void) prepareTextFieldsTags{
@@ -157,69 +162,208 @@
 
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField {
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
     currentSelected = textField;
-    
     switch ([textField tag]) {
-            case kSystolicM1 | kSystolicA2 | kSystolicA3 |kSystolicM2 | kSystolicM3 | kSystolicA1:
+        case kSystolicM1:
             [systolicPicker showPickerOver:self];
-                break;
-            case kDiastolicA1 | kDiastolicA2 | kDiastolicA3 | kDiastolicM1 | kDiastolicM2 | kDiastolicM3:
-                 [systolicPicker showPickerOver:self];
-                break;
-            case kPulseA1 | kPulseA2 | kPulseA3 | kPulseM1 | kPulseM2 | kPulseM3:
-                 [systolicPicker showPickerOver:self];
-             break;
+            break;
+        case kSystolicA2:
+            [systolicPicker showPickerOver:self];
+            break;
+        case kSystolicA3:
+            [systolicPicker showPickerOver:self];
+            break;
+        case kSystolicM2:
+            [systolicPicker showPickerOver:self];
+            break;
+        case kSystolicM3:
+            [systolicPicker showPickerOver:self];
+            break;
+        case kSystolicA1:
+            [systolicPicker showPickerOver:self];
+            break;
+        case kDiastolicA1:
+            [diastolicPicker showPickerOver:self];
+            break;
+        case kDiastolicA2:
+            [diastolicPicker showPickerOver:self];
+            break;
+        case kDiastolicA3:
+            [diastolicPicker showPickerOver:self];
+            break;
+        case kDiastolicM1:
+            [diastolicPicker showPickerOver:self];
+            break;
+        case kDiastolicM2:
+            [diastolicPicker showPickerOver:self];
+            break;
+        case kDiastolicM3:
+            [diastolicPicker showPickerOver:self];
+            break;
+        case kPulseA1:
+            [pulsePicker showPickerOver:self];
+            break;
+        case kPulseA2:
+            [pulsePicker showPickerOver:self];
+            break;
+        case kPulseA3:
+            [pulsePicker showPickerOver:self];
+            break;
+        case kPulseM1:
+            [pulsePicker showPickerOver:self];
+            break;
+        case kPulseM2:
+            [pulsePicker showPickerOver:self];
+            break;
+        case kPulseM3:
+            [pulsePicker showPickerOver:self];
+            break;
     }
+    
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+        [self.aTxtField4 resignFirstResponder];
 
 }
 
 -(void) pickerSelector:(SBPickerSelector *)selector selectedValue:(NSString *)value index:(NSInteger)idx{
     
     [currentSelected setText:value];
+    [currentSelected resignFirstResponder];
     
 }
 
-//- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-//    
-//    return kMaxComponents;
-//}
-//
-//- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-//    
-//    switch (component) {
-//        case kSystolicPressure:
-//            return [systolicValues count];
-//            break;
-//        case kDiastolicPressure:
-//            return [diastolicValues count];
-//        case kPulse:
-//            return [pulseValues count];
-//        default:
-//            return 0;
-//            break;
-//    }
-//}
-//- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-//    
-//    switch (component) {
-//        case kSystolicPressure:
-//            return [systolicValues[row] stringValue];
-//            break;
-//        case kDiastolicPressure:
-//            return [diastolicValues[row] stringValue];
-//        case kPulse:
-//            return [pulseValues[row] stringValue];
-//        default:
-//            return @"0";
-//            break;
-//    }
-//
-//}
+-(void) pickerSelector:(SBPickerSelector *)selector cancelPicker:(BOOL)cancel{
+    
+    [currentSelected resignFirstResponder];
+}
+
+-(void) saveMeasurements{
+    
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    
+    BOOL someTimeZone = NO;
+    
+    if (self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
+        self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
+        self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
+        self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
+        self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
+        self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
+        self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
+        self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
+        self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""]){
+        
+        NSString* first = [NSString stringWithFormat:@"%@ %@ %@",self.mTxtField1.text,self.mTxtField2.text,self.mTxtField3.text];
+        [preferences setObject:first forKey:MORNING_FIRST];
+        
+        NSString* second = [NSString stringWithFormat:@"%@ %@ %@",self.mTxtField4.text,self.mTxtField5.text,self.mTxtField6.text];
+        [preferences setObject:second forKey:MORNING_SECOND];
+        
+        NSString* third= [NSString stringWithFormat:@"%@ %@ %@",self.mTxtField7.text,self.mTxtField8.text,self.mTxtField9.text];
+        [preferences setObject:third forKey:MORNING_THIRD];
+        
+        someTimeZone = YES;
+        
+       
+    }
+    
+    if (self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
+        self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
+        self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
+        self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
+        self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
+        self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
+        self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
+        self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
+        self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""]){
+        
+        NSString* first = [NSString stringWithFormat:@"%@ %@ %@",self.aTxtField1.text,self.aTxtField2.text,self.aTxtField3.text];
+        [preferences setObject:first forKey:AFTERNOON_FIRST];
+        
+        NSString* second = [NSString stringWithFormat:@"%@ %@ %@",self.aTxtField4.text,self.aTxtField5.text,self.aTxtField6.text];
+        [preferences setObject:second forKey:AFTERNOON_SECOND];
+        
+        NSString* third= [NSString stringWithFormat:@"%@ %@ %@",self.aTxtField7.text,self.aTxtField8.text,self.aTxtField9.text];
+        [preferences setObject:third forKey:AFTERNOON_THIRD];
+        
+        someTimeZone = YES;
+    }
+    
+    if (!someTimeZone) {
+        [self showAlert:NSLocalizedString(@"NoSave", nil)];
+    }
+    
+
+}
+
+-(void) showAlert:(NSString*)msg{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"FailSave",nil)
+                                                    message:msg
+                                                   delegate:nil
+                                          cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+-(void)recoverData{
+   
+     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    
+    if ([preferences objectForKey:MORNING_FIRST]!=nil && ![(NSString*)[preferences objectForKey:MORNING_FIRST] isEqualToString:@""]){
+        
+        NSString* first = [preferences objectForKey:MORNING_FIRST];
+        NSArray* firstArray = [first componentsSeparatedByString: @" "];
+        [self.mTxtField1 setText:[firstArray objectAtIndex:0]];
+        [self.mTxtField2 setText:[firstArray objectAtIndex:1]];
+        [self.mTxtField3 setText:[firstArray objectAtIndex:2]];
+
+        NSString* second = [preferences objectForKey:MORNING_SECOND];
+        NSArray* secondArray = [second componentsSeparatedByString: @" "];
+        [self.mTxtField4 setText:[secondArray objectAtIndex:0]];
+        [self.mTxtField5 setText:[secondArray objectAtIndex:1]];
+        [self.mTxtField6 setText:[secondArray objectAtIndex:2]];
+        
+        NSString* third = [preferences objectForKey:MORNING_THIRD];
+        NSArray* thirdArray = [third componentsSeparatedByString: @" "];
+        [self.mTxtField7 setText:[thirdArray objectAtIndex:0]];
+        [self.mTxtField8 setText:[thirdArray objectAtIndex:1]];
+        [self.mTxtField9 setText:[thirdArray objectAtIndex:2]];
+
+        
+    }else if([preferences objectForKey:AFTERNOON_FIRST]!=nil && ![(NSString*)[preferences objectForKey:AFTERNOON_FIRST] isEqualToString:@""]){
+        
+        NSString* first = [preferences objectForKey:AFTERNOON_FIRST];
+        NSArray* firstArray = [first componentsSeparatedByString: @" "];
+        [self.mTxtField1 setText:[firstArray objectAtIndex:0]];
+        [self.mTxtField2 setText:[firstArray objectAtIndex:1]];
+        [self.mTxtField3 setText:[firstArray objectAtIndex:2]];
+        
+        NSString* second = [preferences objectForKey:AFTERNOON_SECOND];
+        NSArray* secondArray = [second componentsSeparatedByString: @" "];
+        [self.mTxtField4 setText:[secondArray objectAtIndex:0]];
+        [self.mTxtField5 setText:[secondArray objectAtIndex:1]];
+        [self.mTxtField6 setText:[secondArray objectAtIndex:2]];
+        
+        NSString* third = [preferences objectForKey:AFTERNOON_THIRD];
+        NSArray* thirdArray = [third componentsSeparatedByString: @" "];
+        [self.mTxtField7 setText:[thirdArray objectAtIndex:0]];
+        [self.mTxtField8 setText:[thirdArray objectAtIndex:1]];
+        [self.mTxtField9 setText:[thirdArray objectAtIndex:2]];
+    }
+
+    
+}
+
 
 - (IBAction)savePressures:(id)sender {
-    
+    [self saveMeasurements];
     
 }
 

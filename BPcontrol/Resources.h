@@ -95,27 +95,34 @@ typedef void (^CompletionBlock)(NSError *error, id object);
 #define PREFIXSAVE @"prefix"
 #define USERUUID @"useruuid"
 
+#define MORNING_FIRST @"morningfirsttime"
+#define MORNING_SECOND @"morningsecondtime"
+#define MORNING_THIRD @"morningthirdtime"
+
+#define AFTERNOON_FIRST @"afternoonfirsttime"
+#define AFTERNOON_SECOND @"afternoonsecondtime"
+#define AFTERNOON_THIRD @"afternoonthirdtime"
+
 #define kMaxComponents 3
 
 #define kSystolicM1 1
-#define kSystolicM2 2
-#define kSystolicM3 3
-#define kSystolicA1 4
-#define kSystolicA2 5
-#define kSystolicA3 6
+#define kDiastolicM1 2
+#define kPulseM1 3
+#define kSystolicM2 4
+#define kDiastolicM2 5
+#define kPulseM2 6
+#define kSystolicM3 7
+#define kDiastolicM3 8
+#define kPulseM3 9
 
-#define kDiastolicM1 7
-#define kDiastolicM2 8
-#define kDiastolicM3 9
-#define kDiastolicA1 10
-#define kDiastolicA2 11
-#define kDiastolicA3 12
-
-#define kPulseM1 13
-#define kPulseM2 14
-#define kPulseM3 15
-#define kPulseA1 16
-#define kPulseA2 17
+#define kSystolicA1 10
+#define kDiastolicA1 11
+#define kPulseA1 12
+#define kSystolicA2 13
+#define kDiastolicA2 14
+#define kPulseA2 15
+#define kSystolicA3 16
+#define kDiastolicA3 17
 #define kPulseA3 18
 
 #endif

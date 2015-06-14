@@ -40,21 +40,20 @@
 @property (strong, nonatomic) IBOutlet UITextField *aTxtField8;
 @property (strong, nonatomic) IBOutlet UITextField *aTxtField9;
 
-
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
 @property (strong, nonatomic) IBOutlet UIButton *saveButton;
 
-//@property (strong, nonatomic) IBOutlet SBPickerSelector *picker;
+@property (strong, nonatomic) IBOutlet UILabel *mSystolicHeader;
+
+@property (strong, nonatomic) IBOutlet UILabel *mPulseHeader;
+
+@property (strong, nonatomic) IBOutlet UILabel *mDiastolicHeader;
+
+@property (strong, nonatomic) IBOutlet UILabel *aSystolicHeader;
+@property (strong, nonatomic) IBOutlet UILabel *aDiastolicHeader;
+@property (strong, nonatomic) IBOutlet UILabel *aPulseHeader;
 
 - (IBAction)savePressures:(id)sender;
 - (IBAction)sendPressuresToSHUITE:(id)sender;
-
-//@property (strong, nonatomic) IBOutlet UIView *parentView;
-//@property (strong, nonatomic) IBOutlet UIView *pickerView;
-//
-//@property (strong, nonatomic) IBOutlet UIBarButtonItem *pickerCancelButton;
-//@property (strong, nonatomic) IBOutlet UIBarButtonItem *pickerOKButton;
-//@property (strong, nonatomic) IBOutlet UIBarButtonItem *titlePicker;
-//@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end
