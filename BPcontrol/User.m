@@ -15,7 +15,7 @@ static User * shared = nil;
 @synthesize dianaSystolicIndex;
 @synthesize dianaDiastolicIndex;
 @synthesize UUID;
-@synthesize name;
+@synthesize username;
 @synthesize firstSurname;
 @synthesize secondSurname;
 @synthesize identityCard;

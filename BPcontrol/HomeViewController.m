@@ -130,7 +130,7 @@
     [[User sharedManager] setBirthDate:[self splitSHUITEDateType:[patient objectForKey:@"birthDate"]]];
     [[User sharedManager] setIdentityCard:[patient objectForKey:@"identityCard"]];
     [[User sharedManager] setEmail:[patient objectForKey:@"email"]];
-    [[User sharedManager] setName:[patient objectForKey:@"name"]];
+    [[User sharedManager] setUsername:[patient objectForKey:@"name"]];
     [[User sharedManager] setTown:[patient objectForKey:@"town"]];
     [[User sharedManager] setLastUpdate:[self splitSHUITEDateType:[patient objectForKey:@"lastUpdated"]]];
     [[User sharedManager] setFirstSurname:[patient objectForKey:@"firstSurname"]];

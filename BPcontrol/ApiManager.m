@@ -39,6 +39,7 @@
         
         [self initURLs];
         _manager = [[AFHTTPRequestOperationManager alloc] init];
+        [_manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     }
     return self;
 }
@@ -140,7 +141,7 @@
     [alert show];
 }
 
--(void) postPressuresToSHUITEWhitMorning:(NSArray*)morning withAfternoon:(NSArray*)afternoon withCompletionBlock:(CompletionBlock) completionBlock;{
+-(void) postPressuresToSHUITEWhitMorning:(NSArray*)morning withAfternoon:(NSArray*)afternoon withCompletionBlock:(CompletionBlock) completionBlock{
     
     Pressure* mfirst = [morning objectAtIndex:0];
     Pressure* msecond = [morning objectAtIndex:1];
@@ -152,9 +153,8 @@
     
     NSString *UUID = [[User sharedManager] UUID];
     
-    NSDictionary *params = @{
-                             @"systole1m": [NSString stringWithFormat:@"%i",(int)[mfirst systolic]] ,
-                             @"systolec2m":[NSString stringWithFormat:@"%i",(int)[msecond systolic]],
+    NSDictionary *params = @{@"systole1m": [NSString stringWithFormat:@"%i",(int)[mfirst systolic]] ,
+                             @"systole2m":[NSString stringWithFormat:@"%i",(int)[msecond systolic]],
                              @"systole3m":[NSString stringWithFormat:@"%i",(int)[mthird systolic]],
                              @"diastole1m": [NSString stringWithFormat:@"%i",(int)[mfirst diastolic]] ,
                              @"diastole2m":[NSString stringWithFormat:@"%i",(int)[msecond diastolic]],
@@ -172,16 +172,26 @@
                              @"pulse2n":[NSString stringWithFormat:@"%i",(int)[asecond pulse]],
                              @"pulse3n":[NSString stringWithFormat:@"%i",(int)[athird pulse]],
                              @"uuid":UUID};
+
     
+     _manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [_manager POST:postPressures parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (responseObject!=nil) {
             completionBlock(nil, responseObject);
         }else{
-            completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:500 userInfo:nil], nil);
+            completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:404 userInfo:nil], nil);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
        completionBlock(error, nil);
     }];
+    
+   //AFHTTPRequestOperation *op =  [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:postPressures parameters:params];
+    
+//    AFHTTPRequestOperation *jsonOperation = [AFJSONRequestOperation JSONRequestOperationWithRequest:jsonRequest success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+//        NSLog(@"Success");
+//    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+//        NSLog(@"Failure");
+//    }];
     
 }
 

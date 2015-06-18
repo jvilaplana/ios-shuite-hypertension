@@ -253,7 +253,6 @@
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     
     BOOL someTimeZone = NO;
-    NSLog(@"DFSFD %@",self.mTxtField5.text);
     
     if (self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
         self.mTxtField2.text != nil && ![self.mTxtField2.text isEqualToString:@""] &&

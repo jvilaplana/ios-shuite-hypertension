@@ -11,7 +11,7 @@
 @interface User : NSObject
 
 @property (strong,nonatomic) NSString* UUID;
-@property (strong,nonatomic) NSString* name;
+@property (strong,nonatomic) NSString* username;
 @property (strong,nonatomic) NSString* firstSurname;
 @property (strong,nonatomic) NSString* secondSurname;
 @property (strong,nonatomic) NSString* identityCard;

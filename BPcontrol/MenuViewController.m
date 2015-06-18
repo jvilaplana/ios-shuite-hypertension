@@ -94,7 +94,7 @@
             ((ProfileTableViewCell*)cell).userImage.image = [UIImage imageWithData: imageData];
             ((ProfileTableViewCell*)cell).userImage.clipsToBounds = YES;
             ((ProfileTableViewCell*)cell).userImage.layer.cornerRadius =((ProfileTableViewCell*)cell).userImage.frame.size.height/2 -1;
-            ((ProfileTableViewCell*)cell).profileLabel.text =[NSString stringWithFormat:@"%@ %@", [[User sharedManager] name],[[User sharedManager] firstSurname]];
+            ((ProfileTableViewCell*)cell).profileLabel.text =[NSString stringWithFormat:@"%@ %@", [[User sharedManager] username],[[User sharedManager] firstSurname]];
            
             break;
         case 3:

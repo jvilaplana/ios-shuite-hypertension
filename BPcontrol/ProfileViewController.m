@@ -47,7 +47,7 @@
     self.imageView.layer.cornerRadius = self.imageView.frame.size.height/2 -1;
 
 }
-
+  
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -55,7 +55,7 @@
 
 -(void) defineProfileLabels{
     self.nameSurnamesLabelHeader.text = NSLocalizedString(@"NameSurname", nil);
-    self.nameSurnameLabel.text = [NSString stringWithFormat:@"%@ %@ %@",[[User sharedManager] name],[[User sharedManager] firstSurname],[[User sharedManager] secondSurname]];
+    self.nameSurnameLabel.text = [NSString stringWithFormat:@"%@ %@ %@",[[User sharedManager] username],[[User sharedManager] firstSurname],[[User sharedManager] secondSurname]];
     self.dniLabelHeader.text = @"D.N.I:";
     self.dniLabel.text = [[User sharedManager] identityCard];
     self.emailLabelHeader.text = @"E-mail:";
