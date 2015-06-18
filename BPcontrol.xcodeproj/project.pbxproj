@@ -16,6 +16,9 @@
 		3A112C261ADC6EA80029167E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A112C241ADC6EA80029167E /* Main.storyboard */; };
 		3A112C281ADC6EA80029167E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A112C271ADC6EA80029167E /* Images.xcassets */; };
 		3A112C371ADC6EA80029167E /* BPcontrolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A112C361ADC6EA80029167E /* BPcontrolTests.m */; };
+		3A21EE681B332B1200BA4E73 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A21EE671B332B1200BA4E73 /* libsqlite3.dylib */; };
+		3A21EE701B332C5600BA4E73 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A21EE6F1B332C5600BA4E73 /* DBManager.m */; };
+		3A21EE731B3333EA00BA4E73 /* BPcontrol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A21EE711B3333EA00BA4E73 /* BPcontrol.xcdatamodeld */; };
 		3A3737C21AF6719B0024801D /* ic_action_help_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737BC1AF6719B0024801D /* ic_action_help_tab.png */; };
 		3A3737C31AF6719B0024801D /* ic_action_help_tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737BD1AF6719B0024801D /* ic_action_help_tab@2x.png */; };
 		3A3737C41AF6719B0024801D /* ic_action_home_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737BE1AF6719B0024801D /* ic_action_home_tab.png */; };
@@ -118,6 +121,10 @@
 		3A112C301ADC6EA80029167E /* BPcontrolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPcontrolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A112C351ADC6EA80029167E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A112C361ADC6EA80029167E /* BPcontrolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPcontrolTests.m; sourceTree = "<group>"; };
+		3A21EE671B332B1200BA4E73 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3A21EE6E1B332C5600BA4E73 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		3A21EE6F1B332C5600BA4E73 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		3A21EE721B3333EA00BA4E73 /* BPcontrol.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BPcontrol.xcdatamodel; sourceTree = "<group>"; };
 		3A3737BC1AF6719B0024801D /* ic_action_help_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_help_tab.png; sourceTree = "<group>"; };
 		3A3737BD1AF6719B0024801D /* ic_action_help_tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_help_tab@2x.png"; sourceTree = "<group>"; };
 		3A3737BE1AF6719B0024801D /* ic_action_home_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_home_tab.png; sourceTree = "<group>"; };
@@ -358,6 +365,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A21EE681B332B1200BA4E73 /* libsqlite3.dylib in Frameworks */,
 				2113EEC31FB8D1C220A7CBA3 /* libPods.a in Frameworks */,
 				3A75C9BF1AFFD6270012DF8E /* Crashlytics.framework in Frameworks */,
 				3A75C9BE1AFFD6270012DF8E /* Fabric.framework in Frameworks */,
@@ -397,6 +405,7 @@
 		3A112C161ADC6EA80029167E /* BPcontrol */ = {
 			isa = PBXGroup;
 			children = (
+				3A21EE691B332B2400BA4E73 /* Database */,
 				3AA4C5161B248FAC00043DD1 /* CustomViews */,
 				3A75C9BD1AFFD6270012DF8E /* Crashlytics.framework */,
 				3A75C9BC1AFFD6270012DF8E /* Fabric.framework */,
@@ -440,6 +449,15 @@
 				3A112C351ADC6EA80029167E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A21EE691B332B2400BA4E73 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				3A21EE6E1B332C5600BA4E73 /* DBManager.h */,
+				3A21EE6F1B332C5600BA4E73 /* DBManager.m */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 		3A3737BB1AF66F490024801D /* Images */ = {
@@ -825,6 +843,7 @@
 		3AF47B941AED74B0009FE6F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3A21EE711B3333EA00BA4E73 /* BPcontrol.xcdatamodeld */,
 				3A989F861AED50EA00A4C945 /* Resources.h */,
 				3AED647E1AF3EA33007A40D6 /* Localizable.strings */,
 			);
@@ -843,6 +862,7 @@
 		94D811AEF1DDB5D9CDDF758B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A21EE671B332B1200BA4E73 /* libsqlite3.dylib */,
 				3AA3A3371B01118800BB87A5 /* SWRevealViewController */,
 				3AF0CCFF1AED8EBF008D95BC /* AFNetworking */,
 				3AF0CCD61AED8E5A008D95BC /* AFNetworking */,
@@ -1046,6 +1066,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A21EE701B332C5600BA4E73 /* DBManager.m in Sources */,
 				3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */,
 				3ADD23741B01202400410655 /* MenuViewController.m in Sources */,
 				3A0CA6021AFAC87400309466 /* TelephoneViewController.m in Sources */,
@@ -1066,6 +1087,7 @@
 				3AEA326C1AFFACB2005CC894 /* SendCodeController.m in Sources */,
 				3A112C1A1ADC6EA80029167E /* main.m in Sources */,
 				3A954F841B150DFC00A32612 /* PressuresViewController.m in Sources */,
+				3A21EE731B3333EA00BA4E73 /* BPcontrol.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1309,6 +1331,16 @@
 				3A112C1F1ADC6EA80029167E /* BPcontrol.xcdatamodel */,
 			);
 			currentVersion = 3A112C1F1ADC6EA80029167E /* BPcontrol.xcdatamodel */;
+			path = BPcontrol.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		3A21EE711B3333EA00BA4E73 /* BPcontrol.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3A21EE721B3333EA00BA4E73 /* BPcontrol.xcdatamodel */,
+			);
+			currentVersion = 3A21EE721B3333EA00BA4E73 /* BPcontrol.xcdatamodel */;
 			path = BPcontrol.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

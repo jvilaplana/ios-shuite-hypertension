@@ -11,9 +11,14 @@
 #import "Pressure.h"
 #import <SVProgressHUD.h>
 #import "ApiManager.h"
+#import "DBManager.h"
 
 @interface PressuresViewController ()
+
+@property (nonatomic, strong) DBManager *dbManager;
+
 @end
+
 @implementation PressuresViewController{
     
     NSMutableArray *systolicValues;
@@ -48,7 +53,8 @@
     [self configurePickers];
     [self prepareTextFieldsTags];
     [self configureView];
-
+    
+    self.dbManager = [[DBManager alloc] initWithDatabaseFilename:@"BPcontrol.db"];
 }
 
 -(void) configureView{
@@ -432,9 +438,11 @@
             [SVProgressHUD dismiss];
             if (error!=nil) {
                 
-             NSString* P = @"";
+                NSDictionary *response =(NSDictionary*)object;
             }else{
-                NSString* P = @"";
+                
+                [self showAlert:NSLocalizedString(@"ErrorSavingPressures", nil)];
+
             }
             
         }];
