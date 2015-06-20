@@ -79,6 +79,8 @@
 		3AED64661AF3C613007A40D6 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED64651AF3C613007A40D6 /* Message.m */; };
 		3AED646D1AF3DD0B007A40D6 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED646C1AF3DD0B007A40D6 /* TabBarController.m */; };
 		3AED647C1AF3EA33007A40D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AED647E1AF3EA33007A40D6 /* Localizable.strings */; };
+		3AFBF6B61B35C1BE004320A2 /* PatientHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AFBF6B51B35C1BE004320A2 /* PatientHistoryCell.xib */; };
+		3AFBF6B81B35C1DA004320A2 /* PatientHistoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AFBF6B71B35C1DA004320A2 /* PatientHistoryHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -359,6 +361,8 @@
 		3AF0CD251AED8EBF008D95BC /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		3AF0CD261AED8EBF008D95BC /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		3AF0CD271AED8EBF008D95BC /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		3AFBF6B51B35C1BE004320A2 /* PatientHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientHistoryCell.xib; sourceTree = "<group>"; };
+		3AFBF6B71B35C1DA004320A2 /* PatientHistoryHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientHistoryHeader.xib; sourceTree = "<group>"; };
 		85E84C97E232C51F93A6E539 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA32FE7558B881AA1EACFD9E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -569,6 +573,7 @@
 		3AED64671AF3D78D007A40D6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3AFBF6B41B35C14C004320A2 /* PatientHistory */,
 				3ADD23721B01202400410655 /* MenuViewController.h */,
 				3ADD23731B01202400410655 /* MenuViewController.m */,
 				3AA3A33C1B01143F00BB87A5 /* ViewController.h */,
@@ -591,8 +596,6 @@
 				3AA05B0F1B11472A00495164 /* ProfileViewController.m */,
 				3A954F821B150DFC00A32612 /* PressuresViewController.h */,
 				3A954F831B150DFC00A32612 /* PressuresViewController.m */,
-				3AD86D321B347CD400C624CE /* HistoryPressuresTableController.h */,
-				3AD86D331B347CD400C624CE /* HistoryPressuresTableController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -855,6 +858,17 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		3AFBF6B41B35C14C004320A2 /* PatientHistory */ = {
+			isa = PBXGroup;
+			children = (
+				3AD86D331B347CD400C624CE /* HistoryPressuresTableController.m */,
+				3AD86D321B347CD400C624CE /* HistoryPressuresTableController.h */,
+				3AFBF6B51B35C1BE004320A2 /* PatientHistoryCell.xib */,
+				3AFBF6B71B35C1DA004320A2 /* PatientHistoryHeader.xib */,
+			);
+			name = PatientHistory;
+			sourceTree = "<group>";
+		};
 		51654CF0E35AA5ABDAFDEBF0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -975,6 +989,7 @@
 				3A3737D51AF6746E0024801D /* ic_action_location_tab@2x.png in Resources */,
 				3A9D3A301B0253D000C5C488 /* ic_action_facebook.png in Resources */,
 				3AC9A5DB1B0AA3BE0067C9C6 /* home_graphic_icon.png in Resources */,
+				3AFBF6B81B35C1DA004320A2 /* PatientHistoryHeader.xib in Resources */,
 				3A9D3A321B0253D000C5C488 /* ic_action_gplus.png in Resources */,
 				3A9D3A331B0253D000C5C488 /* ic_action_help.png in Resources */,
 				3A9D3A381B0253D000C5C488 /* ic_action_phone_start.png in Resources */,
@@ -988,6 +1003,7 @@
 				3A3737D11AF673CD0024801D /* ic_action_location_tab.png in Resources */,
 				3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */,
 				3A9D3A2E1B0253D000C5C488 /* ic_action_clock.png in Resources */,
+				3AFBF6B61B35C1BE004320A2 /* PatientHistoryCell.xib in Resources */,
 				3AC9A5DC1B0AA3BE0067C9C6 /* presiones_icon.png in Resources */,
 				3A9D3A351B0253D000C5C488 /* ic_action_line_chart.png in Resources */,
 				3AED647C1AF3EA33007A40D6 /* Localizable.strings in Resources */,

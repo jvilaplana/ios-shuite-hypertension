@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryPressuresTableController : UINavigationController
+@interface HistoryPressuresTableController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+
+
 
 @end
