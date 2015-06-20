@@ -12,6 +12,7 @@
 #import <SVProgressHUD.h>
 #import "ApiManager.h"
 #import "DBManager.h"
+#import "User.h"
 
 @interface PressuresViewController ()
 
@@ -54,7 +55,6 @@
     [self prepareTextFieldsTags];
     [self configureView];
     
-    self.dbManager = [[DBManager alloc] initWithDatabaseFilename:@"BPcontrol.db"];
 }
 
 -(void) configureView{
@@ -308,6 +308,8 @@
     
     if (!someTimeZone) {
         [self showAlert:NSLocalizedString(@"NoSave", nil)];
+    }else{
+        [self showAlert:NSLocalizedString(@"PressuresSaved", nil)];
     }
     
 
@@ -347,25 +349,26 @@
         [self.mTxtField9 setText:[thirdArray objectAtIndex:2]];
 
         
-    }else if([preferences objectForKey:AFTERNOON_FIRST]!=nil && ![(NSString*)[preferences objectForKey:AFTERNOON_FIRST] isEqualToString:@""]){
+    }
+    if([preferences objectForKey:AFTERNOON_FIRST]!=nil && ![(NSString*)[preferences objectForKey:AFTERNOON_FIRST] isEqualToString:@""]){
         
         NSString* first = [preferences objectForKey:AFTERNOON_FIRST];
         NSArray* firstArray = [first componentsSeparatedByString: @" "];
-        [self.mTxtField1 setText:[firstArray objectAtIndex:0]];
-        [self.mTxtField2 setText:[firstArray objectAtIndex:1]];
-        [self.mTxtField3 setText:[firstArray objectAtIndex:2]];
+        [self.aTxtField1 setText:[firstArray objectAtIndex:0]];
+        [self.aTxtField2 setText:[firstArray objectAtIndex:1]];
+        [self.aTxtField3 setText:[firstArray objectAtIndex:2]];
         
         NSString* second = [preferences objectForKey:AFTERNOON_SECOND];
         NSArray* secondArray = [second componentsSeparatedByString: @" "];
-        [self.mTxtField4 setText:[secondArray objectAtIndex:0]];
-        [self.mTxtField5 setText:[secondArray objectAtIndex:1]];
-        [self.mTxtField6 setText:[secondArray objectAtIndex:2]];
+        [self.aTxtField4 setText:[secondArray objectAtIndex:0]];
+        [self.aTxtField5 setText:[secondArray objectAtIndex:1]];
+        [self.aTxtField6 setText:[secondArray objectAtIndex:2]];
         
         NSString* third = [preferences objectForKey:AFTERNOON_THIRD];
         NSArray* thirdArray = [third componentsSeparatedByString: @" "];
-        [self.mTxtField7 setText:[thirdArray objectAtIndex:0]];
-        [self.mTxtField8 setText:[thirdArray objectAtIndex:1]];
-        [self.mTxtField9 setText:[thirdArray objectAtIndex:2]];
+        [self.aTxtField7 setText:[thirdArray objectAtIndex:0]];
+        [self.aTxtField8 setText:[thirdArray objectAtIndex:1]];
+        [self.aTxtField9 setText:[thirdArray objectAtIndex:2]];
     }
 
     
@@ -436,9 +439,11 @@
          withCompletionBlock:^(NSError *error, id object) {
              
             [SVProgressHUD dismiss];
-            if (error!=nil) {
+            if (error==nil) {
                 
                 NSDictionary *response =(NSDictionary*)object;
+                BOOL videos = [self parseResponse:response];
+                [self showAlertResult:videos];
             }else{
                 
                 [self showAlert:NSLocalizedString(@"ErrorSavingPressures", nil)];
@@ -485,4 +490,63 @@
     [preferences setObject:@"" forKey:AFTERNOON_SECOND];
     [preferences setObject:@"" forKey:AFTERNOON_THIRD];
 }
+
+-(void)showAlertResult:(BOOL)video{
+    
+    NSString *localizedVideo = nil;
+     NSString *butttonVideo = nil;
+    
+    NSString *msg = NSLocalizedString(@"SentpressuresOK",nil);
+    NSArray *listItems = [msg componentsSeparatedByString:@"\n"];
+    
+    if (video) {
+        localizedVideo = msg;
+        butttonVideo = NSLocalizedString(@"GoToVideos", nil);
+    }else{
+         localizedVideo = listItems[1];
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: NSLocalizedString(@"Response", nil)
+                                                    message:localizedVideo
+                                                   delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                              otherButtonTitles:butttonVideo, nil];
+    [alert show];
+
+    
+}
+
+-(BOOL) parseResponse:(NSDictionary*)response{
+    
+    
+    NSString *link =[response objectForKey:@"infoLink"];
+    NSString *description = [response objectForKey:@"infoLinkName"];
+    
+    if (link != nil &&  description!= nil &&
+        ![link isEqualToString:@""] && ![link isEqualToString:@"null"]
+        && ![description isEqualToString:@""] && ![description isEqualToString:@"null"]) {
+        
+        [self saveInDB:link with:description];
+
+        return YES;
+    }
+    
+    return NO;
+}
+
+-(void) saveInDB:(NSString*)videolink with:(NSString*) description{
+    
+    NSString *query = [NSString stringWithFormat:@"insert into youtubeVideo(userUUID,link,description) values('%@','%@','%@')",[[User sharedManager]UUID],videolink,description];
+    
+    [[DBManager getSharedInstance] executeQuery:query];
+    
+    if (self.dbManager.affectedRows != 0) {
+        NSLog(@"Query was executed successfully. Affected rows = %d", self.dbManager.affectedRows);
+    }
+    else{
+        NSLog(@"Could not execute the query.");
+    }
+}
+
+
 @end

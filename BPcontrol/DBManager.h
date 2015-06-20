@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <sqlite3.h>
 
 @interface DBManager : NSObject
 
@@ -14,7 +15,8 @@
 @property (nonatomic) int affectedRows;
 @property (nonatomic) long long lastInsertedRowID;
 
--(instancetype)initWithDatabaseFilename:(NSString *)dbFilename;
+-(void)initWithDatabase;
++(DBManager*)getSharedInstance;
 -(NSArray *)loadDataFromDB:(NSString *)query;
 -(void)executeQuery:(NSString *)query;
 

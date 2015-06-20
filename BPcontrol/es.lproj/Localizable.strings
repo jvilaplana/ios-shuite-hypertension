@@ -70,3 +70,6 @@
 "NoSave" = "Para guardar la presiones tienes que tener rellenado almenos una fraja horaria.";
 "MessageSend" = "Para enviar las presiones tienes que rellenar las dos franjas horarias. Si solo hay una, pulsa el botón guardar para guardar las presiones de una franja horaria";
 "ErrorSavingPressures" = "Un error ha ocurrido mientras se guardaban las presines";
+"SentpressuresOK" = "Las presiones han sido correctamente enviadas\n Nuevo video disponible en la seccion de videos";
+"GoToVideos" = "Ir a videos";
+"Response" = "Respuesta";

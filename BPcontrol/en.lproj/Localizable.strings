@@ -70,6 +70,10 @@
 "Save" = "Save";
 "Accept" = "Accept";
 "Cancel" = "Cancel";
+"PressuresSaved" = "Pressures saved correctly";
 "NoSave" = "To keep the pressure you have to have at least a time zone";
 "MessageSend" = "To send pressures have to fill both slots. If only one , click save button to save the pressures of a slot button.";
 "ErrorSavingPressures" = "An error has occurred while pressures were kept";
+"SentpressuresOK" = "Pressures have been sent successfully\n New video is available in Videos section";
+"GoToVideos" = "Go to videos";
+"Response" = "Response";
