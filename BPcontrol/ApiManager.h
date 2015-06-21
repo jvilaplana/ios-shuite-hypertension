@@ -29,4 +29,5 @@
 -(void) getUserInfo:(NSString*)UUID withCompletionBlock:(CompletionBlock) completionBlock;
 -(void) getUserImage:(NSString*)UUID withCompletionBlock:(CompletionBlock) completionBlock;
 -(void) postPressuresToSHUITEWhitMorning:(NSArray*)morning withAfternoon:(NSArray*)afternoon withCompletionBlock:(CompletionBlock) completionBlock;
+-(void) getUserPressures:(NSString *)UUID withCompletionBlock:(CompletionBlock)completionBlock;
 @end

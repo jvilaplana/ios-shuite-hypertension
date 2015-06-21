@@ -32,7 +32,7 @@ static NSString* path = @"";
     BOOL success = [fileManager fileExistsAtPath:dbPath];
     
     if(!success) {
-      NSString* databasePath  = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"db.sqlite"];
+      NSString* databasePath  = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"bpcontrol.db"];
       success = [fileManager copyItemAtPath:databasePath toPath:dbPath error:&error];
       if (!success)
           NSAssert1(0, @"Failed to create writable database", [error localizedDescription]);

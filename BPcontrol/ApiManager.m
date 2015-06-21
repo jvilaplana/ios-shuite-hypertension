@@ -18,10 +18,11 @@
 #define GET_USER_INFO @"/hypertensionPatient/restShow/"
 #define GET_USER_IMAGE @"/hypertensionPatient/restDownloadProfileImage/"
 #define POST_MEASUREMENTS @"/hypertensionBloodPressure/restSave"
+#define GET_PRESSURES @"/hypertensionBloodPressure/restList/"
 
 @implementation ApiManager{
     
-    NSString *sendTlfNumber,*sendCodeNumber,*getUserInfo,*getUserImage,*postPressures;
+    NSString *sendTlfNumber,*sendCodeNumber,*getUserInfo,*getUserImage,*postPressures,*getPressures;
     UIAlertView *alert;
 }
 
@@ -50,6 +51,7 @@
     getUserInfo = [NSString stringWithFormat:@"%@%@",URL_BASE,GET_USER_INFO];
     getUserImage = [NSString stringWithFormat:@"%@%@",URL_BASE,GET_USER_IMAGE];
     postPressures = [NSString stringWithFormat:@"%@%@",URL_BASE,POST_MEASUREMENTS];
+    getPressures = [NSString stringWithFormat:@"%@%@",URL_BASE,GET_PRESSURES];
 }
 
 #pragma mark WebService calls
@@ -185,14 +187,23 @@
        completionBlock(error, nil);
     }];
     
-   //AFHTTPRequestOperation *op =  [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:postPressures parameters:params];
+}
+
+-(void) getUserPressures:(NSString *)UUID withCompletionBlock:(CompletionBlock)completionBlock{
     
-//    AFHTTPRequestOperation *jsonOperation = [AFJSONRequestOperation JSONRequestOperationWithRequest:jsonRequest success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-//        NSLog(@"Success");
-//    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-//        NSLog(@"Failure");
-//    }];
-    
+    NSString *url = [NSString stringWithFormat:@"%@%@",getPressures,UUID];
+
+    [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (responseObject!=nil) {
+            completionBlock(nil, responseObject);
+        }else{
+            completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:404 userInfo:nil], nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completionBlock(error, nil);
+    }];
+
+
 }
 
 

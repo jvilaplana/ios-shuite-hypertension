@@ -7,35 +7,62 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="024-P2-zlA">
-                    <rect key="frame" x="160" y="24" width="151" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-xz-F8v">
-                    <rect key="frame" x="324" y="24" width="121" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zok-Dj-adA">
-                    <rect key="frame" x="464" y="24" width="128" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Op-tw-Mhn">
-                    <rect key="frame" x="52" y="8" width="45" height="51"/>
-                    <color key="backgroundColor" red="0.23364486179999999" green="0.21898562999999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                </imageView>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="442" y="355"/>
-        </view>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UYX-SI-qX0" customClass="PatientHistoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UYX-SI-qX0" id="uMG-L2-t1h">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uas-s8-BuE">
+                        <rect key="frame" x="8" y="0.0" width="47" height="43"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="128Hgmm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLM-gB-uMp">
+                        <rect key="frame" x="69" y="11" width="80" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Voh-55-yhl"/>
+                            <constraint firstAttribute="width" constant="80" id="wKt-Fw-6iO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="100Hgmm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOT-1E-0wg">
+                        <rect key="frame" x="162" y="11" width="80" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="Dd4-PY-0Eb"/>
+                            <constraint firstAttribute="height" constant="21" id="Qs7-eD-3mP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="60bpm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3Z-JC-xAv">
+                        <rect key="frame" x="255" y="11" width="54" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="07r-OA-DzO"/>
+                            <constraint firstAttribute="width" constant="54" id="8cG-37-VmZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.20539818839999999" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="Uas-s8-BuE" firstAttribute="leading" secondItem="uMG-L2-t1h" secondAttribute="leading" constant="8" id="FRJ-IV-w6L"/>
+                    <constraint firstItem="tOT-1E-0wg" firstAttribute="leading" secondItem="LLM-gB-uMp" secondAttribute="trailing" constant="13" id="K73-u9-Epn"/>
+                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="14" id="Nyt-rA-Aar"/>
+                    <constraint firstAttribute="trailing" secondItem="B3Z-JC-xAv" secondAttribute="trailing" constant="8" id="WA7-He-8Qb"/>
+                    <constraint firstItem="B3Z-JC-xAv" firstAttribute="leading" secondItem="tOT-1E-0wg" secondAttribute="trailing" constant="13" id="ob0-lO-OPW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="diastolicPressure" destination="tOT-1E-0wg" id="UcS-JX-NsM"/>
+                <outlet property="pulse" destination="B3Z-JC-xAv" id="aTW-WI-YXm"/>
+                <outlet property="semaphore" destination="Uas-s8-BuE" id="7AF-yg-J7l"/>
+                <outlet property="systolicPressure" destination="LLM-gB-uMp" id="670-dl-Fzm"/>
+            </connections>
+            <point key="canvasLocation" x="424.5" y="329"/>
+        </tableViewCell>
     </objects>
 </document>

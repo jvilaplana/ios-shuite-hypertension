@@ -57,6 +57,12 @@
     [self prepareTextFieldsTags];
     [self configureView];
     
+    
+    if ([self isLastDateEqualsToToday] ){
+         [self showAlert:NSLocalizedString(@"Pressuresintroduced", nil)];
+    }
+
+    
 }
 
 - (void)customSetup
@@ -329,7 +335,7 @@
 }
 
 -(void) showAlert:(NSString*)msg{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"FailSave",nil)
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info"
                                                     message:msg
                                                    delegate:nil
                                           cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -395,78 +401,94 @@
 
 - (IBAction)sendPressuresToSHUITE:(id)sender {
     
-    if (self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
-        self.mTxtField2.text != nil && ![self.mTxtField2.text isEqualToString:@""] &&
-        self.mTxtField3.text != nil && ![self.mTxtField3.text isEqualToString:@""] &&
-        self.mTxtField4.text != nil && ![self.mTxtField4.text isEqualToString:@""] &&
-        self.mTxtField5.text != nil && ![self.mTxtField5.text isEqualToString:@""] &&
-        self.mTxtField6.text != nil && ![self.mTxtField6.text isEqualToString:@""] &&
-        self.mTxtField7.text != nil && ![self.mTxtField7.text isEqualToString:@""] &&
-        self.mTxtField8.text != nil && ![self.mTxtField8.text isEqualToString:@""] &&
-        self.mTxtField9.text != nil && ![self.mTxtField9.text isEqualToString:@""] &&
-        self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
-        self.aTxtField2.text != nil && ![self.aTxtField2.text isEqualToString:@""] &&
-        self.aTxtField3.text != nil && ![self.aTxtField3.text isEqualToString:@""] &&
-        self.aTxtField4.text != nil && ![self.aTxtField4.text isEqualToString:@""] &&
-        self.aTxtField5.text != nil && ![self.aTxtField5.text isEqualToString:@""] &&
-        self.aTxtField6.text != nil && ![self.aTxtField6.text isEqualToString:@""] &&
-        self.aTxtField7.text != nil && ![self.aTxtField7.text isEqualToString:@""] &&
-        self.aTxtField8.text != nil && ![self.aTxtField8.text isEqualToString:@""] &&
-        self.aTxtField9.text != nil && ![self.aTxtField9.text isEqualToString:@""]){
+    NSString *lastUpdate = [self getLastUpdate];
+    if (![self isLastDateEqualsToToday] ){
+  
+    
+        if (self.mTxtField1.text != nil && ![self.mTxtField1.text isEqualToString:@""] &&
+            self.mTxtField2.text != nil && ![self.mTxtField2.text isEqualToString:@""] &&
+            self.mTxtField3.text != nil && ![self.mTxtField3.text isEqualToString:@""] &&
+            self.mTxtField4.text != nil && ![self.mTxtField4.text isEqualToString:@""] &&
+            self.mTxtField5.text != nil && ![self.mTxtField5.text isEqualToString:@""] &&
+            self.mTxtField6.text != nil && ![self.mTxtField6.text isEqualToString:@""] &&
+            self.mTxtField7.text != nil && ![self.mTxtField7.text isEqualToString:@""] &&
+            self.mTxtField8.text != nil && ![self.mTxtField8.text isEqualToString:@""] &&
+            self.mTxtField9.text != nil && ![self.mTxtField9.text isEqualToString:@""] &&
+            self.aTxtField1.text != nil && ![self.aTxtField1.text isEqualToString:@""] &&
+            self.aTxtField2.text != nil && ![self.aTxtField2.text isEqualToString:@""] &&
+            self.aTxtField3.text != nil && ![self.aTxtField3.text isEqualToString:@""] &&
+            self.aTxtField4.text != nil && ![self.aTxtField4.text isEqualToString:@""] &&
+            self.aTxtField5.text != nil && ![self.aTxtField5.text isEqualToString:@""] &&
+            self.aTxtField6.text != nil && ![self.aTxtField6.text isEqualToString:@""] &&
+            self.aTxtField7.text != nil && ![self.aTxtField7.text isEqualToString:@""] &&
+            self.aTxtField8.text != nil && ![self.aTxtField8.text isEqualToString:@""] &&
+            self.aTxtField9.text != nil && ![self.aTxtField9.text isEqualToString:@""]){
         
-        NSArray* morning;
-        Pressure* mfirst = [[Pressure alloc] init];
-        Pressure* msecond= [[Pressure alloc] init];
-        Pressure* mthird = [[Pressure alloc] init];
-        
-        NSArray* afternoon;
-        Pressure* afirst = [[Pressure alloc] init];
-        Pressure* asecond = [[Pressure alloc] init];
-        Pressure* athird= [[Pressure alloc] init];
-        
-        [mfirst setSystolic:[self.mTxtField1.text intValue]];
-        [mfirst setDiastolic:[self.mTxtField2.text intValue]];
-        [mfirst setPulse:[self.mTxtField3.text intValue]];
-        [msecond setSystolic:[self.mTxtField4.text intValue]];
-        [msecond setDiastolic:[self.mTxtField5.text intValue]];
-        [msecond setPulse:[self.mTxtField6.text intValue]];
-        [mthird setSystolic:[self.mTxtField7.text intValue]];
-        [mthird setDiastolic:[self.mTxtField8.text intValue]];
-        [mthird setPulse:[self.mTxtField9.text intValue]];
-        
-        [afirst setSystolic:[self.aTxtField1.text intValue]];
-        [afirst setDiastolic:[self.aTxtField2.text intValue]];
-        [afirst setPulse:[self.aTxtField3.text intValue]];
-        [asecond setSystolic:[self.aTxtField4.text intValue]];
-        [asecond setDiastolic:[self.aTxtField5.text intValue]];
-        [asecond setPulse:[self.aTxtField6.text intValue]];
-        [athird setSystolic:[self.aTxtField7.text intValue]];
-        [athird setDiastolic:[self.aTxtField8.text intValue]];
-        [athird setPulse:[self.aTxtField9.text intValue]];
-        
-        morning = [NSArray arrayWithObjects:mfirst,msecond,mthird, nil];
-        afternoon = [NSArray arrayWithObjects:afirst,asecond,athird, nil];
-        
-        [SVProgressHUD show];
-        [[ApiManager sharedManager] postPressuresToSHUITEWhitMorning:morning withAfternoon:afternoon
-         withCompletionBlock:^(NSError *error, id object) {
-             
-            [SVProgressHUD dismiss];
-            if (error==nil) {
-                
-                NSDictionary *response =(NSDictionary*)object;
-                BOOL videos = [self parseResponse:response];
-                [self showAlertResult:videos];
-            }else{
-                
-                [self showAlert:NSLocalizedString(@"ErrorSavingPressures", nil)];
-
-            }
+            NSArray* morning;
+            Pressure* mfirst = [[Pressure alloc] init];
+            Pressure* msecond= [[Pressure alloc] init];
+            Pressure* mthird = [[Pressure alloc] init];
             
-        }];
+            NSArray* afternoon;
+            Pressure* afirst = [[Pressure alloc] init];
+            Pressure* asecond = [[Pressure alloc] init];
+            Pressure* athird= [[Pressure alloc] init];
+            
+            [mfirst setSystolic:[self.mTxtField1.text intValue]];
+            [mfirst setDiastolic:[self.mTxtField2.text intValue]];
+            [mfirst setPulse:[self.mTxtField3.text intValue]];
+            [msecond setSystolic:[self.mTxtField4.text intValue]];
+            [msecond setDiastolic:[self.mTxtField5.text intValue]];
+            [msecond setPulse:[self.mTxtField6.text intValue]];
+            [mthird setSystolic:[self.mTxtField7.text intValue]];
+            [mthird setDiastolic:[self.mTxtField8.text intValue]];
+            [mthird setPulse:[self.mTxtField9.text intValue]];
+            
+            [afirst setSystolic:[self.aTxtField1.text intValue]];
+            [afirst setDiastolic:[self.aTxtField2.text intValue]];
+            [afirst setPulse:[self.aTxtField3.text intValue]];
+            [asecond setSystolic:[self.aTxtField4.text intValue]];
+            [asecond setDiastolic:[self.aTxtField5.text intValue]];
+            [asecond setPulse:[self.aTxtField6.text intValue]];
+            [athird setSystolic:[self.aTxtField7.text intValue]];
+            [athird setDiastolic:[self.aTxtField8.text intValue]];
+            [athird setPulse:[self.aTxtField9.text intValue]];
+            
+            morning = [NSArray arrayWithObjects:mfirst,msecond,mthird, nil];
+            afternoon = [NSArray arrayWithObjects:afirst,asecond,athird, nil];
+            
+            [SVProgressHUD show];
+            [[ApiManager sharedManager] postPressuresToSHUITEWhitMorning:morning withAfternoon:afternoon
+                                                     withCompletionBlock:^(NSError *error, id object) {
+                                                         
+                [SVProgressHUD dismiss];
+                if (error==nil) {
+                                                             
+                  NSDictionary *response =(NSDictionary*)object;
+                  BOOL videos = [self parseResponse:response];
+                  [self showAlertResult:videos];
+                    
+                    NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
+                    [dateformate setDateFormat:@"dd-MM-YYYY"];
+                    NSString *todayDate=[dateformate stringFromDate:[NSDate date]];
+                    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+                    [preferences setObject:todayDate forKey:LASTUPDATEDATE];
+                    [self resetValues];
+            
+                }else{
+                                                             
+                 [self showAlert:NSLocalizedString(@"ErrorSavingPressures", nil)];
+                    
+                }
+                                                         
+         }];
+            
+        }else{
+            [self showAlert:NSLocalizedString(@"MessageSend", nil)];
+        }
         
     }else{
-        [self showAlert:NSLocalizedString(@"MessageSend", nil)];
+        [self showAlert:NSLocalizedString(@"Pressuresintroduced", nil)];
     }
     
     
@@ -559,6 +581,33 @@
     else{
         NSLog(@"Could not execute the query.");
     }
+}
+
+-(BOOL)isLastDateEqualsToToday{
+    
+    NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
+    [dateformate setDateFormat:@"dd-MM-YYYY"];
+    NSString *todayDate=[dateformate stringFromDate:[NSDate date]];
+    NSString *lastupdate =[self getLastUpdate];
+    if (![lastupdate isEqualToString:@""]) {
+        if ([lastupdate isEqualToString:todayDate]) {
+            return YES;
+        }
+        return NO;
+    }else{
+        return NO;
+    }
+    
+}
+
+-(NSString*)getLastUpdate{
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    NSString *lastupdate = @"";
+    if ([preferences objectForKey:LASTUPDATEDATE]) {
+        lastupdate =  [preferences objectForKey:LASTUPDATEDATE];
+    }
+    
+    return lastupdate;
 }
 
 

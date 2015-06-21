@@ -1798,7 +1798,6 @@
         <!--Navigation Controller-->
         <scene sceneID="YTo-EJ-ilb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GoT-OR-eCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="HjH-cI-nI3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3LV-cI-ZIi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1808,6 +1807,7 @@
                         <segue destination="7bN-xt-fi7" kind="relationship" relationship="rootViewController" id="jT2-f2-5Kv"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GoT-OR-eCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1243" y="469"/>
         </scene>

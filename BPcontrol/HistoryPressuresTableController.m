@@ -8,6 +8,8 @@
 
 #import "HistoryPressuresTableController.h"
 #import "SWRevealViewController.h"
+#import "PatientHistoryCell.h"
+#import "PatientHistoryHeader.h"
 
 @interface HistoryPressuresTableController ()
 
@@ -17,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
 
     [self customSetup];
 }
@@ -46,42 +49,56 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 50;
+}
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    
-//
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    
-//}
-//
-//-(UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    
-//    
-//    return 3;
-//    
-//}
+-(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 50;
+}
 
-
-
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//    
-//}
-
-
-
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     
+    return 4;
+}
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+-(UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    return [[[NSBundle mainBundle] loadNibNamed:@"PatientHistoryHeader" owner:self options:nil] firstObject];
+    
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellidentifier = @"PatientHistoryCell";
+    PatientHistoryCell *cell = nil;
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:cellidentifier];
+    
+    if (cell == nil) {
+        NSArray *outlets = [[NSBundle mainBundle] loadNibNamed:cellidentifier owner:nil options:nil];
+        for (id currentObject in outlets) {
+            if ([currentObject isKindOfClass:[UITableViewCell class]]){
+                cell =  (PatientHistoryCell *) currentObject;
+                
+                CGRect bounds = [[UIScreen mainScreen] bounds];
+                cell.bounds = bounds;
+                break;
+            }
+        }
+    }
+    
+    return cell;
+    
 }
 
 @end

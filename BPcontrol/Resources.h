@@ -94,6 +94,7 @@ typedef void (^CompletionBlock)(NSError *error, id object);
 #define TLFNSUSER @"telephone"
 #define PREFIXSAVE @"prefix"
 #define USERUUID @"useruuid"
+#define LASTUPDATEDATE @"lasdate"
 
 #define MORNING_FIRST @"morningfirsttime"
 #define MORNING_SECOND @"morningsecondtime"
