@@ -10,6 +10,7 @@
 
 @interface HistoryPressuresTableController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *revealButtonItem;
 
 
 @end

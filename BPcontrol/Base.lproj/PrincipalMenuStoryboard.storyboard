@@ -30,17 +30,17 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="NGY-n3-SWs" kind="relationship" relationship="rootViewController" id="fLu-fc-WyB"/>
+                        <segue destination="NGY-n3-SWs" kind="relationship" relationship="rootViewController" id="p7k-z8-xfS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AhP-i0-4BR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="352"/>
+            <point key="canvasLocation" x="-107" y="367"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="Gh6-MM-RHH">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NGY-n3-SWs" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="NGY-n3-SWs" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y6X-Xe-Sak"/>
                         <viewControllerLayoutGuide type="bottom" id="auu-gA-cCc"/>
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7j1-fU-jiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="375"/>
+            <point key="canvasLocation" x="-240" y="1155"/>
         </scene>
         <!--ColorViewController-->
         <scene sceneID="IXu-k6-Pbf">
@@ -305,6 +305,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="labelMenu" destination="DGo-cY-jEu" id="NLk-UQ-Oj4"/>
+                                    <segue destination="FjZ-JC-Yib" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="buL-FW-O4U"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pressures" id="NCD-4r-0Gr" customClass="SWUITableViewCell">
@@ -369,7 +370,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="labelMenu" destination="t09-5I-GU6" id="8tZ-og-pQg"/>
-                                    <segue destination="zOb-g2-qyv" kind="custom" trigger="accessoryAction" customClass="SWRevealViewControllerSeguePushController" id="bCu-C1-hVd"/>
+                                    <segue destination="HjH-cI-nI3" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="7ae-2a-tcl"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messages" id="JMt-3b-duq" customClass="SWUITableViewCell">
@@ -616,7 +617,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="0nO-07-1w5" id="WfQ-u9-gnz"/>
-                                    <segue destination="FjZ-JC-Yib" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="qVu-am-nJS"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="blue" textLabel="f0i-MZ-Bgg" style="IBUITableViewCellStyleDefault" id="VRJ-PD-BVu" customClass="SWUITableViewCell">
@@ -722,13 +722,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hVL-zR-ECZ">
-                        <barButtonItem key="rightBarButtonItem" image="reveal-icon.png" style="plain" id="aL7-1X-ZEU"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="9SV-7P-mCz">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="revealButtonItem" destination="9SV-7P-mCz" id="oX5-M6-LIr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZN-sh-0uy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2162" y="-1676"/>
+            <point key="canvasLocation" x="2099" y="412"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xw8-PJ-CYL">
@@ -744,7 +749,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOD-U7-a57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="-1046"/>
+            <point key="canvasLocation" x="1421" y="-1518"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xIq-01-m0T">
@@ -760,7 +765,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqe-N8-gTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="-388"/>
+            <point key="canvasLocation" x="1408" y="-820"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aPL-oy-biG">
@@ -1398,6 +1403,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GFw-oT-V4N" firstAttribute="top" secondItem="P7M-TE-8z5" secondAttribute="topMargin" constant="-13" id="4Lj-8H-zF2"/>
                             <constraint firstItem="GFw-oT-V4N" firstAttribute="leading" secondItem="P7M-TE-8z5" secondAttribute="leading" id="8zF-Ee-9ZC"/>
@@ -1406,7 +1412,14 @@
                             <constraint firstAttribute="trailing" secondItem="GFw-oT-V4N" secondAttribute="trailing" id="jXX-v1-6Td"/>
                         </constraints>
                     </scrollView>
-                    <navigationItem key="navigationItem" id="yFQ-KG-DGx"/>
+                    <navigationItem key="navigationItem" id="yFQ-KG-DGx">
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="sYD-2e-uy5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="xwm-Nm-Vg6" kind="custom" customClass="SWRevealViewControllerSegueSetController" id="4Ls-dK-bnY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
                     <connections>
@@ -1439,6 +1452,7 @@
                         <outlet property="mTxtField9" destination="ffu-qG-oK4" id="kx5-Ig-Geo"/>
                         <outlet property="morningHeader" destination="7pE-0b-mSH" id="Ccr-lr-e3s"/>
                         <outlet property="pulseHeader" destination="4Pk-3i-JWY" id="CKf-Fs-E0w"/>
+                        <outlet property="revealButtomItem" destination="sYD-2e-uy5" id="zPh-Uu-0d4"/>
                         <outlet property="saveButton" destination="f8G-zx-1vu" id="Jg5-TI-O1Q"/>
                         <outlet property="sendButton" destination="cFp-mm-QuS" id="1MT-QF-iAa"/>
                         <outlet property="systolicHeader" destination="CsX-TH-fdB" id="6KU-GB-OOg"/>
@@ -1446,7 +1460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bok-CG-wJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2883" y="-1065"/>
+            <point key="canvasLocation" x="2099" y="-1518"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="c4T-d9-Ui9">
@@ -1779,38 +1793,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3l-Y6-TIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2042" y="99"/>
+            <point key="canvasLocation" x="2111" y="-546"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YTo-EJ-ilb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GoT-OR-eCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="HjH-cI-nI3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3LV-cI-ZIi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GoT-OR-eCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="aIW-Md-0eL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zOb-g2-qyv" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vuj-V5-KzA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7bN-xt-fi7" kind="relationship" relationship="rootViewController" id="Je8-j3-AIy"/>
+                        <segue destination="7bN-xt-fi7" kind="relationship" relationship="rootViewController" id="jT2-f2-5Kv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XJd-ts-JPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <barButtonItem image="reveal-icon.png" style="plain" id="MQg-B2-41Z"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="-1676"/>
+            <point key="canvasLocation" x="1243" y="469"/>
         </scene>
     </scenes>
     <resources>
@@ -1835,8 +1834,9 @@
         <image name="video_icon.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mdq-bc-hLS"/>
+        <segue reference="ACY-0G-LS6"/>
         <segue reference="gmX-lo-DhK"/>
+        <segue reference="buL-FW-O4U"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.093987808014565563" green="0.82175247608584767" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -52,6 +52,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *aSystolicHeader;
 @property (strong, nonatomic) IBOutlet UILabel *aDiastolicHeader;
 @property (strong, nonatomic) IBOutlet UILabel *aPulseHeader;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *revealButtomItem;
 
 - (IBAction)savePressures:(id)sender;
 - (IBAction)sendPressuresToSHUITE:(id)sender;

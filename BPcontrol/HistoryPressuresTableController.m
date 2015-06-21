@@ -7,6 +7,7 @@
 //
 
 #import "HistoryPressuresTableController.h"
+#import "SWRevealViewController.h"
 
 @interface HistoryPressuresTableController ()
 
@@ -16,12 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self customSetup];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)customSetup
+{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.revealButtonItem setTarget: revealViewController];
+        [self.revealButtonItem setAction: @selector(revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer:revealViewController.panGestureRecognizer];
+    }
 }
 
 /*
@@ -34,31 +47,31 @@
 }
 */
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    
+//
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    
+//}
+//
+//-(UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    
+//    
+//    return 3;
+//    
+//}
 
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    
-}
-
--(UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    
-    
-    return headerView;
-    
-}
 
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    
-}
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//    
+//}
 
 
 

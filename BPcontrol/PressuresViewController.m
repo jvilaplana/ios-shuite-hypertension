@@ -7,6 +7,7 @@
 //
 
 #import "PressuresViewController.h"
+#import "SWRevealViewController.h"
 #import "Resources.h"
 #import "Pressure.h"
 #import <SVProgressHUD.h>
@@ -49,12 +50,24 @@
     self.mPulseHeader.text = NSLocalizedString(@"Pulse", nil);
     self.aPulseHeader.text = NSLocalizedString(@"Pulse", nil);
 
+    [self customSetup];
     [self recoverData];
     [self calculateNumbersForPicker];
     [self configurePickers];
     [self prepareTextFieldsTags];
     [self configureView];
     
+}
+
+- (void)customSetup
+{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.revealButtomItem setTarget: revealViewController];
+        [self.revealButtomItem setAction: @selector(revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer:revealViewController.panGestureRecognizer];
+    }
 }
 
 -(void) configureView{
