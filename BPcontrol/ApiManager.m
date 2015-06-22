@@ -195,7 +195,7 @@
 
     [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (responseObject!=nil) {
-            completionBlock(nil, responseObject);
+            completionBlock(nil, [self parsePressures:(NSDictionary*)responseObject]);
         }else{
             completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:404 userInfo:nil], nil);
         }
@@ -203,7 +203,33 @@
         completionBlock(error, nil);
     }];
 
+}
 
+-(NSMutableArray*) parsePressures:(NSDictionary*)dictionary{
+    
+    NSMutableArray *arrayPressures = [[NSMutableArray alloc] init];
+    NSArray *keys = [dictionary allKeys];
+    id tmp;
+    Pressure *p;
+    for(int i=[dictionary count] -1;i>=0;i++){
+        p = [[Pressure alloc] init];
+        tmp = [keys objectAtIndex:i];
+        [p setSystolic:[[tmp objectForKey:@"systolic"] integerValue]];
+        [p setSystolic:[[tmp objectForKey:@"diastolic"] integerValue]];
+        [p setSystolic:[[tmp objectForKey:@"pulse"] integerValue]];
+        [p setDate:[self convertWSdateToNormalDate:[tmp objectForKey:@"dateToken"]]];
+        [arrayPressures addObject:p];
+    }
+    return arrayPressures;
+}
+
+-(NSString*)convertWSdateToNormalDate:(NSString*)dateToken{
+    
+    NSArray *chunks = [dateToken componentsSeparatedByString: @"T"];
+    NSArray * dateParts = [[chunks objectAtIndex:0] componentsSeparatedByString:@"-"];
+    
+    return [NSString stringWithFormat:@"%@-%@-%@",
+            [dateParts objectAtIndex:2],[dateParts objectAtIndex:1],[dateParts objectAtIndex:0]];
 }
 
 

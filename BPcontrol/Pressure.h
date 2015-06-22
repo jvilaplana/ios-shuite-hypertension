@@ -10,7 +10,7 @@
 
 @interface Pressure : NSObject
 
-@property NSDate* date;
+@property NSString* date;
 @property NSInteger systolic;
 @property NSInteger diastolic;
 @property NSInteger pulse;
