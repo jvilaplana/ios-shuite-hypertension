@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryPressuresTableController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+@interface HistoryPressuresTableController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *revealButtonItem;
 @property (strong, nonatomic) NSMutableArray *array;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *headerView;
 
 @end

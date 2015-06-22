@@ -208,16 +208,16 @@
 -(NSMutableArray*) parsePressures:(NSDictionary*)dictionary{
     
     NSMutableArray *arrayPressures = [[NSMutableArray alloc] init];
-    NSArray *keys = [dictionary allKeys];
-    id tmp;
     Pressure *p;
-    for(int i=[dictionary count] -1;i>=0;i++){
+    for(id tmp in dictionary){
         p = [[Pressure alloc] init];
-        tmp = [keys objectAtIndex:i];
-        [p setSystolic:[[tmp objectForKey:@"systolic"] integerValue]];
-        [p setSystolic:[[tmp objectForKey:@"diastolic"] integerValue]];
-        [p setSystolic:[[tmp objectForKey:@"pulse"] integerValue]];
-        [p setDate:[self convertWSdateToNormalDate:[tmp objectForKey:@"dateToken"]]];
+        [p setSystolic:[[tmp objectForKey:@"systole"] integerValue]];
+        [p setSystolic:[[tmp objectForKey:@"diastole"] integerValue]];
+        if ([tmp objectForKey:@"pulse"] != [NSNull null]) {
+            [p setSystolic:[[tmp objectForKey:@"pulse"] integerValue]];
+
+        }
+        [p setDate:[self convertWSdateToNormalDate:[tmp objectForKey:@"dateTaken"]]];
         [arrayPressures addObject:p];
     }
     return arrayPressures;
