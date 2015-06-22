@@ -10,9 +10,11 @@
 #import "SWRevealViewController.h"
 #import "PatientHistoryCell.h"
 #import "PatientHistoryHeader.h"
+#import "Resources.h"
+#import "ApiManager.h"
+#import "User.h"
 
 @interface HistoryPressuresTableController ()
-
 @end
 
 @implementation HistoryPressuresTableController
@@ -20,7 +22,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
+    self.navigationController.navigationBar.tintColor = GRAYPROFILE;
+    self.title = NSLocalizedString(@"PressuresRecords", nil);
+    [[ApiManager sharedManager] getUserPressures:[[User sharedManager] UUID] withCompletionBlock:^(NSError *error, id object) {
+                                                 
+        if (error==nil) {
+                                                     
+           _array = (NSMutableArray*)object;
+        
+             NSString *p = @"";
+            
+        }else{
+                                                     
+            //[self showAlert:NSLocalizedString(@"ErrorSavingPressures", nil)];
+                                                     
+         }
+                                                 
+        }];
+    
+    
     [self customSetup];
 }
 
@@ -51,11 +73,11 @@
 */
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 50;
+    return 40;
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 50;
+    return 25;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -71,11 +93,11 @@
 
 -(UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    return [[[NSBundle mainBundle] loadNibNamed:@"PatientHistoryHeader" owner:self options:nil] firstObject];
+    UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"PatientHistoryHeader" owner:self options:nil] firstObject];
+    view.backgroundColor = GRAYPROFILE;
+    return view;
     
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -89,9 +111,12 @@
         for (id currentObject in outlets) {
             if ([currentObject isKindOfClass:[UITableViewCell class]]){
                 cell =  (PatientHistoryCell *) currentObject;
-                
                 CGRect bounds = [[UIScreen mainScreen] bounds];
                 cell.bounds = bounds;
+                cell.backgroundColor = GRAYBP;
+                cell.systolicPressure.textColor = MENUTEXT;
+                cell.diastolicPressure.textColor = MENUTEXT;
+                cell.pulse.textColor = MENUTEXT;
                 break;
             }
         }

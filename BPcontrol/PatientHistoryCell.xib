@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,46 +13,53 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UYX-SI-qX0" id="uMG-L2-t1h">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uas-s8-BuE">
-                        <rect key="frame" x="8" y="0.0" width="47" height="43"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="128Hgmm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLM-gB-uMp">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="128Hgmm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLM-gB-uMp">
                         <rect key="frame" x="69" y="11" width="80" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Voh-55-yhl"/>
                             <constraint firstAttribute="width" constant="80" id="wKt-Fw-6iO"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="100Hgmm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOT-1E-0wg">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100Hgmm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOT-1E-0wg">
                         <rect key="frame" x="162" y="11" width="80" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="Dd4-PY-0Eb"/>
                             <constraint firstAttribute="height" constant="21" id="Qs7-eD-3mP"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="60bpm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3Z-JC-xAv">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60bpm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3Z-JC-xAv">
                         <rect key="frame" x="255" y="11" width="54" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="07r-OA-DzO"/>
                             <constraint firstAttribute="width" constant="54" id="8cG-37-VmZ"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="semafor_yellow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uas-s8-BuE">
+                        <rect key="frame" x="8" y="3" width="46" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="FhY-UQ-fdV"/>
+                            <constraint firstAttribute="width" constant="46" id="led-ex-a94"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.20539818839999999" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
+                    <constraint firstAttribute="centerY" secondItem="B3Z-JC-xAv" secondAttribute="centerY" id="3Zh-lu-jzc"/>
                     <constraint firstItem="Uas-s8-BuE" firstAttribute="leading" secondItem="uMG-L2-t1h" secondAttribute="leading" constant="8" id="FRJ-IV-w6L"/>
                     <constraint firstItem="tOT-1E-0wg" firstAttribute="leading" secondItem="LLM-gB-uMp" secondAttribute="trailing" constant="13" id="K73-u9-Epn"/>
-                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="14" id="Nyt-rA-Aar"/>
+                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="15" id="Nyt-rA-Aar"/>
+                    <constraint firstAttribute="centerY" secondItem="tOT-1E-0wg" secondAttribute="centerY" id="SXx-hx-5T5"/>
+                    <constraint firstAttribute="centerY" secondItem="LLM-gB-uMp" secondAttribute="centerY" id="Sa0-dk-1p7"/>
                     <constraint firstAttribute="trailing" secondItem="B3Z-JC-xAv" secondAttribute="trailing" constant="8" id="WA7-He-8Qb"/>
+                    <constraint firstAttribute="centerY" secondItem="Uas-s8-BuE" secondAttribute="centerY" id="lLt-T5-wGs"/>
                     <constraint firstItem="B3Z-JC-xAv" firstAttribute="leading" secondItem="tOT-1E-0wg" secondAttribute="trailing" constant="13" id="ob0-lO-OPW"/>
                 </constraints>
             </tableViewCellContentView>
@@ -62,7 +69,10 @@
                 <outlet property="semaphore" destination="Uas-s8-BuE" id="7AF-yg-J7l"/>
                 <outlet property="systolicPressure" destination="LLM-gB-uMp" id="670-dl-Fzm"/>
             </connections>
-            <point key="canvasLocation" x="424.5" y="329"/>
+            <point key="canvasLocation" x="424.5" y="325"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="semafor_yellow.png" width="115" height="267"/>
+    </resources>
 </document>

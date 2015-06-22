@@ -78,3 +78,7 @@
 "GoToVideos" = "Go to videos";
 "Response" = "Response";
 "Pressuresintroduced" = "The pressures of today have already been introduced";
+
+// PRESSURE HISTORY
+
+"PressuresRecords" = "Pressures records";

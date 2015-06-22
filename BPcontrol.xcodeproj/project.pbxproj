@@ -36,6 +36,9 @@
 		3A989F951AED53EF00A4C945 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F911AED53EF00A4C945 /* Roboto-Italic.ttf */; };
 		3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A989F921AED53EF00A4C945 /* Roboto-Regular.ttf */; };
 		3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A989F991AED54B400A4C945 /* ApiManager.m */; };
+		3A9D16B31B3767A800DCE8F6 /* semafor_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D16B01B3767A800DCE8F6 /* semafor_green.png */; };
+		3A9D16B41B3767A800DCE8F6 /* semafor_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D16B11B3767A800DCE8F6 /* semafor_red.png */; };
+		3A9D16B51B3767A800DCE8F6 /* semafor_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D16B21B3767A800DCE8F6 /* semafor_yellow.png */; };
 		3A9D3A161B024A6700C5C488 /* arnau3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D3A101B024A6700C5C488 /* arnau3.jpg */; };
 		3A9D3A171B024A6700C5C488 /* foto00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D3A111B024A6700C5C488 /* foto00.jpg */; };
 		3A9D3A181B024A6700C5C488 /* foto22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D3A121B024A6700C5C488 /* foto22.jpg */; };
@@ -152,6 +155,9 @@
 		3A989F921AED53EF00A4C945 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		3A989F981AED54B400A4C945 /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		3A989F991AED54B400A4C945 /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		3A9D16B01B3767A800DCE8F6 /* semafor_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semafor_green.png; sourceTree = "<group>"; };
+		3A9D16B11B3767A800DCE8F6 /* semafor_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semafor_red.png; sourceTree = "<group>"; };
+		3A9D16B21B3767A800DCE8F6 /* semafor_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semafor_yellow.png; sourceTree = "<group>"; };
 		3A9D3A101B024A6700C5C488 /* arnau3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arnau3.jpg; sourceTree = "<group>"; };
 		3A9D3A111B024A6700C5C488 /* foto00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foto00.jpg; sourceTree = "<group>"; };
 		3A9D3A121B024A6700C5C488 /* foto22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foto22.jpg; sourceTree = "<group>"; };
@@ -476,6 +482,9 @@
 		3A3737BB1AF66F490024801D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A9D16B01B3767A800DCE8F6 /* semafor_green.png */,
+				3A9D16B11B3767A800DCE8F6 /* semafor_red.png */,
+				3A9D16B21B3767A800DCE8F6 /* semafor_yellow.png */,
 				3AC9A5D61B0AA3BE0067C9C6 /* conversation_icon.png */,
 				3AC9A5D71B0AA3BE0067C9C6 /* home_graphic_icon.png */,
 				3AC9A5D81B0AA3BE0067C9C6 /* presiones_icon.png */,
@@ -995,6 +1004,7 @@
 				3A112C261ADC6EA80029167E /* Main.storyboard in Resources */,
 				3A3737C31AF6719B0024801D /* ic_action_help_tab@2x.png in Resources */,
 				3A9D3A3D1B0257B300C5C488 /* menu_white.png in Resources */,
+				3A9D16B51B3767A800DCE8F6 /* semafor_yellow.png in Resources */,
 				3A9D3A2D1B0253D000C5C488 /* ic_action_arrow_left.png in Resources */,
 				3A3737D51AF6746E0024801D /* ic_action_location_tab@2x.png in Resources */,
 				3A9D3A301B0253D000C5C488 /* ic_action_facebook.png in Resources */,
@@ -1005,6 +1015,7 @@
 				3A9D3A381B0253D000C5C488 /* ic_action_phone_start.png in Resources */,
 				3A3737C51AF6719B0024801D /* ic_action_home_tab@2x.png in Resources */,
 				3A9D3A2F1B0253D000C5C488 /* ic_action_dialog.png in Resources */,
+				3A9D16B31B3767A800DCE8F6 /* semafor_green.png in Resources */,
 				3A9D3A391B0253D000C5C488 /* ic_action_present.png in Resources */,
 				3A989F961AED53EF00A4C945 /* Roboto-Regular.ttf in Resources */,
 				3A0655E41B01331D0043D5AE /* PrincipalMenuStoryboard.storyboard in Resources */,
@@ -1017,6 +1028,7 @@
 				3AC9A5DC1B0AA3BE0067C9C6 /* presiones_icon.png in Resources */,
 				3A9D3A351B0253D000C5C488 /* ic_action_line_chart.png in Resources */,
 				3AED647C1AF3EA33007A40D6 /* Localizable.strings in Resources */,
+				3A9D16B41B3767A800DCE8F6 /* semafor_red.png in Resources */,
 				3A9D3A181B024A6700C5C488 /* foto22.jpg in Resources */,
 				3A9D3A371B0253D000C5C488 /* ic_action_next.png in Resources */,
 				3A7183761B337C3500AF28DC /* bpcontrol.db in Resources */,
