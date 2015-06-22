@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryPressuresTableController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+@interface HistoryPressuresTableController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *revealButtonItem;
-
 
 @end
