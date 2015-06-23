@@ -104,6 +104,10 @@ typedef void (^CompletionBlock)(NSError *error, id object);
 #define AFTERNOON_SECOND @"afternoonsecondtime"
 #define AFTERNOON_THIRD @"afternoonthirdtime"
 
+#define kGreenSemaphore 0
+#define kYellowSempahore 1
+#define kRedSemaphore 2
+
 #define kMaxComponents 3
 
 #define kSystolicM1 1

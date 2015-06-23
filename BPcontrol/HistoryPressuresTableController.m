@@ -13,6 +13,7 @@
 #import "Resources.h"
 #import "ApiManager.h"
 #import "User.h"
+#import "Pressure.h"
 
 @interface HistoryPressuresTableController ()
 @end
@@ -21,32 +22,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    _array = [NSMutableArray array];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
     self.navigationController.navigationBar.tintColor = GRAYPROFILE;
     self.title = NSLocalizedString(@"PressuresRecords", nil);
     CGRect bounds = [[UIScreen mainScreen] bounds];
 
-    CGRect aRect = CGRectMake(0,self.tableView.bounds.origin.y,bounds.size.width,self.tableView.bounds.size.height);
+    CGRect aRect = CGRectMake(0,self.tableView.bounds.origin.y,bounds.size.width,0);
     self.tableView.bounds = aRect;
-
-    CGRect aRectView = CGRectMake(0,self.headerView.bounds.origin.y,bounds.size.width,self.headerView.bounds.size.height);
-    self.headerView.bounds = aRectView;
 
     [[ApiManager sharedManager] getUserPressures:[[User sharedManager] UUID] withCompletionBlock:^(NSError *error, id object) {
                                                  
         if (error==nil) {
             
            _array = (NSMutableArray*)object;
-        
-             NSString *p = @"";
-    
+            [_tableView reloadData];
             
         }else{
                                                      
-            //[self showAlert:NSLocalizedString(@"ErrorSavingPressures", nil)];
-                                                     
+            [self showAlert:NSLocalizedString(@"ErrorRecovering", nil)];
+            
          }
                                                  
         }];
@@ -92,7 +88,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     
-    return 4;
+    return [_array count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -112,6 +108,7 @@
 {
     NSString *cellidentifier = @"PatientHistoryCell";
     PatientHistoryCell *cell = nil;
+    Pressure *p = [_array objectAtIndex:indexPath.row];
     
     cell = [tableView dequeueReusableCellWithIdentifier:cellidentifier];
     
@@ -120,6 +117,7 @@
         for (id currentObject in outlets) {
             if ([currentObject isKindOfClass:[UITableViewCell class]]){
                 cell =  (PatientHistoryCell *) currentObject;
+                [self addSemaphoreStatus:[p semaphore] toImage:[cell.imageView image]];
                 CGRect bounds = [[UIScreen mainScreen] bounds];
                 cell.bounds = bounds;
                 cell.backgroundColor = GRAYBP;
@@ -134,5 +132,35 @@
     return cell;
     
 }
+
+-(void)showAlert:(NSString*)msg{
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:msg
+                                                   delegate:nil
+                                          cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                          otherButtonTitles:nil];
+    [alert show];
+
+}
+
+-(void)addSemaphoreStatus:(int)semaphore toImage: (UIImage*)image{
+    
+    switch (semaphore) {
+        case kRedSemaphore:
+            image = [UIImage imageNamed: @"semafor_red.png"];
+            break;
+        case kYellowSempahore:
+            image = [UIImage imageNamed: @"semafor_yellow.png"];
+            break;
+        case kGreenSemaphore:
+            image = [UIImage imageNamed: @"semafor_green.png"];
+            break;
+        default:
+            image = [UIImage imageNamed: @"semafor_yellow.png"];
+            break;
+    }
+}
+
 
 @end

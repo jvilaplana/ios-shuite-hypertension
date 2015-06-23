@@ -82,3 +82,8 @@
 // PRESSURE HISTORY
 
 "PressuresRecords" = "Pressures record";
+"HStatus" = "Status";
+"HSystolic" = "Systolic p.";
+"HDiastolic" = "Diastolic p.";
+"HPulse"="Pulse";
+"ErrorRecovering" = "Error recovering pressures";

@@ -218,6 +218,7 @@
 
         }
         [p setDate:[self convertWSdateToNormalDate:[tmp objectForKey:@"dateTaken"]]];
+        [self calculateDianaLimit:p];
         [arrayPressures addObject:p];
     }
     return arrayPressures;
@@ -230,6 +231,36 @@
     
     return [NSString stringWithFormat:@"%@-%@-%@",
             [dateParts objectAtIndex:2],[dateParts objectAtIndex:1],[dateParts objectAtIndex:0]];
+}
+
+-(void)calculateDianaLimit:(Pressure*)pressures{
+    
+    
+    int systolic,diastolic,status;
+    
+    if ((int)[pressures systolic] == 0){
+        systolic = 120;
+    }else{
+        systolic=(int)[pressures systolic];
+    }
+    
+    if ((int)[pressures diastolic] == 0){
+        diastolic = 80;
+    }else{
+        diastolic=(int)[pressures systolic];
+    }
+    
+    if (systolic>(int)[[User sharedManager] dianaSystolicIndex] || diastolic > (int)[[User sharedManager] dianaDiastolicIndex]){
+        status = 2;
+    }else if (((int)[[User sharedManager] dianaSystolicIndex]-systolic)<=5 ||
+              ((int)[[User sharedManager] dianaDiastolicIndex]-diastolic) <=5 ){
+        status = 1;
+    }else{
+        status = 0;
+    }
+    
+    [pressures setSemaphore:status];
+    
 }
 
 

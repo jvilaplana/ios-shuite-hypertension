@@ -15,4 +15,14 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *headerView;
 
+@property (strong, nonatomic) IBOutlet UILabel *headerSemaphore;
+
+@property (strong, nonatomic) IBOutlet UILabel *headerSystolic;
+
+@property (strong, nonatomic) IBOutlet UILabel *headerDiastolic;
+
+@property (strong, nonatomic) IBOutlet UILabel *headerPulse;
+
+
+
 @end
