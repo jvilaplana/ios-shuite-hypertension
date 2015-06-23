@@ -30,10 +30,10 @@
 
     CGRect aRect = CGRectMake(0,self.tableView.bounds.origin.y,bounds.size.width,self.tableView.bounds.size.height);
     self.tableView.bounds = aRect;
-    
+
     CGRect aRectView = CGRectMake(0,self.headerView.bounds.origin.y,bounds.size.width,self.headerView.bounds.size.height);
     self.headerView.bounds = aRectView;
-    
+
     [[ApiManager sharedManager] getUserPressures:[[User sharedManager] UUID] withCompletionBlock:^(NSError *error, id object) {
                                                  
         if (error==nil) {
@@ -41,6 +41,7 @@
            _array = (NSMutableArray*)object;
         
              NSString *p = @"";
+    
             
         }else{
                                                      
