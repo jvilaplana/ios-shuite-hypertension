@@ -26,6 +26,10 @@
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
     self.navigationController.navigationBar.tintColor = GRAYPROFILE;
+    self.headerDiastolic.text = NSLocalizedString(@"HDiastolic", nil);
+    self.headerSystolic.text = NSLocalizedString(@"HSystolic", nil);
+    self.headerPulse.text = NSLocalizedString(@"HPulse",nil);
+    self.headerSemaphore.text = NSLocalizedString(@"HStatus", nil);
     self.title = NSLocalizedString(@"PressuresRecords", nil);
     CGRect bounds = [[UIScreen mainScreen] bounds];
 
@@ -100,6 +104,7 @@
     
     UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"PatientHistoryHeader" owner:self options:nil] firstObject];
     view.backgroundColor = GRAYPROFILE;
+     Pressure *p = [_array objectAtIndex:section];
     return view;
     
 }
@@ -108,7 +113,7 @@
 {
     NSString *cellidentifier = @"PatientHistoryCell";
     PatientHistoryCell *cell = nil;
-    Pressure *p = [_array objectAtIndex:indexPath.row];
+    Pressure *p = [_array objectAtIndex:indexPath.section];
     
     cell = [tableView dequeueReusableCellWithIdentifier:cellidentifier];
     
@@ -117,7 +122,10 @@
         for (id currentObject in outlets) {
             if ([currentObject isKindOfClass:[UITableViewCell class]]){
                 cell =  (PatientHistoryCell *) currentObject;
-                [self addSemaphoreStatus:[p semaphore] toImage:[cell.imageView image]];
+                [cell.imageView setImage:[self addSemaphoreStatus:[p semaphore] toImage:[cell.imageView image]]];
+                [cell.systolicPressure setText:[NSString stringWithFormat:@"%ldHgmm",(long)[p systolic]]];
+                [cell.diastolicPressure setText:[NSString stringWithFormat:@"%ldHgmm",(long)[p diastolic]]];
+                [cell.pulse setText:[NSString stringWithFormat:@"%ldbpm",(long)[p pulse]]];
                 CGRect bounds = [[UIScreen mainScreen] bounds];
                 cell.bounds = bounds;
                 cell.backgroundColor = GRAYBP;
@@ -144,7 +152,7 @@
 
 }
 
--(void)addSemaphoreStatus:(int)semaphore toImage: (UIImage*)image{
+-(UIImage*)addSemaphoreStatus:(int)semaphore toImage: (UIImage*)image{
     
     switch (semaphore) {
         case kRedSemaphore:
@@ -160,6 +168,8 @@
             image = [UIImage imageNamed: @"semafor_yellow.png"];
             break;
     }
+    
+    return image;
 }
 
 

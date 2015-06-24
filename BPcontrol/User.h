@@ -25,9 +25,12 @@
 @property (strong,nonatomic) NSString* mobileNumber;
 @property (strong,nonatomic) NSString* mobileNumberPrefix;
 @property bool isInSession;
-@property int dianaSystolicIndex;
-@property int dianaDiastolicIndex;
 
 +(id) sharedManager;
+
+-(void) setDianaSystolicIndex:(NSInteger)index;
+-(int) dianaSystolicIndex;
+-(void) setDianaDiastolicIndex:(NSInteger)index;
+-(int) dianaDiastolicIndex;
 
 @end

@@ -98,8 +98,10 @@
     [_manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         if ([responseObject objectForKey:@"patient"]!=nil) {
-            [[User sharedManager] setDianaDiastolicIndex:(int)[responseObject objectForKey:@"dbp"]];
-            [[User sharedManager] setDianaSystolicIndex:(int)[responseObject objectForKey:@"sbp"]];
+//            [[User sharedManager]bpm[[responseObject objectForKey:@"dbp"] integerValue]];
+//            [[User sharedManager] setDianaSystolicIndex:[[responseObject objectForKey:@"sbp"] integerValue]];
+            [[User sharedManager] setDianaSystolicIndex:[[responseObject objectForKey:@"sbp"] integerValue]];
+            [[User sharedManager] setDianaDiastolicIndex:[[responseObject objectForKey:@"dbp"] integerValue]];
             completionBlock(nil, responseObject);
         }else{
             completionBlock([NSError errorWithDomain:ERROR_DOMAIN code:[[responseObject valueForKeyPath:@"status.cod"] integerValue] userInfo:nil], nil);
@@ -212,9 +214,9 @@
     for(id tmp in dictionary){
         p = [[Pressure alloc] init];
         [p setSystolic:[[tmp objectForKey:@"systole"] integerValue]];
-        [p setSystolic:[[tmp objectForKey:@"diastole"] integerValue]];
+        [p setDiastolic:[[tmp objectForKey:@"diastole"] integerValue]];
         if ([tmp objectForKey:@"pulse"] != [NSNull null]) {
-            [p setSystolic:[[tmp objectForKey:@"pulse"] integerValue]];
+            [p setPulse:[[tmp objectForKey:@"pulse"] integerValue]];
 
         }
         [p setDate:[self convertWSdateToNormalDate:[tmp objectForKey:@"dateTaken"]]];
@@ -247,9 +249,8 @@
     if ((int)[pressures diastolic] == 0){
         diastolic = 80;
     }else{
-        diastolic=(int)[pressures systolic];
+        diastolic=(int)[pressures diastolic];
     }
-    
     if (systolic>(int)[[User sharedManager] dianaSystolicIndex] || diastolic > (int)[[User sharedManager] dianaDiastolicIndex]){
         status = 2;
     }else if (((int)[[User sharedManager] dianaSystolicIndex]-systolic)<=5 ||

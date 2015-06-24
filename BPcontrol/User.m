@@ -1,4 +1,4 @@
-//
+ //
 //  User.m
 //  BPcontrol
 //
@@ -11,9 +11,9 @@
 @implementation User
 
 static User * shared = nil;
+static int dianaDiastolicIndex;
+static int dianaSystolicIndex;
 
-@synthesize dianaSystolicIndex;
-@synthesize dianaDiastolicIndex;
 @synthesize UUID;
 @synthesize username;
 @synthesize firstSurname;
@@ -62,6 +62,26 @@ static User * shared = nil;
     if (self != nil) {
     }
     return self;
+}
+
+-(void) setDianaSystolicIndex:(NSInteger)index{
+    
+    dianaSystolicIndex = (int)index;
+}
+
+-(int) dianaSystolicIndex{
+    
+    return dianaSystolicIndex;
+}
+
+-(void) setDianaDiastolicIndex:(NSInteger)index{
+    
+    dianaDiastolicIndex = (int)index;
+}
+
+-(int) dianaDiastolicIndex{
+    
+    return dianaDiastolicIndex;
 }
 
 @end

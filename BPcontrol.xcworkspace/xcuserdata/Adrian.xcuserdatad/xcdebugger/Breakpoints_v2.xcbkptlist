@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BPcontrol/HistoryPressuresTableController.m"
-            timestampString = "456776616.1537"
+            timestampString = "456832416.321118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "-addSemaphoreStatus:toImage:"
             landmarkType = "5">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BPcontrol/HistoryPressuresTableController.m"
-            timestampString = "456776617.193585"
+            timestampString = "456832416.321118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "-addSemaphoreStatus:toImage:"
             landmarkType = "5">
          </BreakpointContent>
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BPcontrol/HistoryPressuresTableController.m"
-            timestampString = "456776618.265024"
+            timestampString = "456832416.321118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "-addSemaphoreStatus:toImage:"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BPcontrol/HistoryPressuresTableController.m"
-            timestampString = "456776628.843393"
+            timestampString = "456832416.321118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -83,13 +83,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BPcontrol/ApiManager.m"
-            timestampString = "456776638.806511"
+            filePath = "BPcontrol/HistoryPressuresTableController.m"
+            timestampString = "456832141.838143"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
-            landmarkName = "-calculateDianaLimit:"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "-addSemaphoreStatus:toImage:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -99,29 +99,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BPcontrol/ApiManager.m"
-            timestampString = "456776738.9114"
+            filePath = "BPcontrol/HistoryPressuresTableController.m"
+            timestampString = "456838702.733735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-getUserInfo:withCompletionBlock:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BPcontrol/ApiManager.m"
-            timestampString = "456776760.390844"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
-            landmarkName = "-calculateDianaLimit:"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "-addSemaphoreStatus:toImage:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

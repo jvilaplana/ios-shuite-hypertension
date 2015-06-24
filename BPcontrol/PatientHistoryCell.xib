@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -29,11 +29,11 @@
                             </mask>
                         </variation>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="semafor_yellow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uas-s8-BuE">
-                        <rect key="frame" x="8" y="6" width="40" height="33"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uas-s8-BuE">
+                        <rect key="frame" x="8" y="8" width="33" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="33" id="FhY-UQ-fdV"/>
-                            <constraint firstAttribute="width" constant="40" id="PfP-sX-78c"/>
+                            <constraint firstAttribute="height" constant="32" id="FhY-UQ-fdV"/>
+                            <constraint firstAttribute="width" constant="33" id="PfP-sX-78c"/>
                             <constraint firstAttribute="width" constant="46" id="led-ex-a94"/>
                         </constraints>
                         <variation key="default">
@@ -87,11 +87,11 @@
                     <constraint firstAttribute="centerY" secondItem="LLM-gB-uMp" secondAttribute="centerY" id="Sa0-dk-1p7"/>
                     <constraint firstAttribute="trailing" secondItem="B3Z-JC-xAv" secondAttribute="trailing" constant="8" id="WA7-He-8Qb"/>
                     <constraint firstItem="Uas-s8-BuE" firstAttribute="leading" secondItem="uMG-L2-t1h" secondAttribute="leadingMargin" id="chf-vS-kuz"/>
-                    <constraint firstAttribute="centerY" secondItem="Uas-s8-BuE" secondAttribute="centerY" constant="-0.5" id="lLt-T5-wGs"/>
-                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="6" id="nvK-h4-bqW"/>
+                    <constraint firstAttribute="centerY" secondItem="Uas-s8-BuE" secondAttribute="centerY" constant="-2" id="lLt-T5-wGs"/>
+                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="13" id="nvK-h4-bqW"/>
                     <constraint firstItem="B3Z-JC-xAv" firstAttribute="leading" secondItem="tOT-1E-0wg" secondAttribute="trailing" constant="13" id="ob0-lO-OPW"/>
-                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="6" id="ys0-e8-HPI"/>
-                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="6" id="zoy-VD-2Z9"/>
+                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="13" id="ys0-e8-HPI"/>
+                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="13" id="zoy-VD-2Z9"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
@@ -110,10 +110,7 @@
                 <outlet property="semaphore" destination="Uas-s8-BuE" id="7AF-yg-J7l"/>
                 <outlet property="systolicPressure" destination="LLM-gB-uMp" id="670-dl-Fzm"/>
             </connections>
-            <point key="canvasLocation" x="424.5" y="324"/>
+            <point key="canvasLocation" x="424.5" y="323"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="semafor_yellow.png" width="115" height="267"/>
-    </resources>
 </document>
