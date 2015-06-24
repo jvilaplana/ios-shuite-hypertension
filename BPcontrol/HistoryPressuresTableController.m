@@ -26,16 +26,24 @@
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
     self.navigationController.navigationBar.tintColor = GRAYPROFILE;
+    self.headerView.backgroundColor = CELLHEADER;
     self.headerDiastolic.text = NSLocalizedString(@"HDiastolic", nil);
+    self.headerDiastolic.textColor = MENUTEXT;
     self.headerSystolic.text = NSLocalizedString(@"HSystolic", nil);
+    self.headerSystolic.textColor = MENUTEXT;
     self.headerPulse.text = NSLocalizedString(@"HPulse",nil);
+    self.headerPulse.textColor = MENUTEXT;
     self.headerSemaphore.text = NSLocalizedString(@"HStatus", nil);
+    self.headerSemaphore.textColor = MENUTEXT;
     self.title = NSLocalizedString(@"PressuresRecords", nil);
     [self loadMonthArray];
     CGRect bounds = [[UIScreen mainScreen] bounds];
 
     CGRect aRect = CGRectMake(0,self.tableView.bounds.origin.y,bounds.size.width,0);
     self.tableView.bounds = aRect;
+    
+    CGRect aRectHeader = CGRectMake(0,self.tableView.bounds.origin.y,bounds.size.width,0);
+    self.headerView.bounds = aRectHeader;
 
     [[ApiManager sharedManager] getUserPressures:[[User sharedManager] UUID] withCompletionBlock:^(NSError *error, id object) {
                                                  
