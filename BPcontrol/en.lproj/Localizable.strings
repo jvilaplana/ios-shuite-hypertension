@@ -87,3 +87,17 @@
 "HDiastolic" = "Diastolic p.";
 "HPulse"="Pulse";
 "ErrorRecovering" = "Error recovering pressures";
+
+//MONTH ARRAY
+"MItem1"="January";
+"MItem2"="February";
+"MItem3"="March";
+"MItem4"="April";
+"MItem5"="May";
+"MItem6"="June";
+"MItem7"="July";
+"MItem8"="Augost";
+"MItem9"="September";
+"MItem10"="October";
+"MItem11"="November";
+"MItem12"="December";

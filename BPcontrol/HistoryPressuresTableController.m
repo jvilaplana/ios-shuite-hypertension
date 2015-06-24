@@ -31,6 +31,7 @@
     self.headerPulse.text = NSLocalizedString(@"HPulse",nil);
     self.headerSemaphore.text = NSLocalizedString(@"HStatus", nil);
     self.title = NSLocalizedString(@"PressuresRecords", nil);
+    [self loadMonthArray];
     CGRect bounds = [[UIScreen mainScreen] bounds];
 
     CGRect aRect = CGRectMake(0,self.tableView.bounds.origin.y,bounds.size.width,0);
@@ -102,13 +103,37 @@
 
 -(UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"PatientHistoryHeader" owner:self options:nil] firstObject];
-    view.backgroundColor = GRAYPROFILE;
-     Pressure *p = [_array objectAtIndex:section];
+    Pressure *p = [_array objectAtIndex:section];
+    NSString *cellidentifier = @"PatientHistoryHeader";
+    PatientHistoryHeader *cell = nil;
+    UIView *view;
+    cell  = [tableView dequeueReusableCellWithIdentifier:cellidentifier];
+    
+    if (cell == nil) {
+        NSArray *outlets = [[NSBundle mainBundle] loadNibNamed:cellidentifier owner:self options:nil];
+        for (id currentObject in outlets) {
+            if ([currentObject isKindOfClass:[UITableViewCell class]]){
+                 cell =  (PatientHistoryHeader *) currentObject;
+                CGRect bounds = [[UIScreen mainScreen] bounds];
+                cell.bounds = bounds;
+                view = [cell.subviews objectAtIndex:0];
+                view.backgroundColor = GRAYPROFILE;
+                [cell.date setText:[self adaptDate:[p date]]];
+                break;
+            }
+        }
+    }
+    
     return view;
     
 }
 
+-(NSString*) adaptDate:(NSString*)date{
+    NSArray* array = [date componentsSeparatedByString: @"-"];
+    NSInteger i = [[array objectAtIndex:1] integerValue];
+    return [NSString stringWithFormat:@"%@ %@ %@",[array objectAtIndex:0],[_monthArray objectAtIndex:(i-1)],[array  objectAtIndex:2]];
+    
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellidentifier = @"PatientHistoryCell";
@@ -172,5 +197,10 @@
     return image;
 }
 
+
+-(void)loadMonthArray{
+    
+    _monthArray = @[NSLocalizedString(@"MItem1", nil),NSLocalizedString(@"MItem2", nil),NSLocalizedString(@"MItem3", nil),NSLocalizedString(@"MItem4", nil),NSLocalizedString(@"MItem5", nil),NSLocalizedString(@"MItem6", nil),NSLocalizedString(@"MItem7", nil),NSLocalizedString(@"MItem8", nil),NSLocalizedString(@"MItem9", nil),NSLocalizedString(@"MItem10", nil),NSLocalizedString(@"MItem11", nil),NSLocalizedString(@"MItem12", nil)];
+}
 
 @end

@@ -20,7 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *headerDiastolic;
 @property (strong, nonatomic) IBOutlet UILabel *headerPulse;
 
-
+@property(strong,nonatomic) NSArray *monthArray;
 
 
 @end
