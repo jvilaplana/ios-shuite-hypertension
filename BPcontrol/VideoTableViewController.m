@@ -8,7 +8,7 @@
 
 #import "VideoTableViewController.h"
 #import "DBManager.h"
-
+#import "VideoCell.h"
 @interface VideoTableViewController ()
 
 @end
@@ -33,16 +33,44 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellidentifier = @"VideoCell";
+    VideoCell *cell = nil;
+
+    cell = [tableView dequeueReusableCellWithIdentifier:cellidentifier];
+    
+    if (cell == nil) {
+        NSArray *outlets = [[NSBundle mainBundle] loadNibNamed:cellidentifier owner:nil options:nil];
+        for (id currentObject in outlets) {
+            if ([currentObject isKindOfClass:[UITableViewCell class]]){
+                cell =  (VideoCell*) currentObject;
+                [cell playVideoWithId:@"JX0vZhjLDq4"];
+                break;
+            }
+        }
+    }
+    
+    return cell;
+    
+}
+
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

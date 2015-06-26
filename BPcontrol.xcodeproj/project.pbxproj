@@ -68,6 +68,8 @@
 		3AA3A33E1B01143F00BB87A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA3A33D1B01143F00BB87A5 /* ViewController.m */; };
 		3AA3A3421B01196F00BB87A5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA3A3411B01196F00BB87A5 /* HomeViewController.m */; };
 		3AA4C51D1B24931D00043DD1 /* BPcontrolPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4C51C1B24931D00043DD1 /* BPcontrolPicker.m */; };
+		3AA5B4CC1B3DB19900B398CB /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B4CA1B3DB19900B398CB /* VideoCell.m */; };
+		3AA5B4CD1B3DB19900B398CB /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5B4CB1B3DB19900B398CB /* VideoCell.xib */; };
 		3AB200B01B36FE590013DFC4 /* PatientHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB200AF1B36FE590013DFC4 /* PatientHistoryCell.m */; };
 		3AB200B61B3705AE0013DFC4 /* PatientHistoryHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB200B51B3705AE0013DFC4 /* PatientHistoryHeader.m */; };
 		3AC9A5DA1B0AA3BE0067C9C6 /* conversation_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9A5D61B0AA3BE0067C9C6 /* conversation_icon.png */; };
@@ -194,6 +196,9 @@
 		3AA3A3411B01196F00BB87A5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		3AA4C51B1B24931D00043DD1 /* BPcontrolPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPcontrolPicker.h; sourceTree = "<group>"; };
 		3AA4C51C1B24931D00043DD1 /* BPcontrolPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPcontrolPicker.m; sourceTree = "<group>"; };
+		3AA5B4C91B3DB19900B398CB /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		3AA5B4CA1B3DB19900B398CB /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		3AA5B4CB1B3DB19900B398CB /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		3AB200AE1B36FE590013DFC4 /* PatientHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientHistoryCell.h; sourceTree = "<group>"; };
 		3AB200AF1B36FE590013DFC4 /* PatientHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientHistoryCell.m; sourceTree = "<group>"; };
 		3AB200B41B3705AE0013DFC4 /* PatientHistoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientHistoryHeader.h; sourceTree = "<group>"; };
@@ -533,6 +538,9 @@
 			children = (
 				3A388F701B3CAC040048E469 /* VideoTableViewController.h */,
 				3A388F711B3CAC050048E469 /* VideoTableViewController.m */,
+				3AA5B4C91B3DB19900B398CB /* VideoCell.h */,
+				3AA5B4CA1B3DB19900B398CB /* VideoCell.m */,
+				3AA5B4CB1B3DB19900B398CB /* VideoCell.xib */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -1019,6 +1027,7 @@
 				3A9D3A3D1B0257B300C5C488 /* menu_white.png in Resources */,
 				3A9D16B51B3767A800DCE8F6 /* semafor_yellow.png in Resources */,
 				3A9D3A2D1B0253D000C5C488 /* ic_action_arrow_left.png in Resources */,
+				3AA5B4CD1B3DB19900B398CB /* VideoCell.xib in Resources */,
 				3A3737D51AF6746E0024801D /* ic_action_location_tab@2x.png in Resources */,
 				3A9D3A301B0253D000C5C488 /* ic_action_facebook.png in Resources */,
 				3AC9A5DB1B0AA3BE0067C9C6 /* home_graphic_icon.png in Resources */,
@@ -1136,6 +1145,7 @@
 				3AED646D1AF3DD0B007A40D6 /* TabBarController.m in Sources */,
 				3AB200B01B36FE590013DFC4 /* PatientHistoryCell.m in Sources */,
 				3AA3A3421B01196F00BB87A5 /* HomeViewController.m in Sources */,
+				3AA5B4CC1B3DB19900B398CB /* VideoCell.m in Sources */,
 				3AD86D341B347CD400C624CE /* HistoryPressuresTableController.m in Sources */,
 				3A112C201ADC6EA80029167E /* BPcontrol.xcdatamodeld in Sources */,
 				3AA05B101B11472A00495164 /* ProfileViewController.m in Sources */,
