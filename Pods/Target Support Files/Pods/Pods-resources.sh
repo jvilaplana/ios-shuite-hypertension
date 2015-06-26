@@ -53,10 +53,12 @@ install_resource()
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "SBPickerSelector/SBPickerSelector/Resources/SBPickerSelector.xib"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "youtube-ios-player-helper/Assets"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "SBPickerSelector/SBPickerSelector/Resources/SBPickerSelector.xib"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "youtube-ios-player-helper/Assets"
 fi
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

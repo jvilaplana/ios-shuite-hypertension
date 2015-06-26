@@ -83,3 +83,6 @@
 "HDiastolic" = "P.Diastolic";
 "HPulse"="Pulse";
 "ErrorRecovering" = "Error recovering pressures";
+
+//VIDEOS
+"Videos" = "Videos";

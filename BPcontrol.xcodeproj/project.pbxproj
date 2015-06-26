@@ -25,6 +25,7 @@
 		3A3737D11AF673CD0024801D /* ic_action_location_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737D01AF673CD0024801D /* ic_action_location_tab.png */; };
 		3A3737D51AF6746E0024801D /* ic_action_location_tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3737D41AF6746E0024801D /* ic_action_location_tab@2x.png */; };
 		3A3737D81AF67A050024801D /* InitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3737D71AF67A050024801D /* InitController.m */; };
+		3A388F721B3CAC050048E469 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A388F711B3CAC050048E469 /* VideoTableViewController.m */; };
 		3A4EDA101AF68FA3006C0699 /* InfoPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4EDA0F1AF68FA3006C0699 /* InfoPageViewController.m */; };
 		3A7183761B337C3500AF28DC /* bpcontrol.db in Resources */ = {isa = PBXBuildFile; fileRef = 3A7183751B337C3500AF28DC /* bpcontrol.db */; };
 		3A75C9BE1AFFD6270012DF8E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A75C9BC1AFFD6270012DF8E /* Fabric.framework */; };
@@ -140,6 +141,8 @@
 		3A3737D41AF6746E0024801D /* ic_action_location_tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_location_tab@2x.png"; sourceTree = "<group>"; };
 		3A3737D61AF67A050024801D /* InitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitController.h; sourceTree = "<group>"; };
 		3A3737D71AF67A050024801D /* InitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitController.m; sourceTree = "<group>"; };
+		3A388F701B3CAC040048E469 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
+		3A388F711B3CAC050048E469 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
 		3A4EDA0E1AF68FA3006C0699 /* InfoPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPageViewController.h; sourceTree = "<group>"; };
 		3A4EDA0F1AF68FA3006C0699 /* InfoPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPageViewController.m; sourceTree = "<group>"; };
 		3A7183751B337C3500AF28DC /* bpcontrol.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bpcontrol.db; sourceTree = "<group>"; };
@@ -525,6 +528,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		3A388F6F1B3CAB530048E469 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				3A388F701B3CAC040048E469 /* VideoTableViewController.h */,
+				3A388F711B3CAC050048E469 /* VideoTableViewController.m */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
 		3A989F971AED53FA00A4C945 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +600,7 @@
 		3AED64671AF3D78D007A40D6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3A388F6F1B3CAB530048E469 /* Videos */,
 				3AFBF6B41B35C14C004320A2 /* PatientHistory */,
 				3ADD23721B01202400410655 /* MenuViewController.h */,
 				3ADD23731B01202400410655 /* MenuViewController.m */,
@@ -1111,6 +1124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A21EE701B332C5600BA4E73 /* DBManager.m in Sources */,
+				3A388F721B3CAC050048E469 /* VideoTableViewController.m in Sources */,
 				3AB200B61B3705AE0013DFC4 /* PatientHistoryHeader.m in Sources */,
 				3A989F9A1AED54B400A4C945 /* ApiManager.m in Sources */,
 				3ADD23741B01202400410655 /* MenuViewController.m in Sources */,

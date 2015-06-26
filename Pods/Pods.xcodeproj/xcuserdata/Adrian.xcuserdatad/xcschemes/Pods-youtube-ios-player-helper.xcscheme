@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "12D3BAEB405B56B0D29E660A"
-               BuildableName = "libPods-SBPickerSelector.a"
-               BlueprintName = "Pods-SBPickerSelector"
+               BlueprintIdentifier = "933812D8276F1D62F17E56AA"
+               BuildableName = "libPods-youtube-ios-player-helper.a"
+               BlueprintName = "Pods-youtube-ios-player-helper"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
