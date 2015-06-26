@@ -9,6 +9,10 @@
 #import "VideoTableViewController.h"
 #import "DBManager.h"
 #import "VideoCell.h"
+#import "Resources.h" 
+#import "SWRevealViewController.h"
+#import "User.h"
+#import "YoutubeVideo.h"
 @interface VideoTableViewController ()
 
 @end
@@ -17,12 +21,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Videos", nil);
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
+    self.navigationController.navigationBar.tintColor = GRAYPROFILE;
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.revealButton setTarget: revealViewController];
+        [self.revealButton setAction: @selector(revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer:revealViewController.panGestureRecognizer];
+    }
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    CGRect bounds = [[UIScreen mainScreen] bounds];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    CGRect aRect = CGRectMake(0,self.tableView.bounds.origin.y,bounds.size.width,0);
+    self.tableView.bounds = aRect;
+    self.tableView.allowsSelection = NO;
+    
+    NSString * query = [NSString stringWithFormat:@"SELECT * FROM youtubeVideo WHERE useruuid=\"%@\"",[[User sharedManager]UUID]];
+    
+    _videosArray = [[DBManager getSharedInstance]getAllVideos:query];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,7 +59,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return 1;
+    return [_videosArray count];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -60,7 +79,9 @@
         for (id currentObject in outlets) {
             if ([currentObject isKindOfClass:[UITableViewCell class]]){
                 cell =  (VideoCell*) currentObject;
-                [cell playVideoWithId:@"JX0vZhjLDq4"];
+                YoutubeVideo *video = [_videosArray objectAtIndex:indexPath.row];
+                [cell playVideoWithId:[video link]];
+                [cell setDescription:[video description]];
                 break;
             }
         }
@@ -70,7 +91,10 @@
     
 }
 
-
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 180;
+}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -41,6 +41,7 @@
 
     CGRect aRect = CGRectMake(0,self.tableView.bounds.origin.y,bounds.size.width,0);
     self.tableView.bounds = aRect;
+    self.tableView.allowsSelection = NO;
     
     CGRect aRectHeader = CGRectMake(0,self.tableView.bounds.origin.y,bounds.size.width,0);
     self.headerView.bounds = aRectHeader;

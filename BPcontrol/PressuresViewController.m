@@ -38,6 +38,7 @@
     
     [super viewDidLoad];
 
+
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : MENUTEXT}];
     self.navigationController.navigationBar.tintColor = GRAYPROFILE;

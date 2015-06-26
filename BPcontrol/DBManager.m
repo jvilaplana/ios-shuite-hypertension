@@ -7,6 +7,7 @@
 //
 
 #import "DBManager.h"
+#import "YoutubeVideo.h"
 
 static DBManager *sharedInstance = nil;
 static sqlite3 *BPdatabase = nil;
@@ -193,6 +194,32 @@ static NSString* path = @"";
         
     }
 
+}
+
+-(NSMutableArray*)getAllVideos:(NSString *)query{
+    
+    NSMutableArray *videosArray = [[NSMutableArray alloc] init];
+    sqlite3_stmt    *statement;
+    
+    if (sqlite3_open([path UTF8String], &BPdatabase) == SQLITE_OK){
+        
+        const char *sql_stmt = [query UTF8String];
+        
+        if (sqlite3_prepare_v2(BPdatabase, sql_stmt, -1, &statement, NULL) == SQLITE_OK){
+            while (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                YoutubeVideo *video = [[YoutubeVideo alloc] init];
+                [video setLink:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)]];
+                [video setDescription:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 0)]];
+                [videosArray addObject:video];
+            }
+            sqlite3_finalize(statement);
+        }
+        
+        sqlite3_close(BPdatabase);
+        
+    }
+    return videosArray;
 }
 
 @end

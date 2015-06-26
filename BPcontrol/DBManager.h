@@ -18,6 +18,7 @@
 -(void)initWithDatabase;
 +(DBManager*)getSharedInstance;
 -(NSArray *)loadDataFromDB:(NSString *)query;
+-(NSMutableArray*)getAllVideos:(NSString *)query;
 -(void)executeQuery:(NSString *)query;
 
 @end

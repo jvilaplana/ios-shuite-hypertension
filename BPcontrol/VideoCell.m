@@ -7,11 +7,12 @@
 //
 
 #import "VideoCell.h"
+#import "Resources.h"
 
 @implementation VideoCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    _videoDescription.textColor = MENUTEXT;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -22,6 +23,10 @@
 
 -(void)playVideoWithId:(NSString*)videoId{
     [self.youtubePlayer loadWithVideoId:videoId];
+}
+
+-(void)setDescription:(NSString *)videoDescription{
+    [self.videoDescription setText:videoDescription];
 }
 
 @end

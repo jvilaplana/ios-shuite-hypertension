@@ -27,6 +27,7 @@
 		3A3737D81AF67A050024801D /* InitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3737D71AF67A050024801D /* InitController.m */; };
 		3A388F721B3CAC050048E469 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A388F711B3CAC050048E469 /* VideoTableViewController.m */; };
 		3A4EDA101AF68FA3006C0699 /* InfoPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4EDA0F1AF68FA3006C0699 /* InfoPageViewController.m */; };
+		3A6DE3C41B3E169400B699A7 /* YoutubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DE3C31B3E169400B699A7 /* YoutubeVideo.m */; };
 		3A7183761B337C3500AF28DC /* bpcontrol.db in Resources */ = {isa = PBXBuildFile; fileRef = 3A7183751B337C3500AF28DC /* bpcontrol.db */; };
 		3A75C9BE1AFFD6270012DF8E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A75C9BC1AFFD6270012DF8E /* Fabric.framework */; };
 		3A75C9BF1AFFD6270012DF8E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A75C9BD1AFFD6270012DF8E /* Crashlytics.framework */; };
@@ -147,6 +148,8 @@
 		3A388F711B3CAC050048E469 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
 		3A4EDA0E1AF68FA3006C0699 /* InfoPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPageViewController.h; sourceTree = "<group>"; };
 		3A4EDA0F1AF68FA3006C0699 /* InfoPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPageViewController.m; sourceTree = "<group>"; };
+		3A6DE3C21B3E169400B699A7 /* YoutubeVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoutubeVideo.h; sourceTree = "<group>"; };
+		3A6DE3C31B3E169400B699A7 /* YoutubeVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubeVideo.m; sourceTree = "<group>"; };
 		3A7183751B337C3500AF28DC /* bpcontrol.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bpcontrol.db; sourceTree = "<group>"; };
 		3A75C9BC1AFFD6270012DF8E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
 		3A75C9BD1AFFD6270012DF8E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
@@ -601,6 +604,8 @@
 				3AED64621AF3BF55007A40D6 /* User.m */,
 				3AED64641AF3C613007A40D6 /* Message.h */,
 				3AED64651AF3C613007A40D6 /* Message.m */,
+				3A6DE3C21B3E169400B699A7 /* YoutubeVideo.h */,
+				3A6DE3C31B3E169400B699A7 /* YoutubeVideo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1149,6 +1154,7 @@
 				3AD86D341B347CD400C624CE /* HistoryPressuresTableController.m in Sources */,
 				3A112C201ADC6EA80029167E /* BPcontrol.xcdatamodeld in Sources */,
 				3AA05B101B11472A00495164 /* ProfileViewController.m in Sources */,
+				3A6DE3C41B3E169400B699A7 /* YoutubeVideo.m in Sources */,
 				3AED64601AF3B674007A40D6 /* Pressure.m in Sources */,
 				3AA3A33E1B01143F00BB87A5 /* ViewController.m in Sources */,
 				3AA4C51D1B24931D00043DD1 /* BPcontrolPicker.m in Sources */,

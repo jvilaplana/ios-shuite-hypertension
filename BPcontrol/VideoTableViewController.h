@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface VideoTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *revealButton;
+@property (strong, nonatomic) NSMutableArray *videosArray;
 
 @end

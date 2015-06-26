@@ -11,6 +11,8 @@
 
 @interface VideoCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet YTPlayerView *youtubePlayer;
+@property (strong, nonatomic) IBOutlet UILabel *videoDescription;
 
 -(void)playVideoWithId:(NSString*)videoId;
+-(void)setDescription:(NSString *)videoDescription;
 @end
