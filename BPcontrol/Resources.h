@@ -130,4 +130,17 @@ typedef void (^CompletionBlock)(NSError *error, id object);
 #define kDiastolicA3 17
 #define kPulseA3 18
 
+#define kJanuary 1
+#define kFebruary 2
+#define kMarch 3
+#define kApril 4
+#define kMay 5
+#define kJune 6
+#define kJuly 7
+#define kAugust 8
+#define kSeptember 9
+#define kOctober 10
+#define kNovember 11
+#define kDecember 12
+
 #endif

@@ -82,7 +82,21 @@
 "HSystolic" = "P.Sistólica";
 "HDiastolic" = "P.Diastolic";
 "HPulse"="Pulse";
-"ErrorRecovering" = "Error recovering pressures";
+"ErrorRecovering" = "Error recuperando las mediciones";
 
 //VIDEOS
 "Videos" = "Videos";
+
+//MONTH ARRAY
+"MItem1"="Enero";
+"MItem2"="Febrero";
+"MItem3"="Marzo";
+"MItem4"="Abril";
+"MItem5"="Mayo";
+"MItem6"="Junio";
+"MItem7"="Julio";
+"MItem8"="Agosto";
+"MItem9"="Septiembre";
+"MItem10"="Octubre";
+"MItem11"="Noviembre";
+"MItem12"="Diciembre";

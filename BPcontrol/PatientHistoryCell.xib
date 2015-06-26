@@ -1,108 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UYX-SI-qX0" customClass="PatientHistoryCell">
-            <rect key="frame" x="0.0" y="0.0" width="317" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UYX-SI-qX0" id="uMG-L2-t1h">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="110bpm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3Z-JC-xAv">
-                        <rect key="frame" x="244" y="11" width="57" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="07r-OA-DzO"/>
-                            <constraint firstAttribute="width" constant="54" id="8cG-37-VmZ"/>
-                        </constraints>
+                        <rect key="frame" x="252" y="13" width="57" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="8cG-37-VmZ"/>
-                            </mask>
-                        </variation>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uas-s8-BuE">
-                        <rect key="frame" x="8" y="8" width="33" height="32"/>
+                        <rect key="frame" x="16" y="6" width="33" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="32" id="FhY-UQ-fdV"/>
-                            <constraint firstAttribute="width" constant="33" id="PfP-sX-78c"/>
-                            <constraint firstAttribute="width" constant="46" id="led-ex-a94"/>
+                            <constraint firstAttribute="width" constant="33" id="j7Z-DB-V9f"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="led-ex-a94"/>
-                            </mask>
-                        </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100Hgmm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOT-1E-0wg">
-                        <rect key="frame" x="142" y="11" width="80" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="80" id="Dd4-PY-0Eb"/>
-                            <constraint firstAttribute="height" constant="21" id="Qs7-eD-3mP"/>
-                            <constraint firstAttribute="width" constant="80" id="aoz-yG-6MD"/>
-                        </constraints>
+                        <rect key="frame" x="156" y="13" width="72" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Dd4-PY-0Eb"/>
-                            </mask>
-                        </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="128Hgmm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLM-gB-uMp">
-                        <rect key="frame" x="54" y="11" width="80" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="Voh-55-yhl"/>
-                            <constraint firstAttribute="width" constant="80" id="wKt-Fw-6iO"/>
-                        </constraints>
+                        <rect key="frame" x="57" y="13" width="94" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="wKt-Fw-6iO"/>
-                            </mask>
-                        </variation>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="tOT-1E-0wg" secondAttribute="trailing" constant="95" id="1cr-64-NSh"/>
-                    <constraint firstAttribute="centerY" secondItem="B3Z-JC-xAv" secondAttribute="centerY" id="3Zh-lu-jzc"/>
-                    <constraint firstItem="B3Z-JC-xAv" firstAttribute="leading" secondItem="tOT-1E-0wg" secondAttribute="trailing" constant="22" id="6dl-qi-qCl"/>
-                    <constraint firstItem="tOT-1E-0wg" firstAttribute="leading" secondItem="LLM-gB-uMp" secondAttribute="trailing" constant="8" id="6ou-z6-5LR"/>
-                    <constraint firstItem="B3Z-JC-xAv" firstAttribute="trailing" secondItem="uMG-L2-t1h" secondAttribute="trailingMargin" id="Bi3-Wt-AgW"/>
-                    <constraint firstItem="Uas-s8-BuE" firstAttribute="leading" secondItem="uMG-L2-t1h" secondAttribute="leading" constant="8" id="FRJ-IV-w6L"/>
-                    <constraint firstItem="tOT-1E-0wg" firstAttribute="leading" secondItem="LLM-gB-uMp" secondAttribute="trailing" constant="8" id="K73-u9-Epn"/>
-                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="16" id="Nyt-rA-Aar"/>
-                    <constraint firstAttribute="centerY" secondItem="tOT-1E-0wg" secondAttribute="centerY" id="SXx-hx-5T5"/>
-                    <constraint firstAttribute="centerY" secondItem="LLM-gB-uMp" secondAttribute="centerY" id="Sa0-dk-1p7"/>
-                    <constraint firstAttribute="trailing" secondItem="B3Z-JC-xAv" secondAttribute="trailing" constant="8" id="WA7-He-8Qb"/>
-                    <constraint firstItem="Uas-s8-BuE" firstAttribute="leading" secondItem="uMG-L2-t1h" secondAttribute="leadingMargin" id="chf-vS-kuz"/>
-                    <constraint firstAttribute="centerY" secondItem="Uas-s8-BuE" secondAttribute="centerY" constant="-2" id="lLt-T5-wGs"/>
-                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="13" id="nvK-h4-bqW"/>
-                    <constraint firstItem="B3Z-JC-xAv" firstAttribute="leading" secondItem="tOT-1E-0wg" secondAttribute="trailing" constant="13" id="ob0-lO-OPW"/>
-                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="13" id="ys0-e8-HPI"/>
-                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="13" id="zoy-VD-2Z9"/>
+                    <constraint firstAttribute="centerY" secondItem="LLM-gB-uMp" secondAttribute="centerY" id="4tH-i2-38Y"/>
+                    <constraint firstItem="Uas-s8-BuE" firstAttribute="top" secondItem="uMG-L2-t1h" secondAttribute="topMargin" constant="-2" id="Aic-WF-SPy"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Uas-s8-BuE" secondAttribute="bottom" constant="-3" id="EqF-ae-jB0"/>
+                    <constraint firstAttribute="centerY" secondItem="B3Z-JC-xAv" secondAttribute="centerY" id="KUo-Er-dTI"/>
+                    <constraint firstAttribute="centerY" secondItem="tOT-1E-0wg" secondAttribute="centerY" id="djq-SH-Mea"/>
+                    <constraint firstItem="Uas-s8-BuE" firstAttribute="leading" secondItem="uMG-L2-t1h" secondAttribute="leadingMargin" constant="8" id="fby-v2-MPC"/>
+                    <constraint firstAttribute="centerX" secondItem="B3Z-JC-xAv" secondAttribute="centerX" constant="-120" id="lyZ-qM-IfA"/>
+                    <constraint firstItem="LLM-gB-uMp" firstAttribute="leading" secondItem="Uas-s8-BuE" secondAttribute="trailing" constant="8" symbolic="YES" id="mvd-Tk-psI"/>
+                    <constraint firstAttribute="centerX" secondItem="LLM-gB-uMp" secondAttribute="centerX" constant="56" id="vsC-Tr-fRr"/>
+                    <constraint firstAttribute="centerX" secondItem="tOT-1E-0wg" secondAttribute="centerX" constant="-32" id="xql-Dm-65w"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="FRJ-IV-w6L"/>
-                        <exclude reference="Nyt-rA-Aar"/>
-                        <exclude reference="K73-u9-Epn"/>
-                        <exclude reference="Bi3-Wt-AgW"/>
-                        <exclude reference="WA7-He-8Qb"/>
-                        <exclude reference="ob0-lO-OPW"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="diastolicPressure" destination="tOT-1E-0wg" id="UcS-JX-NsM"/>
@@ -110,7 +58,7 @@
                 <outlet property="semaphore" destination="Uas-s8-BuE" id="7AF-yg-J7l"/>
                 <outlet property="systolicPressure" destination="LLM-gB-uMp" id="670-dl-Fzm"/>
             </connections>
-            <point key="canvasLocation" x="424.5" y="323"/>
+            <point key="canvasLocation" x="424" y="323"/>
         </tableViewCell>
     </objects>
 </document>
