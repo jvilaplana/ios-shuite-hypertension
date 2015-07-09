@@ -57,6 +57,7 @@
     [self configurePickers];
     [self prepareTextFieldsTags];
     [self configureView];
+
     
     
     if ([self isLastDateEqualsToToday] ){
@@ -166,6 +167,7 @@
 
 -(void) prepareTextFieldsTags{
     
+    self.mTxtField1.inputView = systolicPicker.inputView;
     [self.mTxtField1 setTag: kSystolicM1];
     [self.mTxtField2 setTag: kDiastolicM1];
     [self.mTxtField3 setTag: kPulseM1];
@@ -189,12 +191,19 @@
     [self.aTxtField7 setTag: kSystolicA3];
     [self.aTxtField8 setTag: kDiastolicA3];
     [self.aTxtField9 setTag: kPulseA3];
+    
+    
 
+}
+
+-(void)dismissKeyboard {
+    [currentSelected resignFirstResponder];
 }
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
     currentSelected = textField;
+
     switch ([textField tag]) {
         case kSystolicM1:
             [systolicPicker showPickerOver:self];
@@ -254,7 +263,7 @@
     
     [textField resignFirstResponder];
     
-    return YES;
+    return NO;
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
@@ -608,7 +617,7 @@
         lastupdate =  [preferences objectForKey:LASTUPDATEDATE];
     }
     
-    return lastupdate;
+    return @"23-05-2015";
 }
 
 

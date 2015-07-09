@@ -114,7 +114,7 @@
         case 5:
             CellIdentifier = BloodPressures;
             cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
-            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"BloodPressure", nil);
+            ((SWUITableViewCell*)cell).labelMenu.text = NSLocalizedString(@"BloodPressures", nil);
             break;
 
         case 6:
